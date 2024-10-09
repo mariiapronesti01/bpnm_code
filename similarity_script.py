@@ -3,6 +3,8 @@
 import os
 import random
 import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 from similarity_utils import obtain_graph, get_similarity_measure, get_similarity_matrix
 from parser_with_lane import get_edge_df_from_bpmn
@@ -61,6 +63,7 @@ def compute_similarity_matrix(all_files, model, verbose=False):
 
 def main():
     folders = load_files_from_folders("cleaned_data", subset_size=4)
+    print(folders)
     all_files = [file for folder in folders.values() for file in folder]
     all_files = [file for file in all_files if file.endswith('.bpmn')]
 
@@ -69,6 +72,24 @@ def main():
     # save the similarity matrices
     np.save("weighted_similarity_matrix.npy", w_similarity_matrix)
     np.save("unweighted_similarity_matrix.npy", unw_similarity_matrix)
+
+    # save the plot of the similariy matrix toa file
+    plt.figure(figsize=(20, 10))  # Adjust height for better fit (20, 10) for side-by-side comparison
+
+    # First subplot for weighted similarity matrix
+    plt.subplot(1, 2, 1)  # 1 row, 2 columns, 1st plot
+    plt.title("Weighted Similarity Matrix")
+    sns.heatmap(w_similarity_matrix, annot=True, xticklabels=all_files, yticklabels=all_files, cmap='YlGn')
+
+    # Second subplot for unweighted similarity matrix
+    plt.subplot(1, 2, 2)  # 1 row, 2 columns, 2nd plot
+    plt.title("Unweighted Similarity Matrix")
+    sns.heatmap(unw_similarity_matrix, annot=True, xticklabels=all_files, yticklabels=all_files, cmap='YlGn')
+
+    plt.tight_layout()  # Adjust layout to prevent overlapping of plots
+    plt.savefig("similarity_matrix.png")
+
+
 
 if __name__ == "__main__":
     main()
