@@ -1,0 +1,6 @@
+DOMANDE
+- posso usare la metrica come loss function per finetunare il modello? 
+- francesco mi diceva di creare diverse versione dello stesso bpmn e decide i pesi in base a come la metrica funziona su questi 
+    (la sua idea non mi convince)
+- i miei esempi sono tuple (descrizione testuale, xml) oppure (descrizione testuale, rappresentazione intermedia del bpmn)
+    l'idea è che l'output del modello sia una rappresentazione intermedia del modello bpmn che poi viene riconvertita 
