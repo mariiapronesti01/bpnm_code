@@ -12,7 +12,7 @@ from sentence_transformers import SentenceTransformer, util
 
 model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 
-def check_file_similarity(file1, file2, model, verbose=False):
+def check_file_similarity(file1, file2, model, verbose=False):  ## modify to take as input G
     edge_df1 = get_edge_df_from_bpmn(file1)
     edge_df2 = get_edge_df_from_bpmn(file2)
 
@@ -48,7 +48,7 @@ def compute_similarity_matrix(all_files, model, verbose=False):
     unw_similarity_matrix = np.zeros((n, n))
 
     for i in range(n):
-        for j in range(i, n):
+        for j in range(i, n):            ### n/2
             # Compute similarity once for (i, j) and reuse it for (j, i)
             if verbose:
                 print(f"Computing similarity between {all_files[i]} and {all_files[j]}")
@@ -62,7 +62,7 @@ def compute_similarity_matrix(all_files, model, verbose=False):
     return w_similarity_matrix, unw_similarity_matrix
 
 def main():
-    folders = load_files_from_folders("cleaned_data", subset_size=4)
+    folders = load_files_from_folders("cleaned_data", subset_size=1)
     print(folders)
     all_files = [file for folder in folders.values() for file in folder]
     all_files = [file for file in all_files if file.endswith('.bpmn')]
