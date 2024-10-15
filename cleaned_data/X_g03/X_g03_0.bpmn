@@ -65,7 +65,7 @@
    <process id="sid-9C637D8F-9914-46C4-A6BA-E6AB027BEFC8" isClosed="false" isExecutable="false" name="Vienna Night Run App" processType="None">
       <extensionElements/>
       <laneSet id="sid-b20da6ec-07ba-43f0-bcbd-52585bfaf576">
-         <lane id="sid-9CFA540F-5733-406A-B3F8-0BA3E7BF139B">
+         <lane id="sid-9CFA540F-5733-406A-B3F8-0BA3E7BF139B" name="Vienna Night Run App">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -237,7 +237,7 @@
    <process id="sid-ED718D35-D96D-4B50-988B-673BB68FC76C" isClosed="false" isExecutable="false" name="Fitness gadget" processType="None">
       <extensionElements/>
       <laneSet id="sid-824b2554-7272-496f-bce3-7035a97cbce5">
-         <lane id="sid-33941936-FF78-46B8-80D6-0750BD93912E">
+         <lane id="sid-33941936-FF78-46B8-80D6-0750BD93912E" name="Fitness gadget">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -255,7 +255,7 @@
    <process id="sid-D1E54DE1-67A0-4814-A2B9-E19D7EE1DBF0" isClosed="false" isExecutable="false" name="User" processType="None">
       <extensionElements/>
       <laneSet id="sid-244acb2d-e090-4b91-8b84-d89daac30080">
-         <lane id="sid-DB6D2937-D2CF-4AE3-BFCA-66ED5CCC1198">
+         <lane id="sid-DB6D2937-D2CF-4AE3-BFCA-66ED5CCC1198" name="User">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

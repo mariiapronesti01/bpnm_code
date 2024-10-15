@@ -36,7 +36,7 @@ def extract_lane(process, ns):
     return lane_info
 
 
-def parse_bpmn(ns: str, file: str):
+def parse_bpmn(ns: str, file: str, verbose: bool = False):
 
     """
     Function to parse the BPMN file and extract the process(es) elements
@@ -70,13 +70,13 @@ def parse_bpmn(ns: str, file: str):
 
     node_type = flatten(all_node_type)
     attributes = flatten(all_attributes)
-
-    print(f'Detected {len(processes)} processes in the BPMN file')
+    if verbose:
+        print(f'Detected {len(processes)} processes in the BPMN file')
 
     return node_type, attributes, lane_info
 
 
-def get_df(attributes: list, node_type: list, complete=False):
+def get_edge_df(attributes: list, node_type: list):
 
     """
     Function to create a DataFrame from the attributes of the process elements
@@ -106,9 +106,6 @@ def get_df(attributes: list, node_type: list, complete=False):
     df['sourceName']=df['sourceRef'].map(id_to_name)
     df['targetName']=df['targetRef'].map(id_to_name)
 
-    if complete:
-        return df
-    
     return df[df['node_type']=='sequenceFlow']
 
 
@@ -137,7 +134,7 @@ def add_brackets(row):
         return row
 
 
-def get_edge_df_from_bpmn(file:str, ns='{http://www.omg.org/spec/BPMN/20100524/MODEL}', brackets=False, complete=False):
+def get_info_from_bpmn_file(file:str, ns='{http://www.omg.org/spec/BPMN/20100524/MODEL}'):
 
     """
     Function to extract the edges from the BPMN file and return a DataFrame
@@ -151,14 +148,17 @@ def get_edge_df_from_bpmn(file:str, ns='{http://www.omg.org/spec/BPMN/20100524/M
     - df: DataFrame containing the edges of the process elements
 
     """
-    node_type, attributes, _ = parse_bpmn(ns, file)
-    df = get_df(attributes, node_type, complete)
-    if brackets:
-        df = df.apply(add_brackets, axis=1)
-    return df
+    node_type, attributes, lane_info = parse_bpmn(ns, file)
+    df = get_edge_df(attributes, node_type)
+    return df, lane_info
 
 
-def write_mer_file(df, output, lane_info):
+def write_mer_file(file):
+
+    df, lane_info = get_info_from_bpmn_file(file)
+    df = df.apply(add_brackets, axis=1)
+
+    output = file.replace('.bpmn', '.txt')
     
     with open(output, 'w') as f:  # Open the file for writing once
         # Write connections between nodes from different lanes (outside of subgraphs)

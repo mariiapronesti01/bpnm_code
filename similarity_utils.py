@@ -88,8 +88,8 @@ def compute_shortest_path_distance(sp_G1, sp_G2):
 
 
 # for (i,j) ... 
-#label_similarity  = computeSimiliarityType(gdata(i)['embeddings'], gdata(j)['embeddings'] )
-#type_similarity  = computeSimiliarityType(gdata(i)['graph'], gdata(j)['graph'] )
+# label_similarity  = computeSimiliarityType(gdata(i)['embeddings'], gdata(j)['embeddings'] )
+# type_similarity  = computeSimiliarityType(gdata(i)['graph'], gdata(j)['graph'] )
 # weighted_similarity_matrix = (0.4 * label_similarity +
 #                         0.2 * type_similarity + .....
 
@@ -100,7 +100,7 @@ def compute_shortest_path_distance(sp_G1, sp_G2):
 
 # typeSimilarityMatrix =  computeSimiliarityType(G1, G2)
 # labelSimilarityMatrix = computeLabelSimilarity(embeddings_G1, embeddings_G2)
-# 
+
 
 # endPathSimilarityMatrix = f(endPath_G1, end_path_G2)
 # startPathSimilarityMatrix = f(startPath_G1, startPath_G2)
