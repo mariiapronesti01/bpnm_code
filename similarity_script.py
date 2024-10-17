@@ -48,7 +48,7 @@ def compute_similarity_matrix(all_files, model, verbose=False):
     unw_similarity_matrix = np.zeros((n, n))
 
     for i in range(n):
-        for j in range(i, n):            ### n/2
+        for j in range(i, n):            ### 
             # Compute similarity once for (i, j) and reuse it for (j, i)
             if verbose:
                 print(f"Computing similarity between {all_files[i]} and {all_files[j]}")
