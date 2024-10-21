@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<bpmn2:definitions id="_0" name="definitions" exporterVersion="13.4.0" exporter="VOLTA" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:esteco="http://www.esteco.com/BPMN/Extensions" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" targetNamespace="http://www.esteco.com/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+    <bpmn2:process id="processes_60fa66db-7b57-33be-0429-5b452c28a052" name="Decision process with Translator" isExecutable="true">
+        <bpmn2:endEvent id="endEvents_9aa6a45a-e22e-f9d1-69fb-6a8d04623bc7" name="End Event_93">
+        </bpmn2:endEvent>
+        <bpmn2:exclusiveGateway id="exclusiveGateways_27fca393-59bb-208d-ea27-0f9f01cb3d21" name="Approved?" gatewayDirection="Diverging" >
+        </bpmn2:exclusiveGateway>
+        <bpmn2:exclusiveGateway id="exclusiveGateways_be07e4f6-0246-9ee0-4b78-206c0337579c" name="Exclusive Gateway_243" gatewayDirection="Converging">
+        </bpmn2:exclusiveGateway>
+        <bpmn2:sequenceFlow id="sequenceFlows_500af155-4592-d7de-9fc6-ad9579f6d5e8" name="Sequence Flow_31" sourceRef="startEvents_5c1ab15d-31dc-df54-03cd-ad2751a16ead" targetRef="tasks_aa9180b2-3294-ee67-7047-386150c6ff6c"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_9c10c84f-c35b-eef3-0cd2-b4514858befb" name="Sequence Flow_74" sourceRef="tasks_756b276b-009a-d9c2-f495-d10bca1bf833" targetRef="voltaTask_c9afd6c1-b50a-93d0-0286-df6f3592f8f5"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_8779f83b-4f73-d109-661b-2bb8031fc6dd" name="Sequence Flow_81" sourceRef="voltaTask_c9afd6c1-b50a-93d0-0286-df6f3592f8f5" targetRef="tasks_db9ebf10-ab25-568e-bf83-6f6d373481dd"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_a6e6be39-2f75-9072-a04d-a72fff661cdb" name="Sequence Flow_89" sourceRef="tasks_db9ebf10-ab25-568e-bf83-6f6d373481dd" targetRef="tasks_15d03a56-4f3a-5c0a-eeca-71b26c770e03"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_55a84103-769b-5600-e7e5-549b3b6f62b0" name="Sequence Flow_95" sourceRef="tasks_15d03a56-4f3a-5c0a-eeca-71b26c770e03" targetRef="endEvents_9aa6a45a-e22e-f9d1-69fb-6a8d04623bc7"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_d1a32e7a-8ccf-1d8b-0ee2-71bb81da5bb6" name="Sequence Flow_117" sourceRef="tasks_aa9180b2-3294-ee67-7047-386150c6ff6c" targetRef="tasks_3cce143e-1118-df9d-8902-fbd1ce56666e"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_8dc362fa-d552-6ede-99d5-eea6a4e6c20b" name="Sequence Flow_131" sourceRef="tasks_3cce143e-1118-df9d-8902-fbd1ce56666e" targetRef="tasks_80fe73b3-afce-ee10-de4a-9b463fca2805"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_540b5e82-530f-1577-bbab-3d25adfc6bb8" name="Sequence Flow_138" sourceRef="tasks_80fe73b3-afce-ee10-de4a-9b463fca2805" targetRef="tasks_9cb90488-84e5-07a2-6251-b8167b3d32c0"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_a4e5d108-11c8-654e-b327-cd5597f9d352" name="Sequence Flow_155" sourceRef="tasks_651badfc-dba4-a165-f822-9fd39491daff" targetRef="tasks_21ecbcab-3cbe-8564-e0fb-f322ccd0c34f"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_41511c6a-9ee2-7e3d-211b-c312e0d23b97" name="Sequence Flow_225" sourceRef="tasks_21ecbcab-3cbe-8564-e0fb-f322ccd0c34f" targetRef="exclusiveGateways_27fca393-59bb-208d-ea27-0f9f01cb3d21"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_fe7d8e99-3791-15d4-468a-3bc506b1e4fd" name="Yes" sourceRef="exclusiveGateways_27fca393-59bb-208d-ea27-0f9f01cb3d21" targetRef="tasks_756b276b-009a-d9c2-f495-d10bca1bf833"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_ed4b38ac-b2c7-802e-c09f-0958af16f1de" name="Sequence Flow_241" sourceRef="tasks_9cb90488-84e5-07a2-6251-b8167b3d32c0" targetRef="exclusiveGateways_be07e4f6-0246-9ee0-4b78-206c0337579c"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_1a46d350-f0c8-2ce2-30c5-fc5bc5b4e1d6" name="Sequence Flow_245" sourceRef="exclusiveGateways_be07e4f6-0246-9ee0-4b78-206c0337579c" targetRef="tasks_651badfc-dba4-a165-f822-9fd39491daff"/>
+        <bpmn2:sequenceFlow id="sequenceFlows_d6174213-3d02-1c21-3e4d-d469d14d3627" name="No" sourceRef="exclusiveGateways_27fca393-59bb-208d-ea27-0f9f01cb3d21" targetRef="exclusiveGateways_be07e4f6-0246-9ee0-4b78-206c0337579c"/>
+        <bpmn2:serviceTask id="voltaTask_c9afd6c1-b50a-93d0-0286-df6f3592f8f5" name="Design of Experiments">
+        </bpmn2:serviceTask>
+        <bpmn2:startEvent id="startEvents_5c1ab15d-31dc-df54-03cd-ad2751a16ead" name="Start Event_26">
+        </bpmn2:startEvent>
+        <bpmn2:userTask id="tasks_aa9180b2-3294-ee67-7047-386150c6ff6c" name="Formulate industrial problem" >
+        </bpmn2:userTask>
+        <bpmn2:userTask id="tasks_756b276b-009a-d9c2-f495-d10bca1bf833" name="Finalize modeling execution" >
+        </bpmn2:userTask>
+        <bpmn2:userTask id="tasks_db9ebf10-ab25-568e-bf83-6f6d373481dd" name="Translate results">
+        </bpmn2:userTask>
+        <bpmn2:userTask id="tasks_15d03a56-4f3a-5c0a-eeca-71b26c770e03" name="Make decision" >
+        </bpmn2:userTask>
+        <bpmn2:userTask id="tasks_3cce143e-1118-df9d-8902-fbd1ce56666e" name="Understand business and industrial case">
+        </bpmn2:userTask>
+        <bpmn2:userTask id="tasks_80fe73b3-afce-ee10-de4a-9b463fca2805" name="Analysis of data available" >
+        </bpmn2:userTask>
+        <bpmn2:userTask id="tasks_9cb90488-84e5-07a2-6251-b8167b3d32c0" name="Translate to modeling workflows" >
+        </bpmn2:userTask>
+        <bpmn2:userTask id="tasks_21ecbcab-3cbe-8564-e0fb-f322ccd0c34f" name="Evaluate modeling execution">
+        </bpmn2:userTask>
+        <bpmn2:userTask id="tasks_651badfc-dba4-a165-f822-9fd39491daff" name="Define modeling execution">
+        </bpmn2:userTask>
+    </bpmn2:process>
+</bpmn2:definitions>

@@ -5,18 +5,37 @@ import re
 def flatten(xss):
     return [x for xs in xss for x in xs]
 
-def extract_process_info(processes):
+# def extract_process_info(processes):
     
-    """
-    Helper function to extract the node type and attributes of the process elements
+#     """
+#     Helper function to extract the node type and attributes of the process elements
 
-    """
+#     """
     
+#     node_type = []
+#     attributes = []
+#     for child in processes:
+#         node_type.append(re.sub(r'{.*}', '', child.tag))
+#         attributes.append(child.attrib)
+#     return node_type, attributes
+
+def extract_process_info(processes):
     node_type = []
     attributes = []
+
     for child in processes:
-        node_type.append(re.sub(r'{.*}', '', child.tag))
-        attributes.append(child.attrib)
+            # Append the node type after removing any namespace from the tag
+            node_type.append(re.sub(r'{.*}', '', child.tag))
+            
+            # Make a copy of child.attrib so we don't modify the original
+            child_attrib = child.attrib.copy()
+            
+            # If 'name' attribute is missing or None, set it to 'None'
+            if child_attrib.get('name') is None:
+                child_attrib['name'] = 'Unnamed'
+            
+            # Append the modified attributes dictionary to the list
+            attributes.append(child_attrib)
     return node_type, attributes
 
 
@@ -109,29 +128,29 @@ def get_edge_df(attributes: list, node_type: list):
     return df[df['node_type']=='sequenceFlow']
 
 
-def add_brackets(row):
+# def add_brackets(row):   # may not be necessary anymore
         
-        """
-        Helper function to add brackets to the source and target names based on their type. Needed for mermaid representation
+#         """
+#         Helper function to add brackets to the source and target names based on their type. Needed for mermaid representation
 
-        """
-        # For 'sourceRef' column (open/close symbols)
-        if re.search('Event', row['sourceType'], re.IGNORECASE):
-            row['sourceOpen'], row['sourceClose'] = '(( ', ' ))'
-        elif re.search('task', row['sourceType'], re.IGNORECASE):    
-            row['sourceOpen'], row['sourceClose'] = '[ ', ' ]'
-        elif re.search('Gateway', row['sourceType'], re.IGNORECASE):
-            row['sourceOpen'], row['sourceClose'] = '{ ', ' }'
+#         """
+#         # For 'sourceRef' column (open/close symbols)
+#         if re.search('Event', row['sourceType'], re.IGNORECASE):
+#             row['sourceOpen'], row['sourceClose'] = '((', '))'
+#         elif re.search('task', row['sourceType'], re.IGNORECASE):    
+#             row['sourceOpen'], row['sourceClose'] = '[', ']'
+#         elif re.search('Gateway', row['sourceType'], re.IGNORECASE):
+#             row['sourceOpen'], row['sourceClose'] = '{', '}'
 
-        # For 'targetRef' column (open/close symbols)
-        if re.search('Event', row['targetType'], re.IGNORECASE):
-            row['targetOpen'], row['targetClose'] = '(( ', ' ))'
-        elif re.search('task', row['targetType'], re.IGNORECASE):
-            row['targetOpen'], row['targetClose'] = '[ ', ' ]'
-        elif re.search('Gateway', row['targetType'], re.IGNORECASE):
-            row['targetOpen'], row['targetClose'] = '{ ', ' }'
+#         # For 'targetRef' column (open/close symbols)
+#         if re.search('Event', row['targetType'], re.IGNORECASE):
+#             row['targetOpen'], row['targetClose'] = '((', '))'
+#         elif re.search('task', row['targetType'], re.IGNORECASE):
+#             row['targetOpen'], row['targetClose'] = '[', ']'
+#         elif re.search('Gateway', row['targetType'], re.IGNORECASE):
+#             row['targetOpen'], row['targetClose'] = '{', '}'
 
-        return row
+#         return row
 
 
 def get_info_from_bpmn_file(file:str, ns='{http://www.omg.org/spec/BPMN/20100524/MODEL}'):
@@ -152,33 +171,4 @@ def get_info_from_bpmn_file(file:str, ns='{http://www.omg.org/spec/BPMN/20100524
     df = get_edge_df(attributes, node_type)
     return df, lane_info
 
-
-def write_mer_file(file):
-
-    df, lane_info = get_info_from_bpmn_file(file)
-    df = df.apply(add_brackets, axis=1)
-
-    output = file.replace('.bpmn', '.txt')
-    
-    with open(output, 'w') as f:  # Open the file for writing once
-        # Write connections between nodes from different lanes (outside of subgraphs)
-        for _, row in df.iterrows():
-            f.write(
-                f"{row['sourceRef']}{row['sourceOpen']}{row['sourceName']}{row['sourceClose']} "
-                f"--> | {row['name']} | "
-                f"{row['targetRef']}{row['targetOpen']}{row['targetName']}{row['targetClose']}\n"
-            )
-        if lane_info:
-        # Write subgraphs for each lane
-            for _, lane_data in lane_info.items():
-                # Write the subgraph label for the current lane
-                f.write(f"subgraph {lane_data['name']}\n")
-
-                # Write all nodes associated with the current lane
-                current_lane_nodes = set(lane_data['nodes'])
-                for node in current_lane_nodes:
-                    f.write(f"  {node}\n")  # Write each node in the subgraph
-
-                # Close the subgraph for the current lane
-                f.write("end\n\n")
 

@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
-             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
-             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
-             xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
-             xmlns:signavio="http://www.signavio.com"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             exporter="Signavio Process Editor, http://www.signavio.com"
-             exporterVersion="11.7.0-next+4b0b6f2e"
-             expressionLanguage="http://www.w3.org/TR/XPath"
-             id="sid-800ef296-07e6-450b-92da-0329afd48f50"
-             targetNamespace="http://www.signavio.com"
-             typeLanguage="http://www.w3.org/2001/XMLSchema"
-             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:signavio="http://www.signavio.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Signavio Process Editor, http://www.signavio.com" exporterVersion="11.7.0-next+4b0b6f2e" expressionLanguage="http://www.w3.org/TR/XPath" id="sid-800ef296-07e6-450b-92da-0329afd48f50" targetNamespace="http://www.signavio.com" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
    <collaboration id="sid-658ce2e2-d194-47ff-bb64-3becb6226f35">
       <extensionElements>
          <signavio:signavioDiagramMetaData metaKey="prozessreifegrad" metaValue=""/>
@@ -97,12 +85,7 @@ I understood this part of the description as follows: First, the customer browse
          <incoming>sid-1FCA9831-C034-420E-A5C4-AF76CF5ED0C2</incoming>
          <outgoing>sid-A8A50D2F-F0A2-4323-A588-B78D4CCD1EF9</outgoing>
       </userTask>
-      <userTask completionQuantity="1"
-                id="sid-EB8527B1-6FB9-49D6-BB15-9F587211D911"
-                implementation="##WebService"
-                isForCompensation="false"
-                name="Enter payment data"
-                startQuantity="1">
+      <userTask completionQuantity="1" id="sid-EB8527B1-6FB9-49D6-BB15-9F587211D911" implementation="##WebService" isForCompensation="false" name="Enter payment data" startQuantity="1">
          <documentation id="sid-9e01eaa4-45bc-4174-b2c8-18e3e7e356ea">To pay for his order, the customer needs to enter his payment data.</documentation>
          <extensionElements>
             <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc"/>
@@ -116,8 +99,7 @@ I understood this part of the description as follows: First, the customer browse
          <incoming>sid-02EBAA4E-2FE0-4286-9E4A-8411145904FF</incoming>
          <outgoing>sid-59796E66-27F9-45FB-85EE-63DEA78E89E1</outgoing>
       </userTask>
-      <intermediateCatchEvent id="sid-ADCAB114-E9B0-45CD-982F-B6427217D90D"
-                              name="Payment confirmation">
+      <intermediateCatchEvent id="sid-ADCAB114-E9B0-45CD-982F-B6427217D90D" name="Payment confirmation">
          <documentation id="sid-d3919d88-fdbf-4598-a8be-ba01cd6ff48b">The customer needs to wait for the payment confirmation of the bank.</documentation>
          <extensionElements>
             <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff"/>
