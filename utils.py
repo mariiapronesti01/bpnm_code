@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import networkx as nx
 
-from parser_with_lane import get_info_from_bpmn_file
+from BPMN_parser import get_info_from_bpmn_file
 
 
 def obtain_graph(edge_df: pd.DataFrame):
