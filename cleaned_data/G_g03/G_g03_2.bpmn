@@ -33,7 +33,7 @@
    <process id="sid-413A4664-DBE7-42CB-A894-E59556F7BD3E" isClosed="false" isExecutable="false" name="User" processType="None">
       <extensionElements/>
       <laneSet id="sid-17b77f12-808b-406c-a2ed-51ecf229c59f">
-         <lane id="sid-79218757-4B35-4874-86D7-F0AE6B89230F">
+         <lane id="sid-79218757-4B35-4874-86D7-F0AE6B89230F" name="User">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -523,7 +523,7 @@
    <process id="sid-899C01C3-9CEC-4686-9E3F-5B650B25E5BC" isClosed="false" isExecutable="false" name="Battle.net" processType="None">
       <extensionElements/>
       <laneSet id="sid-8d4c0ced-046b-44c1-b097-867fb5e73185">
-         <lane id="sid-969C7FE8-EC85-4BC5-934C-C1A65F0E3B6B">
+         <lane id="sid-969C7FE8-EC85-4BC5-934C-C1A65F0E3B6B" name="Battle.net">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

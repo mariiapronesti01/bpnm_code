@@ -123,6 +123,39 @@ def get_ShortestPathDistanceMatrix(shortest_path_G1: dict, shortest_path_G2: dic
     return shortest_path_distance
 
 
+def get_NodeEmbeddingDict(lane):
+    """
+    Function that, given a dictionary containing the lane information and having the lane id as key, 
+    returns a new dictionary in which the key is the node id and the value is the embedding of the name of the corresponding lane.
+    """
+    nodes_embeddings = {}
+    for entry in lane.values():
+        name_embedding = entry['name_embedding']
+        for node in entry['nodes']:
+            nodes_embeddings[node] = name_embedding
+    return nodes_embeddings
+
+
+def get_LaneSimilarityMatrix(G1, G2, lane1, lane2):
+    """
+    Function that computes the similarity between the lanes of two processes, by comparing the name of the name to which each nodes in each graph belongs.
+    """
+    node_emb_1 = get_NodeEmbeddingDict(lane1)
+    node_emb_2 = get_NodeEmbeddingDict(lane2)
+    
+    # Ensure the order of nodes from G1 and G2
+    nodes_1 = list(G1.nodes())
+    nodes_2 = list(G2.nodes())
+    
+    lane_similarity_matrix = np.zeros((len(nodes_1), len(nodes_2)))
+    
+    for i, node1 in enumerate(nodes_1):
+        for j, node2 in enumerate(nodes_2):
+            lane_similarity_matrix[i][j] = util.pytorch_cos_sim(node_emb_1[node1], node_emb_2[node2]).item()
+    
+    return lane_similarity_matrix
+
+
 def get_2ProcessesSimilarity(info_process1: dict, info_process2: dict, return_matrix=False):
     """
     Compute the similarity score between two processes.
@@ -140,16 +173,25 @@ def get_2ProcessesSimilarity(info_process1: dict, info_process2: dict, return_ma
     neighbor_similarity = get_NeighbourSimilarityMatrix(info_process1['G'], info_process2['G'], label_similarity, type_similarity)
     start_shortest_path_distance = get_ShortestPathDistanceMatrix(info_process1['start_shortest_path'], info_process2['start_shortest_path'])
     end_shortest_path_distance = get_ShortestPathDistanceMatrix(info_process1['end_shortest_path'], info_process2['end_shortest_path'])
-
+    
+    if info_process1['lane_info'] and info_process2['lane_info']:
+        lane_similarity_matrix = get_LaneSimilarityMatrix(info_process1['G'], info_process2['G'], info_process1['lane_info'], info_process2['lane_info'])
+    elif info_process1['lane_info'] or info_process2['lane_info']:  
+        lane_similarity_matrix = np.zeros((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
+    else:
+        lane_similarity_matrix = np.ones((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
     
     # Combine the similarities with the given weights
-    similarity_matrix = (
-        0.20 * label_similarity + 
-        0.20 * type_similarity + 
-        0.20 * start_shortest_path_distance + 
-        0.20 * end_shortest_path_distance +
-        0.20 * neighbor_similarity
-    )
+    # similarity_matrix = (
+    #     0.20 * label_similarity + 
+    #     0.20 * type_similarity + 
+    #     0.20 * start_shortest_path_distance + 
+    #     0.20 * end_shortest_path_distance +
+    #     0.20 * neighbor_similarity
+    # )
+    
+    # similarity matrix is the mean of all the similarity matrices
+    similarity_matrix = np.mean([label_similarity, type_similarity, start_shortest_path_distance, end_shortest_path_distance, neighbor_similarity, lane_similarity_matrix], axis=0)
 
     max_row_mean = np.max(similarity_matrix, axis=1).mean()
     max_col_mean = np.max(similarity_matrix, axis=0).mean()

@@ -165,6 +165,13 @@ def build_process_info_dict(all_files: list, model):
         shortest_path_start, shortest_path_end = find_shortest_path(graph)
         embeddings = {node : model.encode(graph.nodes[node]['name'], convert_to_tensor=True) for node in graph.nodes}
         degree = {node: (graph.in_degree(node), graph.out_degree(node)) for node in graph.nodes}
+        
+        #extract embeddings for lane names
+        for lane_id, lane in lane_info.items():
+            lane_name = lane['name']
+            lane_embedding = model.encode(lane_name, convert_to_tensor=True)
+            lane_info[lane_id]['name_embedding'] = lane_embedding
+            
         files_info[file] = {
             'edge_df': edge_df,   # Assign to 'edge_df' key
             'lane_info': lane_info, # Assign to 'lane_info' key 
