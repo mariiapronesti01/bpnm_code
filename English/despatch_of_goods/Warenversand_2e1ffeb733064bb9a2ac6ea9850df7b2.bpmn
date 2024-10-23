@@ -12,7 +12,7 @@
    <process id="sid-5DA49628-3E10-4F0E-851E-A58FD93B544D" isClosed="false" isExecutable="false" name="Dispatch of Goods&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-228b33d4-9eec-4bf3-9571-1836466a6c1b">
-         <lane id="sid-22024609-1388-4692-8E55-EDB06992DB85" name="Secretary&#10;">
+         <lane id="sid-22024609-1388-4692-8E55-EDB06992DB85" name="Secretary">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -26,7 +26,7 @@
             <flowNodeRef>sid-4D913B79-4664-4DAD-A809-41803DE7027A</flowNodeRef>
             <flowNodeRef>sid-3A6F9815-C4E4-48E7-90E8-3D8C04F23671</flowNodeRef>
          </lane>
-         <lane id="sid-B1F46D72-0360-4247-99D7-376E159C556F" name="Logistic Department Head&#10;">
+         <lane id="sid-B1F46D72-0360-4247-99D7-376E159C556F" name="Logistic Department Head">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

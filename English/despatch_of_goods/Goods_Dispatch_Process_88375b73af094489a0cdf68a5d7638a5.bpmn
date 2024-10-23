@@ -36,7 +36,7 @@
             </extensionElements>
             <flowNodeRef>sid-7989A3E2-3674-41CC-9E6F-58CF9CEAE508</flowNodeRef>
          </lane>
-         <lane id="sid-58FB5B18-F2F9-4A76-9FCD-FCE047BF9413" name="Logistics Department Head&#10;">
+         <lane id="sid-58FB5B18-F2F9-4A76-9FCD-FCE047BF9413" name="Logistics Department Head">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

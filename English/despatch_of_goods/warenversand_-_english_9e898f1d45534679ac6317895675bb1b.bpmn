@@ -203,7 +203,7 @@
    <process id="sid-BFDB1433-9F3F-44A9-A371-223CCA5130FE" isClosed="false" isExecutable="false" name="Spedition companies" processType="None">
       <extensionElements/>
       <laneSet id="sid-2b7a1965-2501-4135-a196-47dbc41e7a38">
-         <lane id="sid-7638FD89-E146-47E2-8414-8C84D56D403D">
+         <lane id="sid-7638FD89-E146-47E2-8414-8C84D56D403D" name="Spedition companies">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -213,7 +213,7 @@
    <process id="sid-F8CC81EE-2A48-4F4F-9A92-EC8955D39EBE" isClosed="false" isExecutable="false" name="Standard delivery company" processType="None">
       <extensionElements/>
       <laneSet id="sid-1b788aba-2d0f-4993-a0de-785115215840">
-         <lane id="sid-5C50CE21-4322-41B1-831A-5753276F2721">
+         <lane id="sid-5C50CE21-4322-41B1-831A-5753276F2721" name="Standard delivery company">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

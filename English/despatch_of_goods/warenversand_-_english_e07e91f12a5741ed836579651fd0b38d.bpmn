@@ -12,11 +12,6 @@
    <process id="sid-26CE2B8A-2579-4495-8867-BDFD5F7210C8" isClosed="false" isExecutable="false" name="Dispatch of Goods" processType="None">
       <extensionElements/>
       <laneSet id="sid-f5248585-54c9-4b9b-82ce-16e45caafe0f">
-         <lane id="sid-B71A4A34-28F0-4C13-BBF2-F0FC0B774023">
-            <extensionElements>
-               <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
-            </extensionElements>
-         </lane>
          <lane id="sid-2E6B24EC-7FA8-414B-BC25-4AD40CB394EB" name="Secretary">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>

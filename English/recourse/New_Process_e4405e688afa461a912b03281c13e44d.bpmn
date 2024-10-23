@@ -12,7 +12,7 @@
    <process id="sid-7084E286-BB28-466F-9661-DC5CEAB088EF" isClosed="false" isExecutable="false" processType="None">
       <extensionElements/>
       <laneSet id="sid-ef6b46ea-4464-46cb-8458-6dfbb763a63d">
-         <lane id="sid-D9A82A96-AD2D-482A-A0D8-F6BE6C0C1CF0" name="I">
+         <lane id="sid-D9A82A96-AD2D-482A-A0D8-F6BE6C0C1CF0" name="User">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

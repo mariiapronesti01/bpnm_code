@@ -12,7 +12,7 @@
    <process id="sid-D36A3F33-CDAA-46A8-AD47-5FB284462C18" isClosed="false" isExecutable="false" name="My Pool" processType="None">
       <extensionElements/>
       <laneSet id="sid-611dd083-817c-4c22-8e23-9556827c21e1">
-         <lane id="sid-59CBB379-7CD1-4D04-8991-40391CF30ED6" name="Secretary&#10;">
+         <lane id="sid-59CBB379-7CD1-4D04-8991-40391CF30ED6" name="Secretary">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

@@ -138,7 +138,7 @@
    <process id="sid-B30C61CB-7AC9-4CBC-8FAF-A0064B14062A" isClosed="false" isExecutable="false" name="Scoring (Protection Agency)" processType="None">
       <extensionElements/>
       <laneSet id="sid-ed8d5372-fecf-40ed-9ac9-2eaec28306ad">
-         <lane id="sid-80406D9D-F9DC-492F-A45A-87FDCFABD481">
+         <lane id="sid-80406D9D-F9DC-492F-A45A-87FDCFABD481" name="Protection agency">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

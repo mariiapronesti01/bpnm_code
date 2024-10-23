@@ -12,7 +12,7 @@
    <process id="sid-9A9B2ADC-AB07-40EF-AC84-BB925657E138" isClosed="false" isExecutable="false" name="Insurance Company" processType="None">
       <extensionElements/>
       <laneSet id="sid-26c34d58-ac61-4f3b-8b1c-bf02d82863b2">
-         <lane id="sid-4F284E57-2056-441A-8E6D-2D3EA387A8EC">
+         <lane id="sid-4F284E57-2056-441A-8E6D-2D3EA387A8EC" name="Insurance Clerk">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

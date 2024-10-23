@@ -137,7 +137,7 @@
    <process id="sid-F72612B7-41BB-4134-9951-DA6CCEB195B6" isClosed="false" isExecutable="false" name="Credit agency scoring" processType="None">
       <extensionElements/>
       <laneSet id="sid-4f59ed66-c83c-4eac-ace2-e6491a02b7cc">
-         <lane id="sid-1819F0D1-A78B-4197-815E-BD6F7E8BCCF6">
+         <lane id="sid-1819F0D1-A78B-4197-815E-BD6F7E8BCCF6" name="Credit agency scoring">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

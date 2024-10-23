@@ -12,7 +12,7 @@
    <process id="sid-54CBFB93-1A8B-4A49-9412-FEC6C686A534" isClosed="false" isExecutable="false" name="Shipping Process&#10;&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-df5d08ad-5445-494a-93b8-59e855e64385">
-         <lane id="sid-A6EAE4E8-1B9D-4012-90AB-CE0A36BDF77E">
+         <lane id="sid-A6EAE4E8-1B9D-4012-90AB-CE0A36BDF77E" name="Shipping Process">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

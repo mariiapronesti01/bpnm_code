@@ -13,7 +13,7 @@
    <process id="sid-2FC9C364-DABC-440E-B8CA-E88FDD9BA729" isClosed="false" isExecutable="false" name="dispatch" processType="None">
       <extensionElements/>
       <laneSet id="sid-023bf068-d26a-4fbd-8ae0-76aae5609683">
-         <lane id="sid-D0E101A8-428F-4A5A-938B-460EEF2B5A15" name="warehousemen&#10;">
+         <lane id="sid-D0E101A8-428F-4A5A-938B-460EEF2B5A15" name="warehousemen">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

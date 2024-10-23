@@ -52,7 +52,7 @@
    <process id="sid-5E342B2A-7131-4A31-878E-48A33CB8D83C" isClosed="false" isExecutable="false" name="Frontend (Bank)" processType="None">
       <extensionElements/>
       <laneSet id="sid-26f82be4-cf3e-4807-bf9b-07339ca01c52">
-         <lane id="sid-DB1974EC-B2E9-4C60-BAF1-72DED1703042">
+         <lane id="sid-DB1974EC-B2E9-4C60-BAF1-72DED1703042" name="Frontend (Bank)">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -62,7 +62,7 @@
    <process id="sid-2382D84A-39CC-4020-B52F-C4F8CA6DC89C" isClosed="false" isExecutable="false" name="Backend (Bank)" processType="None">
       <extensionElements/>
       <laneSet id="sid-4f41ff11-ed3c-4b67-907c-b8fcf7bae205">
-         <lane id="sid-8EF7410C-74CB-48A7-B6ED-D7865452A2E9">
+         <lane id="sid-8EF7410C-74CB-48A7-B6ED-D7865452A2E9" name="Backend (Bank)">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -148,7 +148,7 @@
    <process id="sid-AA3720EC-773D-4F82-8568-B11D136871B1" isClosed="false" isExecutable="false" name="Solvency Service (Schufa)" processType="None">
       <extensionElements/>
       <laneSet id="sid-27319e81-4c4e-4556-bd5a-073e4b493719">
-         <lane id="sid-2DD998CD-3713-4716-961D-10E122E8AC27">
+         <lane id="sid-2DD998CD-3713-4716-961D-10E122E8AC27" name="Solvency Service (Schufa)">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

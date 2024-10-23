@@ -29,7 +29,7 @@
             <flowNodeRef>sid-AC3AA870-75CC-477D-AE9D-8EF4FAE0C801</flowNodeRef>
             <flowNodeRef>sid-6A5E5F91-0701-4C8A-8576-A21B761CC038</flowNodeRef>
          </lane>
-         <lane id="sid-0CB4ECDC-E93F-4E9B-977B-8F8359BE0F81" name="Sekretariat / secretary">
+         <lane id="sid-0CB4ECDC-E93F-4E9B-977B-8F8359BE0F81" name="Secretary">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

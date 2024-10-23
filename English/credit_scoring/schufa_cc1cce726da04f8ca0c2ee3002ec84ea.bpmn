@@ -106,7 +106,7 @@
    <process id="sid-7998E897-446E-4557-8B37-C21D963D429B" isClosed="false" isExecutable="false" name="Credit protection agency" processType="None">
       <extensionElements/>
       <laneSet id="sid-189f6659-1a83-4438-9cc5-ce790d6decc1">
-         <lane id="sid-DD751F59-C3AD-4837-AD6F-2021E2F90995">
+         <lane id="sid-DD751F59-C3AD-4837-AD6F-2021E2F90995" name="Credit protection agency">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

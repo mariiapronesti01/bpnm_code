@@ -12,7 +12,7 @@
    <process id="sid-D8010917-0AE6-4155-9010-D92491B743F2" isClosed="false" isExecutable="false" processType="None">
       <extensionElements/>
       <laneSet id="sid-ed571b9a-d6ec-4484-a2a4-7c5100e26bf5">
-         <lane id="sid-87594D7E-EE54-4304-9506-475867F2B53C" name="Sekretariat">
+         <lane id="sid-87594D7E-EE54-4304-9506-475867F2B53C" name="Secretary">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -23,7 +23,7 @@
             <flowNodeRef>sid-C1C7236C-6193-449D-915C-8C474AF00F35</flowNodeRef>
             <flowNodeRef>sid-6665780F-A716-443E-88E9-E9E43DE4E534</flowNodeRef>
          </lane>
-         <lane id="sid-97EF8165-5582-41C0-A184-3C96A552C590" name="Logistikleiter">
+         <lane id="sid-97EF8165-5582-41C0-A184-3C96A552C590" name="Logistics">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -31,7 +31,7 @@
             <flowNodeRef>sid-23C890CA-97D1-451B-AD64-85586A5328C2</flowNodeRef>
             <flowNodeRef>sid-ED8E16F5-49F8-4F0E-A1D7-261E8FC4154D</flowNodeRef>
          </lane>
-         <lane id="sid-9A2B3B77-BFF8-48E2-9FA9-C2E846086596" name="Lagerarbeiter">
+         <lane id="sid-9A2B3B77-BFF8-48E2-9FA9-C2E846086596" name="Warehousemen">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

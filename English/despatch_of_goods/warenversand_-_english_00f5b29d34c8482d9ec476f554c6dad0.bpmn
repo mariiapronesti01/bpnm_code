@@ -12,7 +12,7 @@
    <process id="sid-AA94D2F6-6007-4A28-BE01-D1BC07E0842C" isClosed="false" isExecutable="false" name="Hardware Company" processType="None">
       <extensionElements/>
       <laneSet id="sid-adb0ebdd-31bd-45f5-8289-4f730c6628fc">
-         <lane id="sid-300D8C07-6CDC-4304-BD47-65BD3E83307C" name="Secretary&#10;">
+         <lane id="sid-300D8C07-6CDC-4304-BD47-65BD3E83307C" name="Secretary">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

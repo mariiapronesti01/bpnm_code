@@ -27,7 +27,7 @@
    <process id="sid-E39BA7DE-A279-49D2-A6E7-604D120DBE45" isClosed="false" isExecutable="false" name="Banking Scoring System" processType="None">
       <extensionElements/>
       <laneSet id="sid-1a1a9b33-c0c3-423b-b9a9-5eb00d78efcb">
-         <lane id="sid-D982489A-AB0A-4CBB-865E-AF3B056098EB">
+         <lane id="sid-D982489A-AB0A-4CBB-865E-AF3B056098EB" name="Banking Scoring System">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -74,7 +74,7 @@
    <process id="sid-AA27D21A-9BBF-48F2-ACBE-8AF6A1E8FC53" isClosed="false" isExecutable="false" name="Credit Agency Scoring" processType="None">
       <extensionElements/>
       <laneSet id="sid-5a7a015f-6d5a-4381-898b-a31f6eca3692">
-         <lane id="sid-1E2AA92C-7815-4727-B1F4-B6AE6B73F1B9">
+         <lane id="sid-1E2AA92C-7815-4727-B1F4-B6AE6B73F1B9" name="Credit Agency Scoring">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

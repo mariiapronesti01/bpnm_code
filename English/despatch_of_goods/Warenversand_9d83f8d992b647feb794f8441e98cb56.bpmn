@@ -22,7 +22,7 @@
    <process id="sid-E568A9C9-4E5B-441D-95D9-E6DE2786C0DB" isClosed="false" isExecutable="false" name="Logistics" processType="None">
       <extensionElements/>
       <laneSet id="sid-a7db52d9-0ed1-4071-af1d-37e8e8679b52">
-         <lane id="sid-BDCA90F2-824E-4101-A5BE-FFEB043BA274">
+         <lane id="sid-BDCA90F2-824E-4101-A5BE-FFEB043BA274" name="Logistics">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -43,7 +43,7 @@
    <process id="sid-91612997-8AB9-41F0-AAC0-19EA91BCDB51" isClosed="false" isExecutable="false" name="Secretary" processType="None">
       <extensionElements/>
       <laneSet id="sid-801dd52f-660f-4cbf-950b-910ee675eff4">
-         <lane id="sid-B3237548-10E3-4A9C-B635-23B69DD6A37E">
+         <lane id="sid-B3237548-10E3-4A9C-B635-23B69DD6A37E" name="Secretary">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
@@ -151,7 +151,7 @@
    <process id="sid-E5DE5EF9-7CF1-4C4E-BDD3-76B65575DA48" isClosed="false" isExecutable="false" name="Warehouse" processType="None">
       <extensionElements/>
       <laneSet id="sid-7348b771-1f3c-4830-a283-8f96d6a7fee1">
-         <lane id="sid-68DEE409-E955-4E03-9D5F-9BAB5538BF9D">
+         <lane id="sid-68DEE409-E955-4E03-9D5F-9BAB5538BF9D" name="Warehouse">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>

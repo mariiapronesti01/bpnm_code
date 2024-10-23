@@ -33,19 +33,19 @@
             <flowNodeRef>sid-B8D4ED6D-7239-4F90-A649-94B792CBC22F</flowNodeRef>
             <flowNodeRef>sid-9C56AF18-554D-4478-84AC-389DA21ED66E</flowNodeRef>
          </lane>
-         <lane id="sid-33E23B1C-02C3-4D56-8393-A122E90A1B51" name="Comp 1">
+         <lane id="sid-33E23B1C-02C3-4D56-8393-A122E90A1B51" name="Company 1">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
             <flowNodeRef>sid-036BA9E7-E097-4453-A8DE-A04FDFA38E80</flowNodeRef>
          </lane>
-         <lane id="sid-E9C96939-9FB0-4497-A592-361823AB9649" name="Comp 2">
+         <lane id="sid-E9C96939-9FB0-4497-A592-361823AB9649" name="Company 2">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
             <flowNodeRef>sid-493D05C7-648E-4E8C-834C-4E9795B7194F</flowNodeRef>
          </lane>
-         <lane id="sid-E10CCB1E-33DA-4A10-A8F2-1AE9E382E92E" name="Comp 3">
+         <lane id="sid-E10CCB1E-33DA-4A10-A8F2-1AE9E382E92E" name="Company 3">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
             </extensionElements>
