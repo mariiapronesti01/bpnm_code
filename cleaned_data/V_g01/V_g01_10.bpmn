@@ -48,7 +48,7 @@
    <process id="sid-4050920C-A7B2-47E2-9C0A-122659C5837F" isClosed="false" isExecutable="false" name="Customer" processType="None">
       <extensionElements/>
       <laneSet id="sid-db4a5448-e454-4dd5-ab8d-27f4715c4312">
-         <lane id="sid-A7F7847D-5836-443D-8266-9CB89D263E42">
+         <lane id="sid-A7F7847D-5836-443D-8266-9CB89D263E42" name="Customer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -151,7 +151,7 @@
    <process id="sid-AC8DBDFB-47CA-40F5-A3FB-4BDECFD73CE2" isClosed="false" isExecutable="false" name="Burger robot" processType="None">
       <extensionElements/>
       <laneSet id="sid-9c0d538a-0f9f-4b56-9d9c-57dacf204fd8">
-         <lane id="sid-74D23044-35C7-4350-8B4D-FCBE9BF3A977">
+         <lane id="sid-74D23044-35C7-4350-8B4D-FCBE9BF3A977" name="Burger robot">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

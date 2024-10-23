@@ -70,7 +70,7 @@
    <process id="sid-E65FD31B-9C19-4E13-8E94-D520CECF718E" isClosed="false" isExecutable="false" name="End User" processType="None">
       <extensionElements/>
       <laneSet id="sid-badba0dc-808b-41c0-acf6-892d7aa1121c">
-         <lane id="sid-96A0E650-62CE-4C08-8C17-9CCC4119E530">
+         <lane id="sid-96A0E650-62CE-4C08-8C17-9CCC4119E530" name="End User">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -572,7 +572,7 @@
    <process id="sid-658110D8-65C4-4792-B024-AA43F2420848" isClosed="false" isExecutable="false" name="Battle.net system" processType="None">
       <extensionElements/>
       <laneSet id="sid-7083b2d8-74e0-4979-b2bf-b1d16252b182">
-         <lane id="sid-259951AD-0682-40E6-AB3D-3FE6971E3514">
+         <lane id="sid-259951AD-0682-40E6-AB3D-3FE6971E3514" name="Battle.net system">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -689,7 +689,7 @@
    <process id="sid-87562D76-F325-4278-B46B-5825037067F0" isClosed="false" isExecutable="false" name="WoW system" processType="None">
       <extensionElements/>
       <laneSet id="sid-e1412fc7-92fc-452b-a7f7-5918905487b7">
-         <lane id="sid-301A7E5E-A7DA-4AE0-BF8F-BCDBF74E13DE">
+         <lane id="sid-301A7E5E-A7DA-4AE0-BF8F-BCDBF74E13DE" name="WoW system">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -818,7 +818,7 @@
    <process id="sid-755D9A22-A88F-435E-BB3E-814315F2FDCD" isClosed="false" isExecutable="false" name="Payment system" processType="None">
       <extensionElements/>
       <laneSet id="sid-8c5c2db6-acdc-402d-8d88-74d2e36a5865">
-         <lane id="sid-1CF9808E-13C4-4A7A-AC63-1D06AF34F3F0">
+         <lane id="sid-1CF9808E-13C4-4A7A-AC63-1D06AF34F3F0" name="Payment system">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

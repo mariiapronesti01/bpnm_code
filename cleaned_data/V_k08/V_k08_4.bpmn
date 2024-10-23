@@ -387,7 +387,7 @@
    <process id="sid-25A33EE2-2C0F-466E-93A9-1813290D27B9" isClosed="false" isExecutable="false" name="Customer" processType="None">
       <extensionElements/>
       <laneSet id="sid-8b1f8d0a-2558-4040-aa00-b6e07619b1f4">
-         <lane id="sid-07D5BAC5-2449-470A-A4C9-DE4DAA469A20">
+         <lane id="sid-07D5BAC5-2449-470A-A4C9-DE4DAA469A20" name="Customer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

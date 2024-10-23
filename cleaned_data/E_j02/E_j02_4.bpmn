@@ -48,7 +48,7 @@
    <process id="sid-36D39FD9-17C0-4260-9D41-9FF851DD2CE4" isClosed="false" isExecutable="false" name="Maternity leave application" processType="None">
       <extensionElements/>
       <laneSet id="sid-5844fd13-c138-4d9e-b400-4dd7f7152bc6">
-         <lane id="sid-42CE8316-8920-4384-8A15-B9B0FC1281CC">
+         <lane id="sid-42CE8316-8920-4384-8A15-B9B0FC1281CC" name="Maternity leave application">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -593,7 +593,7 @@
    <process id="sid-0B186D57-1604-489C-BE96-DE3534583E6F" isClosed="false" isExecutable="false" name="Company" processType="None">
       <extensionElements/>
       <laneSet id="sid-cfe2a17f-07ac-4070-bde5-970429d644a3">
-         <lane id="sid-19645718-54B3-43AC-A6DE-89B0658D5722" name="CEO">
+         <lane id="sid-19645718-54B3-43AC-A6DE-89B0658D5722" name="Company">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

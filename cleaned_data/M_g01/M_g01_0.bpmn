@@ -49,7 +49,7 @@
    <process id="sid-5A4970F5-B03A-474B-B026-DF15335D4A10" isClosed="false" isExecutable="false" name="3D Printer" processType="None">
       <extensionElements/>
       <laneSet id="sid-57e14148-a9ed-4b2f-80fe-c564fff6d6ec">
-         <lane id="sid-9B949CA3-6245-4E91-BAC6-7C46B5E3A1DD">
+         <lane id="sid-9B949CA3-6245-4E91-BAC6-7C46B5E3A1DD" name="3D Printer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -182,7 +182,7 @@
    <process id="sid-64A0D251-2ACE-429F-92B8-1D29CF2ABC7B" isClosed="false" isExecutable="false" name="Artist" processType="None">
       <extensionElements/>
       <laneSet id="sid-13a2c33d-1f43-4e54-9f8b-60220062d70e">
-         <lane id="sid-D52A77E5-ABE2-48BB-B5A2-0B05E421C82B">
+         <lane id="sid-D52A77E5-ABE2-48BB-B5A2-0B05E421C82B" name="Artist">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -273,7 +273,7 @@
    <process id="sid-40C0F289-66F3-4AC7-83BC-F7C50DB1CA0B" isClosed="false" isExecutable="false" name="Manufacturer&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-0c251a9a-4546-4359-8aa1-dbd0871cbe78">
-         <lane id="sid-B9D27EE0-475A-4514-84D9-175637507D08">
+         <lane id="sid-B9D27EE0-475A-4514-84D9-175637507D08" name="Manufacturer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

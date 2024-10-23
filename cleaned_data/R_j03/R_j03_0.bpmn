@@ -48,7 +48,7 @@
    <process id="sid-608BD0BF-AE90-4F15-886D-F5F2E0393C0A" isClosed="false" isExecutable="false" name="Customer" processType="None">
       <extensionElements/>
       <laneSet id="sid-79f317ce-7b2f-4575-8e4e-ae7a097a8c00">
-         <lane id="sid-62A22A60-A63C-4F50-A0B7-2AD60BD683CB">
+         <lane id="sid-62A22A60-A63C-4F50-A0B7-2AD60BD683CB" name="Customer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -177,7 +177,7 @@
    <process id="sid-D9D9F420-1F29-4C0A-9711-B5175DC5DED9" isClosed="false" isExecutable="false" name="Fridge Company" processType="None">
       <extensionElements/>
       <laneSet id="sid-8a05232a-a7b3-4d8d-bd18-8b614d4772f9">
-         <lane id="sid-7CF8DDF1-C383-41A9-BA9C-6305A2243D52" name="Local Service Facility">
+         <lane id="sid-7CF8DDF1-C383-41A9-BA9C-6305A2243D52" name="Local Service Facility of the Fridge Company">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

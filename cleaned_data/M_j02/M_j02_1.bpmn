@@ -65,7 +65,7 @@
    <process id="sid-6B28C5C0-5F39-4E33-8811-7CF43A722364" isClosed="false" isExecutable="false" name="Customer" processType="None">
       <extensionElements/>
       <laneSet id="sid-a975597f-cae9-42a6-996e-435847047461">
-         <lane id="sid-0D8A63AC-A6F0-4C0F-AE66-5175D1038418">
+         <lane id="sid-0D8A63AC-A6F0-4C0F-AE66-5175D1038418" name="Customer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -76,7 +76,7 @@
    <process id="sid-56551CF0-4736-4295-BD12-F63C8E4C4695" isClosed="false" isExecutable="false" name="Team" processType="None">
       <extensionElements/>
       <laneSet id="sid-d2ed06ec-3533-40f2-bd11-7d5d89ee7a2f">
-         <lane id="sid-EED4B3C7-4B12-40ED-999A-2CF690081D2B">
+         <lane id="sid-EED4B3C7-4B12-40ED-999A-2CF690081D2B" name="Team">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -87,7 +87,7 @@
    <process id="sid-68B9F566-FDC7-4561-BCA3-759C9D8A8677" isClosed="false" isExecutable="false" name="Manufacturer" processType="None">
       <extensionElements/>
       <laneSet id="sid-72137613-537f-4619-99a3-d2d86e4993b9">
-         <lane id="sid-482A9266-61C1-4840-83FA-FF4F778FC16D">
+         <lane id="sid-482A9266-61C1-4840-83FA-FF4F778FC16D" name="Manufacturer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -540,7 +540,7 @@
    <process id="sid-12E7E1C3-84A2-4AE3-BF3D-F69ADB8021FC" isClosed="false" isExecutable="false" name="Test Pilot" processType="None">
       <extensionElements/>
       <laneSet id="sid-7502a9fe-3a0d-4f6e-8bc0-1875993b6d5c">
-         <lane id="sid-386E5B2C-84EC-4C63-B4B7-CA0887629329">
+         <lane id="sid-386E5B2C-84EC-4C63-B4B7-CA0887629329" name="Test Pilot">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

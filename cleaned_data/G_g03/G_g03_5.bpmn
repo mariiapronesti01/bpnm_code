@@ -17,7 +17,7 @@
    <process id="sid-B6246300-82D5-4EBD-B2F4-62D3044969A2" isClosed="false" isExecutable="false" name="Blizzard Online Charachter&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-e5b6ccf5-db5a-4c8b-97f2-be2494d33ac2">
-         <lane id="sid-1F1D5663-38DF-4F61-AF17-B2867FC7C295">
+         <lane id="sid-1F1D5663-38DF-4F61-AF17-B2867FC7C295" name="Blizzard Online Charachter">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

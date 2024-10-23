@@ -64,7 +64,7 @@
    <process id="sid-CF6DE359-252C-4E83-AFDE-0D060217F992" isClosed="false" isExecutable="false" name="Artist" processType="None">
       <extensionElements/>
       <laneSet id="sid-ad0caa4a-2965-4914-8786-b7fa96d9fe63">
-         <lane id="sid-3D853529-AB88-4566-B9A3-9868E22ADBE7">
+         <lane id="sid-3D853529-AB88-4566-B9A3-9868E22ADBE7" name="Artist">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -205,7 +205,7 @@
    <process id="sid-2227B6C0-AF35-49D3-94D3-5A5BDA52C0EB" isClosed="false" isExecutable="false" name="Manufacturer" processType="None">
       <extensionElements/>
       <laneSet id="sid-e5380967-2bf9-4a7d-8a04-0d8ca79853be">
-         <lane id="sid-C20FEA1D-A029-45FE-AC53-AFF81D1BEF73" name="create sketches">
+         <lane id="sid-C20FEA1D-A029-45FE-AC53-AFF81D1BEF73" name="Manufacturer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -651,7 +651,7 @@
    <process id="sid-421B68F2-7268-46EE-BA98-CC765A80049F" isClosed="false" isExecutable="false" name="Printer" processType="None">
       <extensionElements/>
       <laneSet id="sid-6be377d8-88cb-4de9-bdb2-da206c02047e">
-         <lane id="sid-8D206190-C52E-48B8-B850-AFA2454462B7">
+         <lane id="sid-8D206190-C52E-48B8-B850-AFA2454462B7" name="Printer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

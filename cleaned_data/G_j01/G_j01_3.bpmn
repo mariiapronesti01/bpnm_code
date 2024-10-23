@@ -17,7 +17,7 @@
    <process id="sid-281A3BB3-B536-4EB0-A45D-139689FD6743" isClosed="false" isExecutable="false" name="Farming Bot" processType="None">
       <extensionElements/>
       <laneSet id="sid-fa112854-37e5-4c1b-b05b-d1c5b7f29050">
-         <lane id="sid-02EB9EA9-F233-448D-90FD-457933AC17F3">
+         <lane id="sid-02EB9EA9-F233-448D-90FD-457933AC17F3" name="Farming Bot">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

@@ -48,7 +48,7 @@
    <process id="sid-E81CE91B-3B63-4204-AD9C-3B5951666DA5" isClosed="false" isExecutable="false" name="Robot" processType="None">
       <extensionElements/>
       <laneSet id="sid-168d7ef8-cb35-4a2b-ac39-021a899f26c8">
-         <lane id="sid-7230DB60-05A8-46D7-A9DE-E4B2169118D6">
+         <lane id="sid-7230DB60-05A8-46D7-A9DE-E4B2169118D6" name="Robot">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -512,7 +512,7 @@
    <process id="sid-77AC047B-BA55-4EB5-8BB7-47525D612BCD" isClosed="false" isExecutable="false" name="Customer" processType="None">
       <extensionElements/>
       <laneSet id="sid-88012353-73d8-4c33-aa55-9ea1f20f26b1">
-         <lane id="sid-8A4AC258-D077-464A-A5E8-B1D519C1036D">
+         <lane id="sid-8A4AC258-D077-464A-A5E8-B1D519C1036D" name="Customer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

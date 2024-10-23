@@ -17,7 +17,7 @@
    <process id="sid-09F66BD4-9683-4E2D-8454-191B2446E3A6" isClosed="false" isExecutable="false" name="Farming Bot Game&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-5b334003-1299-4b9f-a5b1-02ffbff06571">
-         <lane id="sid-A80F308B-F360-469F-B5F8-39FFA3981598">
+         <lane id="sid-A80F308B-F360-469F-B5F8-39FFA3981598" name="Farming Bot Game">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

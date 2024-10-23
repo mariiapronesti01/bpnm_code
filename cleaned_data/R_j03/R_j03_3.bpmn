@@ -38,7 +38,7 @@
    <process id="sid-7E12098C-6860-4F6A-9E1B-8E78072F9FCA" isClosed="false" isExecutable="false" name="End User" processType="None">
       <extensionElements/>
       <laneSet id="sid-10d3c8fb-3883-4d8f-b289-2a3a8ddc2a85">
-         <lane id="sid-9AA32692-AE52-4A6D-9A1A-35D95FBA8B3C">
+         <lane id="sid-9AA32692-AE52-4A6D-9A1A-35D95FBA8B3C" name="End User">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -299,7 +299,7 @@
    <process id="sid-23B1AE7D-6B2B-4517-B332-4AC5C8F14A94" isClosed="false" isExecutable="false" name="Fridge Service Center" processType="None">
       <extensionElements/>
       <laneSet id="sid-972b801e-b946-442b-b039-fff5e49cb560">
-         <lane id="sid-905E3B37-402C-4070-B8C4-A8CCBD7526EC" name="Central Agency">
+         <lane id="sid-905E3B37-402C-4070-B8C4-A8CCBD7526EC" name="Central Agency of the Fridge company">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -307,7 +307,7 @@
             <flowNodeRef>sid-84F1301B-9626-477C-A2EB-64EB502AF197</flowNodeRef>
             <flowNodeRef>sid-180C36F4-31C5-4CC7-AFB4-F7794946CAAA</flowNodeRef>
          </lane>
-         <lane id="sid-B53525D6-76C5-4155-BD46-1EA73FF22241" name="Local Service Facility">
+         <lane id="sid-B53525D6-76C5-4155-BD46-1EA73FF22241" name="Local Service Facility of the Fridge company">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

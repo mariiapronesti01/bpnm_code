@@ -57,7 +57,7 @@
    <process id="sid-F6B29518-C124-4B9F-88CD-12CB08B8B076" isClosed="false" isExecutable="false" name="Procurement" processType="None">
       <extensionElements/>
       <laneSet id="sid-9c58959c-6590-41c0-9770-26ef53530e0f">
-         <lane id="sid-A2AE3111-0A92-484C-BB84-9EF5BA8A5010">
+         <lane id="sid-A2AE3111-0A92-484C-BB84-9EF5BA8A5010" name="Procurement">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

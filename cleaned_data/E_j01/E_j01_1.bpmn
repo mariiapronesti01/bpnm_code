@@ -58,7 +58,7 @@
    <process id="sid-0441FC95-A60C-4369-95FD-266DAFBBBC0C" isClosed="false" isExecutable="false" name="Applicant" processType="None">
       <extensionElements/>
       <laneSet id="sid-6589043a-2fcb-41b7-8fe4-e6b7e4843127">
-         <lane id="sid-A3AE161D-BEFF-4A76-85DD-2AB1916D9DA8">
+         <lane id="sid-A3AE161D-BEFF-4A76-85DD-2AB1916D9DA8" name="Applicant">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -288,7 +288,7 @@
    <process id="sid-5D8F854D-0145-4383-A1EE-ABDF8AD20DE7" isClosed="false" isExecutable="false" name="E-Government" processType="None">
       <extensionElements/>
       <laneSet id="sid-a88487fa-d2a7-4190-81a2-ba1d57721006">
-         <lane id="sid-7DBFB502-1DAC-412F-AE06-50552885FC75">
+         <lane id="sid-7DBFB502-1DAC-412F-AE06-50552885FC75" name="E-Government">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

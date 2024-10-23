@@ -17,7 +17,7 @@
    <process id="sid-3D5824F2-57D0-4F0A-B66D-D6397873DBD1" isClosed="false" isExecutable="false" name="Storage Management" processType="None">
       <extensionElements/>
       <laneSet id="sid-519c2308-dc8f-4252-b611-497e30103dd2">
-         <lane id="sid-43E3A9D2-A28F-45EC-957F-C8DD1F436714">
+         <lane id="sid-43E3A9D2-A28F-45EC-957F-C8DD1F436714" name="Storage Management system">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

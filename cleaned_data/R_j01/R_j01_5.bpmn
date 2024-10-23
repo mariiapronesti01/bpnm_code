@@ -33,7 +33,7 @@
    <process id="sid-002B64ED-96B6-4E34-B721-6FE776EA85C3" isClosed="false" isExecutable="false" name="Machine" processType="None">
       <extensionElements/>
       <laneSet id="sid-a9424a16-e525-4064-a5b0-7bbb28380562">
-         <lane id="sid-CDA64372-9074-4B46-999D-67686714266C">
+         <lane id="sid-CDA64372-9074-4B46-999D-67686714266C" name="Machine">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -273,7 +273,7 @@
    <process id="sid-C474C543-BF94-48DA-8A1F-063CA3F87806" isClosed="false" isExecutable="false" name="Engineer" processType="None">
       <extensionElements/>
       <laneSet id="sid-7341fb03-82a1-4515-bbb4-a807cc473cbb">
-         <lane id="sid-E083F6DA-67B4-4245-AB22-982BDA3BDFC9">
+         <lane id="sid-E083F6DA-67B4-4245-AB22-982BDA3BDFC9" name="Engineer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

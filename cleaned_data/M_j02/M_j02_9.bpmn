@@ -64,7 +64,7 @@
    <process id="sid-0A100124-661B-4F1F-80AA-7EC54D2BDD2B" isClosed="false" isExecutable="false" name="Airplane company&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-84e2accf-d3b1-4957-9410-63d868db218b">
-         <lane id="sid-349D731B-0661-4DB9-A42A-C7F0A43EEF12" name="Headquarter (Vienna)&#10;">
+         <lane id="sid-349D731B-0661-4DB9-A42A-C7F0A43EEF12" name="Airplane company">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -279,7 +279,7 @@
    <process id="sid-73CF047C-B96F-401B-9836-2C43484EED31" isClosed="false" isExecutable="false" name="Customer&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-6ff8882b-f4d8-4819-b8eb-d25a805af124">
-         <lane id="sid-DE9D6750-9420-4D97-BFA4-899F3B7CD622">
+         <lane id="sid-DE9D6750-9420-4D97-BFA4-899F3B7CD622" name="Customer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

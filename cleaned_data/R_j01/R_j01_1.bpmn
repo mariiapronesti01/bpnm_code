@@ -10,7 +10,7 @@
    <process id="sid-4575B920-E7C6-4D17-85FF-B444536436DC" isClosed="false" isExecutable="false" name="OEE Calculation" processType="None">
       <extensionElements/>
       <laneSet id="sid-4b7bf166-f254-419a-9fce-6b1fb4914b48">
-         <lane id="sid-F5A1AA46-155D-456E-9A4B-49FDC74EB52E">
+         <lane id="sid-F5A1AA46-155D-456E-9A4B-49FDC74EB52E" name="OEE Calculation">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

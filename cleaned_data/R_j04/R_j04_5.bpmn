@@ -84,7 +84,7 @@
    <process id="sid-9A511C57-56CA-408C-AC42-8788C5E03BA9" isClosed="false" isExecutable="false" name="Police App" processType="None">
       <extensionElements/>
       <laneSet id="sid-8bceae45-8c26-4d5c-ba3f-43327abbe7d7">
-         <lane id="sid-48B4115D-2D2F-410F-8A8D-3E6733B83497">
+         <lane id="sid-48B4115D-2D2F-410F-8A8D-3E6733B83497" name="Police App">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -422,7 +422,7 @@
    <process id="sid-808FB04B-05EB-4F84-BE82-59B458138100" isClosed="false" isExecutable="false" name="Mechanic" processType="None">
       <extensionElements/>
       <laneSet id="sid-f0afb6a1-3dc6-4307-ae2e-9308f579d557">
-         <lane id="sid-29C18A10-DB51-4785-AF4F-CB7FBD661D70">
+         <lane id="sid-29C18A10-DB51-4785-AF4F-CB7FBD661D70" name="Mechanic">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -663,7 +663,7 @@
    <process id="sid-95330E31-34EF-475B-BF14-B7EF957F5A1E" isClosed="false" isExecutable="false" name="Car owner" processType="None">
       <extensionElements/>
       <laneSet id="sid-8503625f-1fd5-40e1-ba50-3fa4c84578c4">
-         <lane id="sid-FDB11D9A-F817-4B36-9BF1-80FF89670434">
+         <lane id="sid-FDB11D9A-F817-4B36-9BF1-80FF89670434" name="Car owner">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

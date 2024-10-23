@@ -17,7 +17,7 @@
    <process id="sid-0504F3D8-B729-46C4-8E8E-3D78D25CE376" isClosed="false" isExecutable="false" name="Robotic Burger Seller&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-2e8fe92a-980e-4d3f-b886-ec2797be0421">
-         <lane id="sid-EC3193C6-F9A7-438A-821B-85FE95C5048F">
+         <lane id="sid-EC3193C6-F9A7-438A-821B-85FE95C5048F" name="Robot">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

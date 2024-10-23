@@ -39,7 +39,7 @@
    <process id="sid-B0F119D2-EBC8-4673-A5A2-6919165DB4A1" isClosed="false" isExecutable="false" name="Trainee" processType="None">
       <extensionElements/>
       <laneSet id="sid-7707e805-14a2-41db-8c5a-4621d692632d">
-         <lane id="sid-CFBE46FD-7962-4EF5-80B7-12055999F3C3">
+         <lane id="sid-CFBE46FD-7962-4EF5-80B7-12055999F3C3" name="Trainee">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -650,7 +650,7 @@
    <process id="sid-A27C47EB-9D20-4880-AFF6-79CE45567038" isClosed="false" isExecutable="false" name="Company" processType="None">
       <extensionElements/>
       <laneSet id="sid-45aefff7-287e-4461-b9bf-d3a494b84877">
-         <lane id="sid-14BF3291-B82D-46B2-87DD-722AA159B91A">
+         <lane id="sid-14BF3291-B82D-46B2-87DD-722AA159B91A" name="Company">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -661,7 +661,7 @@
    <process id="sid-ADCB2223-ECBD-4A75-AB82-7276274FC619" isClosed="false" isExecutable="false" name="E-Government Website" processType="None">
       <extensionElements/>
       <laneSet id="sid-6c70086b-3cfc-4ea1-85f5-bb7af792fc3c">
-         <lane id="sid-73D1037B-68A5-4563-897B-F12E9F4EB9A8">
+         <lane id="sid-73D1037B-68A5-4563-897B-F12E9F4EB9A8" name="E-Government Website">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

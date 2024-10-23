@@ -63,7 +63,7 @@
    <process id="sid-E6CFE65D-C0D3-401E-9B48-F0E85CC952D7" isClosed="false" isExecutable="false" name="Production Chainsaw GmbH&#10;&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-8583a339-afbc-4e23-a190-7701f801156a">
-         <lane id="sid-ED86B749-CBE6-4870-BCE4-164082C99404">
+         <lane id="sid-ED86B749-CBE6-4870-BCE4-164082C99404" name="Production Chainsaw">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

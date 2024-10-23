@@ -33,7 +33,7 @@
    <process id="sid-0DEFA27E-958C-4A87-8CFE-37F6FB458C37" isClosed="false" isExecutable="false" name="Machine " processType="None">
       <extensionElements/>
       <laneSet id="sid-dcf87e9b-6e9f-4726-826e-ce199f71c41e">
-         <lane id="sid-47FE77BE-2A64-4EE7-8221-8D6E8B33CA80">
+         <lane id="sid-47FE77BE-2A64-4EE7-8221-8D6E8B33CA80" name="Machine">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -268,7 +268,7 @@
    <process id="sid-CA03DD5D-D7A1-4248-9F04-54ACF55AE95B" isClosed="false" isExecutable="false" name="Egineer&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-3ca731b5-bfb4-465b-8081-0f89ddf25b57">
-         <lane id="sid-4B176272-6D6E-4D09-830D-7C0346441376">
+         <lane id="sid-4B176272-6D6E-4D09-830D-7C0346441376" name="Egineer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

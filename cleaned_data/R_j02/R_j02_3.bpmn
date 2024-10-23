@@ -48,7 +48,7 @@
    <process id="sid-1BA88227-FA21-4D2E-B8E9-9ED02E9B3853" isClosed="false" isExecutable="false" name="Inspector" processType="None">
       <extensionElements/>
       <laneSet id="sid-9ac0f802-b505-4b58-8ba0-105be37d8e12">
-         <lane id="sid-6EC18E17-9267-425B-AD15-F2180C6F002C">
+         <lane id="sid-6EC18E17-9267-425B-AD15-F2180C6F002C" name="Inspector">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -196,7 +196,7 @@
    <process id="sid-51E91A94-C31F-4DD2-846E-482B8B4DFBDF" isClosed="false" isExecutable="false" name="Application" processType="None">
       <extensionElements/>
       <laneSet id="sid-e6669406-fa0f-4208-ae7c-2abe63b160f9">
-         <lane id="sid-E8A8D2B6-790E-4A87-B580-42C26A6982BA">
+         <lane id="sid-E8A8D2B6-790E-4A87-B580-42C26A6982BA" name="Application">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

@@ -58,7 +58,7 @@
    <process id="sid-57BC6410-4ECC-4D79-92F9-7F3CD0D31D26" isClosed="false" isExecutable="false" name="Customer" processType="None">
       <extensionElements/>
       <laneSet id="sid-090c48f3-7bf2-4d48-a11f-6f2f781de283">
-         <lane id="sid-EB115EBD-2844-4C56-8F7F-56C80FB8B980">
+         <lane id="sid-EB115EBD-2844-4C56-8F7F-56C80FB8B980" name="Customer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -400,10 +400,10 @@
          </extensionElements>
       </sequenceFlow>
    </process>
-   <process id="sid-02C66494-A742-4031-8C61-9C0199B10A69" isClosed="false" isExecutable="false" name="USI Course Register System" processType="None">
+   <process id="sid-02C66494-A742-4031-8C61-9C0199B10A69" isClosed="false" isExecutable="false" name="Course Register System" processType="None">
       <extensionElements/>
       <laneSet id="sid-283f2320-ea30-4c2f-aee0-f825f1eb386d">
-         <lane id="sid-4A7CB0C5-261F-4E6E-A725-9C4AF1C43A0E">
+         <lane id="sid-4A7CB0C5-261F-4E6E-A725-9C4AF1C43A0E" name="USI Course Register System">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

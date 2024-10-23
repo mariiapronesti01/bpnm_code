@@ -69,7 +69,7 @@
    <process id="sid-D209EEA7-EA24-472E-A2D7-FEDDD2644AD2" isClosed="false" isExecutable="false" name="Company" processType="None">
       <extensionElements/>
       <laneSet id="sid-3ea0f6e8-6484-4694-9e99-433434a4dd65">
-         <lane id="sid-E890D5A8-DD23-41A5-B4B3-EBCA79887911">
+         <lane id="sid-E890D5A8-DD23-41A5-B4B3-EBCA79887911" name="Company">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -314,7 +314,7 @@
    <process id="sid-CFAC3857-CD56-463A-992F-63D42B62CE05" isClosed="false" isExecutable="false" name="Job Seeker&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-92c629a2-fd5a-4ec8-a68c-36e45eb41820">
-         <lane id="sid-7B869AAF-2178-46C5-993A-78C2270F3406">
+         <lane id="sid-7B869AAF-2178-46C5-993A-78C2270F3406" name="Job Seeker">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -506,7 +506,7 @@
    <process id="sid-AA3AB946-08EF-49E0-BF1F-56C3BF21E6C2" isClosed="false" isExecutable="false" name="Job Plattform" processType="None">
       <extensionElements/>
       <laneSet id="sid-0c842a6b-76bd-4a39-99ba-2e7191a423af">
-         <lane id="sid-EBEDF06B-3F9F-43A4-9020-8FE6EEDCDE64">
+         <lane id="sid-EBEDF06B-3F9F-43A4-9020-8FE6EEDCDE64" name="Job Plattform">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

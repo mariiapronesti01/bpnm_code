@@ -49,7 +49,7 @@
    <process id="sid-E24FB60B-8667-4944-8973-091FD386BCEB" isClosed="false" isExecutable="false" name="Vienna Marathon" processType="None">
       <extensionElements/>
       <laneSet id="sid-f1aaaa0c-020d-45fa-8398-c8e4ec1035cb">
-         <lane id="sid-2298B0DF-12C6-42A1-956F-6A42D3A492E2">
+         <lane id="sid-2298B0DF-12C6-42A1-956F-6A42D3A492E2" name="User">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -536,7 +536,7 @@
    <process id="sid-33F592C3-BE09-4225-B398-2FCDF97857B1" isClosed="false" isExecutable="false" name="Fitbit" processType="None">
       <extensionElements/>
       <laneSet id="sid-fc280216-8999-4e92-89b7-04aa1df1849d">
-         <lane id="sid-8CADEE8C-8B9C-4B41-AEC8-808B0751C8EF">
+         <lane id="sid-8CADEE8C-8B9C-4B41-AEC8-808B0751C8EF" name="Fitbit">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -547,7 +547,7 @@
    <process id="sid-DEACD4A3-40B4-4949-9BA4-4FA69311AF5F" isClosed="false" isExecutable="false" name="Vienna Marathon App" processType="None">
       <extensionElements/>
       <laneSet id="sid-58ccd0b5-135f-495f-b3ee-fa11be9eb4b6">
-         <lane id="sid-C1067A29-43AE-4350-A63F-DDD3271B4D9C">
+         <lane id="sid-C1067A29-43AE-4350-A63F-DDD3271B4D9C" name="Vienna Marathon App">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

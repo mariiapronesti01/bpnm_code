@@ -78,7 +78,7 @@
    <process id="sid-AC577204-23EA-4355-9FD3-615FED23112D" isClosed="false" isExecutable="false" name="Customer" processType="None">
       <extensionElements/>
       <laneSet id="sid-e2e90896-0fc1-408d-b1b5-0363c8238e9e">
-         <lane id="sid-FE957137-5A81-46DE-AF33-D94A5A2D053B">
+         <lane id="sid-FE957137-5A81-46DE-AF33-D94A5A2D053B" name="Customer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -143,7 +143,7 @@
    <process id="sid-80EFEB61-813A-4003-8E32-F890F94CA972" isClosed="false" isExecutable="false" name="Manufacturer" processType="None">
       <extensionElements/>
       <laneSet id="sid-d5701b0d-33e8-40ca-9c6c-f881d49b75bf">
-         <lane id="sid-64579553-FB53-4E00-8A32-2582F83BD53B">
+         <lane id="sid-64579553-FB53-4E00-8A32-2582F83BD53B" name="Manufacturer">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -525,7 +525,7 @@
    <process id="sid-9EF8A944-E699-4E91-8137-0A27F4AE3C46" isClosed="false" isExecutable="false" name="Suppliers" processType="None">
       <extensionElements/>
       <laneSet id="sid-08d3a568-b04b-4f05-950b-d741db9c531e">
-         <lane id="sid-B694A146-F9E1-40EE-A3A5-EA608247A054">
+         <lane id="sid-B694A146-F9E1-40EE-A3A5-EA608247A054" name="Suppliers">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

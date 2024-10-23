@@ -43,7 +43,7 @@
    <process id="sid-07577F73-808E-46A8-A717-949D41A22838" isClosed="false" isExecutable="false" name="Internship Software" processType="None">
       <extensionElements/>
       <laneSet id="sid-edc23fc8-608b-486e-ada6-7827a73017eb">
-         <lane id="sid-B11080D2-D88A-4448-A240-7E2D2599A704">
+         <lane id="sid-B11080D2-D88A-4448-A240-7E2D2599A704" name="Internship Software">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

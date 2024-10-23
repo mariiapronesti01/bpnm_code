@@ -174,13 +174,16 @@ def get_2ProcessesSimilarity(info_process1: dict, info_process2: dict, return_ma
     start_shortest_path_distance = get_ShortestPathDistanceMatrix(info_process1['start_shortest_path'], info_process2['start_shortest_path'])
     end_shortest_path_distance = get_ShortestPathDistanceMatrix(info_process1['end_shortest_path'], info_process2['end_shortest_path'])
     
-    if info_process1['lane_info'] and info_process2['lane_info']:
-        lane_similarity_matrix = get_LaneSimilarityMatrix(info_process1['G'], info_process2['G'], info_process1['lane_info'], info_process2['lane_info'])
-    elif info_process1['lane_info'] or info_process2['lane_info']:  
+    try: 
+        if info_process1['lane_info'] and info_process2['lane_info']:
+            lane_similarity_matrix = get_LaneSimilarityMatrix(info_process1['G'], info_process2['G'], info_process1['lane_info'], info_process2['lane_info'])
+        elif info_process1['lane_info'] or info_process2['lane_info']:  
+            lane_similarity_matrix = np.zeros((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
+        else:
+            lane_similarity_matrix = np.ones((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
+    except:
         lane_similarity_matrix = np.zeros((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
-    else:
-        lane_similarity_matrix = np.ones((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
-    
+        
     # Combine the similarities with the given weights
     # similarity_matrix = (
     #     0.20 * label_similarity + 

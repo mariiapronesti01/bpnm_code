@@ -17,7 +17,7 @@
    <process id="sid-B2850723-2D5D-4520-ADBE-5231CF075CC8" isClosed="false" isExecutable="false" name="&#10;Gaming&#10;" processType="None">
       <extensionElements/>
       <laneSet id="sid-da4842f9-9fb7-4a40-bc85-5b707bdf4166">
-         <lane id="sid-E4742A29-97E6-4DF4-883E-82F7C5412309">
+         <lane id="sid-E4742A29-97E6-4DF4-883E-82F7C5412309" name="Gaming">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>

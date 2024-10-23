@@ -43,7 +43,7 @@
    <process id="sid-408F6048-31E5-496B-81AB-864B0F23C091" isClosed="false" isExecutable="false" name="LAN Organisator" processType="None">
       <extensionElements/>
       <laneSet id="sid-32d66e66-5301-4fba-abda-44abeab4aaa0">
-         <lane id="sid-76931948-3972-400D-9D07-1D7317AF5D95">
+         <lane id="sid-76931948-3972-400D-9D07-1D7317AF5D95" name="LAN Organisator">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
@@ -573,7 +573,7 @@
    <process id="sid-9CBD3AA0-2CA3-45BA-8C40-76E7561E2594" isClosed="false" isExecutable="false" name="Friends" processType="None">
       <extensionElements/>
       <laneSet id="sid-13851ea4-70dd-4deb-a1b6-d139a4492479">
-         <lane id="sid-945A9B5A-2C7A-4365-803F-265614870077">
+         <lane id="sid-945A9B5A-2C7A-4365-803F-265614870077" name="Friends">
             <extensionElements>
                <signavio:signavioMetaData metaKey="bgcolor" metaValue=""/>
                <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000"/>
