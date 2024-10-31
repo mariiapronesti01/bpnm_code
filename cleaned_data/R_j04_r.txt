@@ -1,0 +1,6 @@
+Category: Repair and Service
+Title: Car Service
+
+The police have launched a new app designed to remind you when it's time for your car service. This process kicks off after a successful service has been completed. When your car requires servicing, the system verifies its registration status; if your vehicle is still registered, you will receive a notification. If you don’t attend the service within 30 days, you’ll incur a fine.
+
+At the car service center, the mechanic records any issues with your vehicle for future reference. While you wait for the repairs, which may take several days, you will receive regular status updates via email. Once the repair is finalized, you can conveniently make your payment through the app. The mechanic will confirm that the repair was successful and that you received your "Pickerl." Additionally, they will schedule your next service appointment and record the time in the system.

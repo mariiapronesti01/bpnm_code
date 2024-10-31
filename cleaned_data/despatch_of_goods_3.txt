@@ -1,0 +1,6 @@
+TITLE: Goods Shipment
+When goods need to be shipped, the secretary identifies who will manage the shipping. For large shipments, special handling is required. In such cases, the secretary requests quotes from three logistics companies and selects one. For smaller shipments, standard postal services are used. The secretary prepares a shipping label, and if necessary, the logistics department head arranges parcel insurance.
+During this time, the warehouse team can already start packaging the goods. Once everything is prepared, the packaged goods are ready for pickup by the chosen logistics company.
+
+Background Information:
+This process occurs at a small hardware company that ships small orders to customers and larger quantities to other retailers.

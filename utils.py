@@ -173,6 +173,7 @@ def build_process_info_dict(all_files: list, model):
             lane_info[lane_id]['name_embedding'] = lane_embedding
             
         files_info[file] = {
+            'file_name': file, # Assign to 'file_name' key
             'edge_df': edge_df,   # Assign to 'edge_df' key
             'lane_info': lane_info, # Assign to 'lane_info' key 
             'G' : graph, # Assign to 'graph' key

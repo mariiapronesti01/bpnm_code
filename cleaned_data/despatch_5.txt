@@ -1,0 +1,8 @@
+TITLE: Dispatch of Goods
+
+When shipping goods, the secretary coordinates the logistics. For larger shipments, specialized shipping methods are required. In these instances, the secretary requests quotes from three logistics companies and chooses one to manage the delivery. For smaller shipments, standard postal services are used. The secretary creates a shipping label, and if needed, the head of the logistics department arranges for parcel insurance.
+
+During this time, warehouse staff can begin packing the items. Once everything is in order, the packaged goods are prepared for pickup by the chosen logistics company.
+
+Background Information:
+This procedure is conducted at a small hardware company that sends small orders to individual customers as well as larger quantities to other retailers.

@@ -1,0 +1,8 @@
+Category: Manufacturing
+Title: Luxury Airplane
+
+You manufacture airplanes, with a standard base model that remains consistent, but customers can customize their planes with luxurious interiors. They can choose from five different bar options, select the number of seats, pick their colors, and decide on the water capacity in the restrooms, among other features.
+
+Once you receive the specifications, you forward the requirements to various teams responsible for manufacturing the components. For example, the Russian team handles the production of the vodka bar, while the Irish team takes care of the whiskey bar.
+
+After assembling the interior with all the individual parts, the airplane undergoes a test flight. During this flight, a test protocol is generated and sent to both you and the customer. Finally, the plane is delivered to the customer, who must provide confirmation of receipt.

@@ -1,0 +1,4 @@
+Category: E-Government
+Title: Internship
+
+You can input a topic of interest and your desired salary. Additionally, you may include your experience and hobbies. You will receive several offers at random times, which you can choose to accept or decline. Once you accept an offer, all other offers become invalid. You are required to provide at least three weekly status updates about your internship, while the company must also submit three updates about you. Upon completing the internship, you can recommend the company to your friends via Twitter, with separate tweets sent simultaneously.
