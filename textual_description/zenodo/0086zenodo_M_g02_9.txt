@@ -1,0 +1,3 @@
+Title: Building a Custom Machine with Lego Bricks
+
+To build a custom machine using Lego bricks, the first step is to create a basic design. Once your design is ready, you can order specific Lego brick sets. Then, provide these sets to a group of children to sort the pieces into various containers. Your machine will consist of several subcomponents, which you will build individually using parts from the sorted containers. If you run out of parts in a container, reorder the necessary pieces. After constructing each subcomponent, test them individually; if all tests are successful, proceed to assemble them. If any subcomponent fails the tests, you'll need to redesign and rebuild it.

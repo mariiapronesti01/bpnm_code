@@ -1,0 +1,48 @@
+startEvent//sid-91DD8887-D1E0-4D24-8AA0-2B81F0889525(Scoringneeded)-->|sequenceFlow//sid-25A2C42E-AF8F-45E7-892B-A6FD97FF6961(Unnamed)|task//sid-CAD324D6-7940-4DB6-9327-2631065C1468(request scoring)
+task//sid-CAD324D6-7940-4DB6-9327-2631065C1468(request scoring)-->|sequenceFlow//sid-83A901FF-4E56-4F72-BC42-55DD545680A7(Unnamed)|eventBasedGateway//sid-D3DCB60D-80FC-4AE3-99FE-52FCDF546C67(Unnamed)
+eventBasedGateway//sid-D3DCB60D-80FC-4AE3-99FE-52FCDF546C67(Unnamed)-->|sequenceFlow//sid-A6139AD1-EF14-4AAE-988E-9961268A861D(Unnamed)|intermediateCatchEvent//sid-603C2B58-CAFE-4A86-8555-CE3AD988260C(Message about scoring information delay)
+intermediateCatchEvent//sid-603C2B58-CAFE-4A86-8555-CE3AD988260C(Message about scoring information delay)-->|sequenceFlow//sid-7B9FE741-2E87-4AFA-8F53-9B2FB2C7AC22(Unnamed)|task//sid-BCD1E653-488B-4529-BFB0-EC7E2432066E(Display delay information to Frontend)
+eventBasedGateway//sid-D3DCB60D-80FC-4AE3-99FE-52FCDF546C67(Unnamed)-->|sequenceFlow//sid-39062740-7E30-4AA0-94AB-D43AECD1896D(Unnamed)|intermediateCatchEvent//sid-2C19F57C-FDF3-4D87-9989-75BA2EC0A926(Scoring received)
+intermediateCatchEvent//sid-2C19F57C-FDF3-4D87-9989-75BA2EC0A926(Scoring received)-->|sequenceFlow//sid-58E7C8E2-D610-41AD-B306-EE9879B7AABB(Unnamed)|task//sid-528B978A-2A57-4040-BC22-A120BD8F47A2(Present Scoring results to Frontend)
+task//sid-BCD1E653-488B-4529-BFB0-EC7E2432066E(Display delay information to Frontend)-->|sequenceFlow//sid-BA103A3F-E035-4008-8B71-C894F015A886(Unnamed)|intermediateCatchEvent//sid-353B213F-A8E5-4D11-974B-118DC1808B38(Scoring received)
+intermediateCatchEvent//sid-353B213F-A8E5-4D11-974B-118DC1808B38(Scoring received)-->|sequenceFlow//sid-1A00C37E-5772-48F1-A238-ABD7D7957445(Unnamed)|task//sid-528B978A-2A57-4040-BC22-A120BD8F47A2(Present Scoring results to Frontend)
+task//sid-528B978A-2A57-4040-BC22-A120BD8F47A2(Present Scoring results to Frontend)-->|sequenceFlow//sid-E5DD60CC-2234-44DD-9F47-80003AA81097(Unnamed)|endEvent//sid-7D55CB38-425F-47D4-91DD-2B1DD0CBB187(Scoring request handled)
+startEvent//sid-3494A368-0646-4BAD-B5A6-5D73C8AA3CD8(Scoringneeded)-->|sequenceFlow//sid-A5D2435D-7A83-4159-92FB-4C314DF84A2A(Unnamed)|task//sid-E6A6E06A-C7BB-445D-BD1E-E807775D27C8(execute scoring level 1)
+task//sid-E6A6E06A-C7BB-445D-BD1E-E807775D27C8(execute scoring level 1)-->|sequenceFlow//sid-DCB1F1F6-7E96-41F7-8AF7-3B3B75B394F4(Unnamed)|exclusiveGateway//sid-1FB3A4E6-3FED-4AD4-885B-FC80815DC6BD(Level 1 Results available)
+exclusiveGateway//sid-1FB3A4E6-3FED-4AD4-885B-FC80815DC6BD(Level 1 Results available)-->|sequenceFlow//sid-CDFBDC69-5090-4FAA-963C-D511CE227DA3(no)|task//sid-CFAD6343-8330-4041-90C6-502AEB560AC4(Start scoring level 2)
+task//sid-CFAD6343-8330-4041-90C6-502AEB560AC4(Start scoring level 2)-->|sequenceFlow//sid-BC28B783-87E5-4F4A-ACE1-63BD37ADAF49(Unnamed)|task//sid-D5963002-03FF-4692-8FB7-013065ACB7BB(execute scoring level 2 )
+exclusiveGateway//sid-1FB3A4E6-3FED-4AD4-885B-FC80815DC6BD(Level 1 Results available)-->|sequenceFlow//sid-E670422B-67F2-4A48-A945-6BCEA6D74BF4(Unnamed)|task//sid-4C2C6213-69AF-4793-A51C-6DE2741E2776(Send scoring results)
+task//sid-D5963002-03FF-4692-8FB7-013065ACB7BB(execute scoring level 2 )-->|sequenceFlow//sid-216E2E68-9B07-4555-B968-93792202E541(Unnamed)|task//sid-A329DC09-20DE-4EAF-96B5-20F38C63A99F(Send scoring results)
+task//sid-A329DC09-20DE-4EAF-96B5-20F38C63A99F(Send scoring results)-->|sequenceFlow//sid-37211174-0C02-4AC7-AC23-8D9532D53298(Unnamed)|exclusiveGateway//sid-7FD7886F-3DD0-4CD0-8DF8-9BA7F313F8A8(Level 1 Results available)
+task//sid-4C2C6213-69AF-4793-A51C-6DE2741E2776(Send scoring results)-->|sequenceFlow//sid-C27E9A61-D3F5-44A1-988A-C3333F2C5C3F(Unnamed)|exclusiveGateway//sid-7FD7886F-3DD0-4CD0-8DF8-9BA7F313F8A8(Level 1 Results available)
+exclusiveGateway//sid-7FD7886F-3DD0-4CD0-8DF8-9BA7F313F8A8(Level 1 Results available)-->|sequenceFlow//sid-0C011AE5-A123-4FBD-8B32-FD146584108D(Unnamed)|endEvent//sid-C5E2FD3E-8265-4AB8-AD04-0822F1DF7950(Scoring request handled)
+nan//sid-8726C5F4-0E76-49E5-A438-43654553F66A(nan)-->|messageFlow//sid-2CA67243-3627-4723-A3C4-FEC75393BE1B(Unnamed)|startEvent//sid-91DD8887-D1E0-4D24-8AA0-2B81F0889525(Scoringneeded)
+task//sid-CAD324D6-7940-4DB6-9327-2631065C1468(request scoring)-->|messageFlow//sid-03BC7BE0-59EA-4CF5-9FFF-1E3C3515E06F(Unnamed)|startEvent//sid-3494A368-0646-4BAD-B5A6-5D73C8AA3CD8(Scoringneeded)
+task//sid-528B978A-2A57-4040-BC22-A120BD8F47A2(Present Scoring results to Frontend)-->|messageFlow//sid-FB7CF58D-EE11-4BC5-9E99-F273D42DB2FE(Unnamed)|nan//sid-8726C5F4-0E76-49E5-A438-43654553F66A(nan)
+task//sid-CFAD6343-8330-4041-90C6-502AEB560AC4(Start scoring level 2)-->|messageFlow//sid-F0CD9536-97F9-4233-96E1-AFB72334D76E(Unnamed)|intermediateCatchEvent//sid-603C2B58-CAFE-4A86-8555-CE3AD988260C(Message about scoring information delay)
+task//sid-BCD1E653-488B-4529-BFB0-EC7E2432066E(Display delay information to Frontend)-->|messageFlow//sid-B422AA79-B645-4E64-B494-7FF2738CFA05(Unnamed)|nan//sid-8726C5F4-0E76-49E5-A438-43654553F66A(nan)
+task//sid-A329DC09-20DE-4EAF-96B5-20F38C63A99F(Send scoring results)-->|messageFlow//sid-0EE7A86C-4414-496F-8B54-251C3B9BE37E(Unnamed)|intermediateCatchEvent//sid-353B213F-A8E5-4D11-974B-118DC1808B38(Scoring received)
+lane sid-9EB48454-9F8D-4144-9B99-6052186D3000(Scoring Bank)
+  sid-D3DCB60D-80FC-4AE3-99FE-52FCDF546C67
+  sid-528B978A-2A57-4040-BC22-A120BD8F47A2
+  sid-2C19F57C-FDF3-4D87-9989-75BA2EC0A926
+  sid-353B213F-A8E5-4D11-974B-118DC1808B38
+  sid-BCD1E653-488B-4529-BFB0-EC7E2432066E
+  sid-91DD8887-D1E0-4D24-8AA0-2B81F0889525
+  sid-CAD324D6-7940-4DB6-9327-2631065C1468
+  sid-7D55CB38-425F-47D4-91DD-2B1DD0CBB187
+  sid-603C2B58-CAFE-4A86-8555-CE3AD988260C
+end
+
+lane sid-77B696B7-7FE8-4CEE-B49E-8A547BFA4FAF(Scoring Credit Protection Agency)
+  sid-CFAD6343-8330-4041-90C6-502AEB560AC4
+  sid-C5E2FD3E-8265-4AB8-AD04-0822F1DF7950
+  sid-3494A368-0646-4BAD-B5A6-5D73C8AA3CD8
+  sid-D5963002-03FF-4692-8FB7-013065ACB7BB
+  sid-A329DC09-20DE-4EAF-96B5-20F38C63A99F
+  sid-7FD7886F-3DD0-4CD0-8DF8-9BA7F313F8A8
+  sid-4C2C6213-69AF-4793-A51C-6DE2741E2776
+  sid-E6A6E06A-C7BB-445D-BD1E-E807775D27C8
+  sid-1FB3A4E6-3FED-4AD4-885B-FC80815DC6BD
+end
+

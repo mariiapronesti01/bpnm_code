@@ -1,0 +1,6 @@
+TITLE: Shipping Process
+When goods are to be shipped, the secretary determines who will oversee the shipment. For large volumes, special shipping is required. In such cases, the secretary contacts three logistics companies for quotes and selects one. For smaller shipments, regular postal services are used. A shipping label is created by the secretary, and if needed, the logistics department head arranges parcel insurance.
+Meanwhile, the warehouse staff can begin packing the goods. Once everything is finalized, the packaged items are set for pickup by the selected logistics company.
+
+Background Information:
+This process is used by a small hardware company that ships both small orders to customers and large quantities to other businesses.

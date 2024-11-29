@@ -1,0 +1,42 @@
+startEvent//sid-3CB493D7-AF92-42F0-884A-AA20E15E4A95(Order received)-->|sequenceFlow//sid-973BDB9B-D684-4984-9D70-00A81105D42D(Unnamed)|task//sid-417E457C-5C20-4860-96C1-0CE84434090D(Order read from automatic order management system)
+task//sid-417E457C-5C20-4860-96C1-0CE84434090D(Order read from automatic order management system)-->|sequenceFlow//sid-6AB4C90C-BC3D-4B2A-9064-6F5011D566B8(Unnamed)|exclusiveGateway//sid-71FCF143-4431-409E-9BA6-471DE42A3970(product in stock)
+exclusiveGateway//sid-71FCF143-4431-409E-9BA6-471DE42A3970(product in stock)-->|sequenceFlow//sid-1DF8388C-8113-4DDF-B0D7-E2E227820835(yes)|task//sid-A55E857A-9818-4318-B504-677FCF93A514(Product is withdrawn from stock)
+exclusiveGateway//sid-71FCF143-4431-409E-9BA6-471DE42A3970(product in stock)-->|sequenceFlow//sid-F5D937C4-4355-4614-BB5F-09C7AE4D0740(no)|task//sid-1E4ECB72-BB5B-4D8C-A653-F2F902250E62(Reorder product from wholesaler)
+task//sid-1E4ECB72-BB5B-4D8C-A653-F2F902250E62(Reorder product from wholesaler)-->|sequenceFlow//sid-726D8288-E1D7-456F-898E-D4C778076A04(Unnamed)|intermediateCatchEvent//sid-059D7AB7-7D98-4431-BF08-8EDE4E7B9ED4(max 10 days)
+exclusiveGateway//sid-2147ADFC-9036-4E20-837F-43F045BC6CCD(delivery delay)-->|sequenceFlow//sid-8114C89F-EA95-406D-B41A-C89DDC75A489(yes)|task//sid-222334AC-CAB2-4AAC-936A-F9297BAAD729(delay penalty demanded from wholesaler)
+exclusiveGateway//sid-2147ADFC-9036-4E20-837F-43F045BC6CCD(delivery delay)-->|sequenceFlow//sid-0B15E095-CD64-4372-8F8E-CCDF8C0F2A82(no)|task//sid-EF68E135-E0F6-444B-998D-669797ED5DCA(register product in stock management system)
+intermediateCatchEvent//sid-059D7AB7-7D98-4431-BF08-8EDE4E7B9ED4(max 10 days)-->|sequenceFlow//sid-EEFBA38E-1B3C-4169-B98E-85895AD4D689(Unnamed)|exclusiveGateway//sid-2147ADFC-9036-4E20-837F-43F045BC6CCD(delivery delay)
+task//sid-EF68E135-E0F6-444B-998D-669797ED5DCA(register product in stock management system)-->|sequenceFlow//sid-11209CDE-12E1-42BE-BC3E-BE3DEFF057F8(Unnamed)|task//sid-3E3C8FDC-B59C-4273-A480-D4A22ACF25A5(check if whole order is ready for shipment)
+task//sid-A55E857A-9818-4318-B504-677FCF93A514(Product is withdrawn from stock)-->|sequenceFlow//sid-857D1168-75DD-4A42-8FAC-C0ADA40E7AB5(Unnamed)|task//sid-3E3C8FDC-B59C-4273-A480-D4A22ACF25A5(check if whole order is ready for shipment)
+task//sid-3E3C8FDC-B59C-4273-A480-D4A22ACF25A5(check if whole order is ready for shipment)-->|sequenceFlow//sid-99AB1C9A-77CB-4C74-B198-C323F5AAD8FA(Unnamed)|exclusiveGateway//sid-E5650362-FC98-4D4F-AA4F-06DA27CF95A3(order status)
+exclusiveGateway//sid-E5650362-FC98-4D4F-AA4F-06DA27CF95A3(order status)-->|sequenceFlow//sid-099D869C-2115-4846-B3B0-5775F1B0F4F1(complete)|parallelGateway//sid-798A26AC-C75A-4B59-A311-9E76AD014946(Unnamed)
+parallelGateway//sid-798A26AC-C75A-4B59-A311-9E76AD014946(Unnamed)-->|sequenceFlow//sid-E4181029-FD24-4F96-94CB-26B0CFFFD735(Unnamed)|task//sid-3BD39CE0-61B6-48BD-8473-2E7568144078(request courir)
+parallelGateway//sid-798A26AC-C75A-4B59-A311-9E76AD014946(Unnamed)-->|sequenceFlow//sid-0AD7F81E-F117-421F-A291-F2DB28D5BFCA(Unnamed)|task//sid-FA55A265-FEC5-4297-B31B-40AB77057753(pack all products of the order)
+task//sid-FA55A265-FEC5-4297-B31B-40AB77057753(pack all products of the order)-->|sequenceFlow//sid-29D21ED5-30B8-42E3-85CA-4199A95F6B5F(Unnamed)|parallelGateway//sid-C90C8C2B-3D0A-4178-A6A6-42F86E536874(Unnamed)
+task//sid-3BD39CE0-61B6-48BD-8473-2E7568144078(request courir)-->|sequenceFlow//sid-BDDB239E-20BE-401A-9F53-AC0D7E68ED84(Unnamed)|parallelGateway//sid-C90C8C2B-3D0A-4178-A6A6-42F86E536874(Unnamed)
+exclusiveGateway//sid-E5650362-FC98-4D4F-AA4F-06DA27CF95A3(order status)-->|sequenceFlow//sid-4434C28C-D3FF-4661-B6FE-8F3C9262AA2D(incomplete)|task//sid-A2C69CEF-D40F-4DE1-842C-E05447B94F59(check if next product in stock)
+parallelGateway//sid-C90C8C2B-3D0A-4178-A6A6-42F86E536874(Unnamed)-->|sequenceFlow//sid-A885011B-C922-4FFA-9FE8-101B9B3D8C48(Unnamed)|task//sid-17FD760B-2D92-40E8-9065-C704679CF911(ship the order to customer)
+task//sid-17FD760B-2D92-40E8-9065-C704679CF911(ship the order to customer)-->|sequenceFlow//sid-5976A6AA-B1A1-464E-B16C-DC39808BDAA7(Unnamed)|endEvent//sid-919BA48D-4D19-47FB-B0C8-D4AFED0208D6(order shipped to customer)
+task//sid-A2C69CEF-D40F-4DE1-842C-E05447B94F59(check if next product in stock)-->|sequenceFlow//sid-D6B44A15-AB28-46EC-B6A2-FE6AE2CB8761(Unnamed)|task//sid-417E457C-5C20-4860-96C1-0CE84434090D(Order read from automatic order management system)
+task//sid-222334AC-CAB2-4AAC-936A-F9297BAAD729(delay penalty demanded from wholesaler)-->|sequenceFlow//sid-E2C1F635-B835-4FC2-BC4B-9F21A4129C2F(Unnamed)|task//sid-3E3C8FDC-B59C-4273-A480-D4A22ACF25A5(check if whole order is ready for shipment)
+lane sid-43E3A9D2-A28F-45EC-957F-C8DD1F436714(Storage Management system)
+  sid-C90C8C2B-3D0A-4178-A6A6-42F86E536874
+  sid-3E3C8FDC-B59C-4273-A480-D4A22ACF25A5
+  sid-A55E857A-9818-4318-B504-677FCF93A514
+  sid-17FD760B-2D92-40E8-9065-C704679CF911
+  sid-798A26AC-C75A-4B59-A311-9E76AD014946
+  sid-919BA48D-4D19-47FB-B0C8-D4AFED0208D6
+  sid-A2C69CEF-D40F-4DE1-842C-E05447B94F59
+  sid-2147ADFC-9036-4E20-837F-43F045BC6CCD
+  sid-FA55A265-FEC5-4297-B31B-40AB77057753
+  sid-059D7AB7-7D98-4431-BF08-8EDE4E7B9ED4
+  sid-EF68E135-E0F6-444B-998D-669797ED5DCA
+  sid-417E457C-5C20-4860-96C1-0CE84434090D
+  sid-222334AC-CAB2-4AAC-936A-F9297BAAD729
+  sid-3BD39CE0-61B6-48BD-8473-2E7568144078
+  sid-E5650362-FC98-4D4F-AA4F-06DA27CF95A3
+  sid-71FCF143-4431-409E-9BA6-471DE42A3970
+  sid-3CB493D7-AF92-42F0-884A-AA20E15E4A95
+  sid-1E4ECB72-BB5B-4D8C-A653-F2F902250E62
+end
+

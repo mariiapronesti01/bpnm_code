@@ -1,0 +1,5 @@
+TITLE: Credit Scoring
+
+Bank sales clerks can access this information through their software frontend, allowing them to retrieve the credit score for a specific customer. This action triggers a process within the banking system that operates behind the scenes, establishing communication with the agency. Immediately upon initiation, a scoring request is sent to the agency. The agency conducts a swift preliminary evaluation (level 1), which typically provides an immediate result that is returned to the banking system within seconds. The clerk can then view this information on their frontend interface.
+
+However, there are instances when the score cannot be obtained right away, resulting in a longer processing time. In these cases, the agency alerts the banking process about the delay and transitions to a more comprehensive level 2 scoring, which can take several minutes. Once the scoring result is finalized, it is relayed back to the banking system. If the clerk is notified of a delay, the system prompts them to check again later. When the final result becomes available, it will be shown on the frontend for the clerk’s review.

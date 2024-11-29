@@ -1,0 +1,5 @@
+Title: Ordering in an Online Shop  
+
+In an online shop, the customer begins by logging into the e-shop system, which requires waiting for login confirmation as the system checks their credentials. If the login is successful, the customer can proceed to select products; however, if the login fails, the shopping experience comes to an end. After choosing a product, the customer must add it to their shopping cart and save the selection, then check if all desired products have been chosen. This process continues until the customer has selected all the products they want.
+
+Once the selection is complete, the order is finalized by the shopping system, which simultaneously prepares for payment and shipment. For payment, the customer is required to enter their payment information and wait for bank confirmation. While waiting for this confirmation, the customer can input their shipping address. If the shipping address differs from the billing address, they have the option to enter an independent billing address. Finally, once both the payment and address details are successfully processed, the order is completed by the system.

@@ -1,0 +1,3 @@
+Title: Chainsaw
+
+You manufacture custom chainsaws on demand, with each chainsaw featuring at least five specifications, including guide bar length, chain width, and whether it’s electric or gas-powered. Once your customer provides the desired specifications, you can begin ordering the necessary parts from various online suppliers simultaneously. When the parts arrive, conduct a thorough manual inspection before assembling them. Throughout the production process, keep your customer updated with regular progress reports. After completing the first chainsaw, send it to the customer. If they approve of it, you can proceed with producing the remainder of their order.

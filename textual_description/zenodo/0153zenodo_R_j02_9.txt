@@ -1,0 +1,5 @@
+You are creating an application designed to facilitate the inspection of a bottling machine. The inspection process begins once you input the machine type and serial number:
+
+The application will prompt you with a series of questions that require you to enter specific values.
+You can press designated buttons to automatically collect data from the machine, which will then be displayed for your review.
+Depending on the data retrieved, the application will determine whether to ask additional questions or proceed without further inquiries.

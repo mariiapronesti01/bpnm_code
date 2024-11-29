@@ -1,0 +1,6 @@
+Background Information:
+Insured individuals may be obligated to return money received from their insurance company for various reasons, a process known as recourse. This is how I manage that process.
+
+When a potential subrogation against an insured individual is spotted, I collect the necessary details about the case. If subrogation appears to be a viable option, I send a payment request to the insured and create a reminder for myself. If recourse is not possible, I close the case.
+
+Once I receive the payment, I document the transaction and wrap up the case. If the insured challenges the recourse, I review their reasoning. If their claim is justified, I close the case; if it isn’t, I escalate it to a collection agency. If the deadline for raising a dispute passes without any payment, I also refer the case to the collection agency.

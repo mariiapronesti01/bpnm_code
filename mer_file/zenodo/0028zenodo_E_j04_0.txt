@@ -1,0 +1,72 @@
+startEvent//sid-B3CEFD7A-BB80-41BC-BCE1-3A48379DE613(Unnamed)-->|sequenceFlow//sid-068F214A-BAB9-4A94-AE1B-2B014D9E9FE9(Unnamed)|manualTask//sid-E291258B-5527-495E-A8C6-F9F310F5388D(Open EGovernment Website)
+manualTask//sid-E291258B-5527-495E-A8C6-F9F310F5388D(Open EGovernment Website)-->|sequenceFlow//sid-43A421E8-BF68-426C-B1BF-878ACF95CCAA(Unnamed)|exclusiveGateway//sid-9A4DCF43-DBB1-490A-B05C-180D0202AC06(Registered)
+exclusiveGateway//sid-9A4DCF43-DBB1-490A-B05C-180D0202AC06(Registered)-->|sequenceFlow//sid-1ED301C1-CAC3-4829-BA1E-ED06FD3824D4(No)|manualTask//sid-804BED4D-929E-4ABD-884B-AA54AC4CCCA0(Create an account)
+manualTask//sid-804BED4D-929E-4ABD-884B-AA54AC4CCCA0(Create an account)-->|sequenceFlow//sid-7E866934-691C-4529-AEA6-3197BD03EF47(Unnamed)|manualTask//sid-0FDC6236-1306-415B-A10D-FEACFB5C0AD7(Confirm account)
+manualTask//sid-0FDC6236-1306-415B-A10D-FEACFB5C0AD7(Confirm account)-->|sequenceFlow//sid-6949E5A4-1A63-4F50-B069-3AF2B55DA6B3(Unnamed)|exclusiveGateway//sid-6DDAB27D-264D-4F5F-8AB9-B1EAE250CCA4(Unnamed)
+exclusiveGateway//sid-6DDAB27D-264D-4F5F-8AB9-B1EAE250CCA4(Unnamed)-->|sequenceFlow//sid-90500C73-B622-4BAE-8225-368F9F1B8409(Unnamed)|manualTask//sid-00D23AE9-F96C-4AD8-BE5B-F76729EE0DED(Login on the job portal of the EGovernment website)
+manualTask//sid-00D23AE9-F96C-4AD8-BE5B-F76729EE0DED(Login on the job portal of the EGovernment website)-->|sequenceFlow//sid-68E93352-FC18-4B75-A2F4-5446D1F9392C(Unnamed)|parallelGateway//sid-5D5C22B0-821F-41B5-BC12-CE58AA19FE38(Unnamed)
+parallelGateway//sid-5D5C22B0-821F-41B5-BC12-CE58AA19FE38(Unnamed)-->|sequenceFlow//sid-4DECF990-2D15-49E0-A45D-5B9C19B950F4(Unnamed)|manualTask//sid-6FC65F3D-171A-4785-B37A-D296942FB0A2(Enter topic)
+parallelGateway//sid-5D5C22B0-821F-41B5-BC12-CE58AA19FE38(Unnamed)-->|sequenceFlow//sid-C541FF80-844C-4260-8968-761780FDE348(Unnamed)|manualTask//sid-6990B9A5-9FD2-4B7E-88C8-338353B45490(Enter minimum salary)
+parallelGateway//sid-5D5C22B0-821F-41B5-BC12-CE58AA19FE38(Unnamed)-->|sequenceFlow//sid-6A024731-0089-4D28-A0D1-F7C76AC9C36F(Unnamed)|manualTask//sid-DDCC101D-871B-4416-ABE2-C14C96883068(Enter experience)
+parallelGateway//sid-5D5C22B0-821F-41B5-BC12-CE58AA19FE38(Unnamed)-->|sequenceFlow//sid-EBB04EAD-4376-4E57-963A-0DFA8C34B328(Unnamed)|manualTask//sid-47719E94-AC15-4779-A05A-7145C0199E39(Enter hobbies)
+manualTask//sid-DDCC101D-871B-4416-ABE2-C14C96883068(Enter experience)-->|sequenceFlow//sid-939547C0-311E-4AC2-9858-B90E7396E967(Unnamed)|parallelGateway//sid-64C2788C-3638-410D-AEEB-6E70B34B9E8A(Unnamed)
+manualTask//sid-6990B9A5-9FD2-4B7E-88C8-338353B45490(Enter minimum salary)-->|sequenceFlow//sid-0132C7D1-A35B-410B-A335-D270D3F4A09C(Unnamed)|parallelGateway//sid-64C2788C-3638-410D-AEEB-6E70B34B9E8A(Unnamed)
+manualTask//sid-6FC65F3D-171A-4785-B37A-D296942FB0A2(Enter topic)-->|sequenceFlow//sid-28F0C7E1-806A-49FE-8037-86FDB069D947(Unnamed)|parallelGateway//sid-64C2788C-3638-410D-AEEB-6E70B34B9E8A(Unnamed)
+manualTask//sid-47719E94-AC15-4779-A05A-7145C0199E39(Enter hobbies)-->|sequenceFlow//sid-6521E159-D1FE-44B0-BD52-A4B0F807C580(Unnamed)|parallelGateway//sid-64C2788C-3638-410D-AEEB-6E70B34B9E8A(Unnamed)
+exclusiveGateway//sid-35246AB9-03F3-4172-9D94-4E30C379F947(Accept offer)-->|sequenceFlow//sid-9C37321E-A6CB-458C-99F5-20B7A079A2F9(Yes)|manualTask//sid-E7628BE5-4B35-4718-8ABD-BB7602B4E1AF(Accept the offer on the EGovernment website)
+manualTask//sid-E7628BE5-4B35-4718-8ABD-BB7602B4E1AF(Accept the offer on the EGovernment website)-->|sequenceFlow//sid-B97BE663-A030-4CF4-8E30-7E71046209DD(Unnamed)|exclusiveGateway//sid-FDD303AD-F2A8-4963-9142-EF0C65964AF5(Unnamed)
+exclusiveGateway//sid-FDD303AD-F2A8-4963-9142-EF0C65964AF5(Unnamed)-->|sequenceFlow//sid-B01D680E-387E-4485-9790-2E4F4F19E032(Unnamed)|manualTask//sid-29681108-6195-4639-80A5-0054F8AF8B0C(Write a status update about the week)
+manualTask//sid-29681108-6195-4639-80A5-0054F8AF8B0C(Write a status update about the week)-->|sequenceFlow//sid-A09454B7-64FF-4EF7-985D-385A3D2D3397(Unnamed)|serviceTask//sid-0DF0D79C-C20D-4529-9196-6E2683E1E845(Receive all status updates from the company via the EGovernment website)
+exclusiveGateway//sid-8BE65F08-8919-44D4-AAA5-CA44A5D454A6(Recommend the company)-->|sequenceFlow//sid-6159C67E-6C04-45CE-B5FD-8F1946DA72CF(Yes)|manualTask//sid-41DA4DD6-4777-4794-B384-F40850C631ED(Recommend the company to alist of friends on Twitter)
+exclusiveGateway//sid-8BE65F08-8919-44D4-AAA5-CA44A5D454A6(Recommend the company)-->|sequenceFlow//sid-94CA9D07-2FDB-4494-A409-AD5C55A1C1F1(No)|exclusiveGateway//sid-D106D669-ED1B-4E5F-AD40-B542198B1F43(Unnamed)
+manualTask//sid-41DA4DD6-4777-4794-B384-F40850C631ED(Recommend the company to alist of friends on Twitter)-->|sequenceFlow//sid-1747FE59-9B93-42EB-97D9-70C0A4F0EEC3(Unnamed)|exclusiveGateway//sid-D106D669-ED1B-4E5F-AD40-B542198B1F43(Unnamed)
+exclusiveGateway//sid-D106D669-ED1B-4E5F-AD40-B542198B1F43(Unnamed)-->|sequenceFlow//sid-FC6413F8-764C-4968-B862-D847241954A1(Unnamed)|endEvent//sid-2D809FA1-E587-42A8-A2C6-EF51CC5FED4D(Unnamed)
+intermediateCatchEvent//sid-69D20642-82D8-4F41-A12E-5FFAFDDD5681(Offers)-->|sequenceFlow//sid-8AB21E6D-8178-4A99-BF5E-044E7E348FE2(Unnamed)|serviceTask//sid-F66B2972-6B4E-44A7-83D4-3BBEB311E7DF(Display all offers on the user page)
+serviceTask//sid-F66B2972-6B4E-44A7-83D4-3BBEB311E7DF(Display all offers on the user page)-->|sequenceFlow//sid-447D256E-CA10-4FC8-BA68-33253CC1739F(Unnamed)|exclusiveGateway//sid-35246AB9-03F3-4172-9D94-4E30C379F947(Accept offer)
+exclusiveGateway//sid-9A4DCF43-DBB1-490A-B05C-180D0202AC06(Registered)-->|sequenceFlow//sid-0D115231-D8B4-458F-8F7D-41B87FF80528(Yes)|exclusiveGateway//sid-6DDAB27D-264D-4F5F-8AB9-B1EAE250CCA4(Unnamed)
+exclusiveGateway//sid-35246AB9-03F3-4172-9D94-4E30C379F947(Accept offer)-->|sequenceFlow//sid-2A987259-BDB0-4F7A-8DDC-A609B5E74078(No)|manualTask//sid-3F2373EC-EE7C-4746-A947-3C8C85944718(Cancel the offer to the company)
+manualTask//sid-3F2373EC-EE7C-4746-A947-3C8C85944718(Cancel the offer to the company)-->|sequenceFlow//sid-FA35B48B-C63A-4BF0-A772-22D1E3E2DD97(Unnamed)|serviceTask//sid-9D3023AA-9730-45E0-AEE9-7D759CD9D298(Delete automatically the offer from the user page)
+serviceTask//sid-9D3023AA-9730-45E0-AEE9-7D759CD9D298(Delete automatically the offer from the user page)-->|sequenceFlow//sid-548DEC57-1D79-4F3D-8BA2-415CB05CC04F(Unnamed)|intermediateCatchEvent//sid-69D20642-82D8-4F41-A12E-5FFAFDDD5681(Offers)
+parallelGateway//sid-64C2788C-3638-410D-AEEB-6E70B34B9E8A(Unnamed)-->|sequenceFlow//sid-1CA65A0A-1B6E-4619-98A7-9A47D0FA7325(Unnamed)|manualTask//sid-90A86BAF-AFDE-44F0-A286-CA0E8888A38A(Save preferences and specifications)
+manualTask//sid-90A86BAF-AFDE-44F0-A286-CA0E8888A38A(Save preferences and specifications)-->|sequenceFlow//sid-6C9C4C82-5BB3-4BC7-88CA-094610DB8FE0(Unnamed)|intermediateCatchEvent//sid-69D20642-82D8-4F41-A12E-5FFAFDDD5681(Offers)
+serviceTask//sid-0DF0D79C-C20D-4529-9196-6E2683E1E845(Receive all status updates from the company via the EGovernment website)-->|sequenceFlow//sid-E8FDF909-6487-46BE-956B-82A4F7BA465A(Unnamed)|intermediateCatchEvent//sid-B9443CC5-01F7-445C-8E1F-CD005683331C(After theinternship is finished)
+intermediateCatchEvent//sid-B9443CC5-01F7-445C-8E1F-CD005683331C(After theinternship is finished)-->|sequenceFlow//sid-936D9959-7185-48ED-95D3-79E954BCB82E(Unnamed)|exclusiveGateway//sid-8BE65F08-8919-44D4-AAA5-CA44A5D454A6(Recommend the company)
+nan//sid-24B58A84-5A5C-4D3A-8B9E-79589A019B51(nan)-->|messageFlow//sid-F877150B-EB07-4069-A1A4-F0B74596F493(Unnamed)|serviceTask//sid-0DF0D79C-C20D-4529-9196-6E2683E1E845(Receive all status updates from the company via the EGovernment website)
+nan//sid-9FA4AB70-F497-4110-84B2-4E2BD3438FC7(nan)-->|messageFlow//sid-C5E02A07-2714-4ED1-9C4D-FC539111F0A9(Unnamed)|intermediateCatchEvent//sid-69D20642-82D8-4F41-A12E-5FFAFDDD5681(Offers)
+lane sid-CFBE46FD-7962-4EF5-80B7-12055999F3C3(Trainee)
+  sid-47719E94-AC15-4779-A05A-7145C0199E39
+  sid-8BE65F08-8919-44D4-AAA5-CA44A5D454A6
+  sid-90A86BAF-AFDE-44F0-A286-CA0E8888A38A
+  sid-35246AB9-03F3-4172-9D94-4E30C379F947
+  sid-D106D669-ED1B-4E5F-AD40-B542198B1F43
+  sid-2D809FA1-E587-42A8-A2C6-EF51CC5FED4D
+  sid-64C2788C-3638-410D-AEEB-6E70B34B9E8A
+  sid-69D20642-82D8-4F41-A12E-5FFAFDDD5681
+  sid-00D23AE9-F96C-4AD8-BE5B-F76729EE0DED
+  sid-5D5C22B0-821F-41B5-BC12-CE58AA19FE38
+  sid-0DF0D79C-C20D-4529-9196-6E2683E1E845
+  sid-DDCC101D-871B-4416-ABE2-C14C96883068
+  sid-B3CEFD7A-BB80-41BC-BCE1-3A48379DE613
+  sid-E7628BE5-4B35-4718-8ABD-BB7602B4E1AF
+  sid-41DA4DD6-4777-4794-B384-F40850C631ED
+  sid-29681108-6195-4639-80A5-0054F8AF8B0C
+  sid-9A4DCF43-DBB1-490A-B05C-180D0202AC06
+  sid-9D3023AA-9730-45E0-AEE9-7D759CD9D298
+  sid-E291258B-5527-495E-A8C6-F9F310F5388D
+  sid-6990B9A5-9FD2-4B7E-88C8-338353B45490
+  sid-6FC65F3D-171A-4785-B37A-D296942FB0A2
+  sid-FDD303AD-F2A8-4963-9142-EF0C65964AF5
+  sid-F66B2972-6B4E-44A7-83D4-3BBEB311E7DF
+  sid-804BED4D-929E-4ABD-884B-AA54AC4CCCA0
+  sid-0FDC6236-1306-415B-A10D-FEACFB5C0AD7
+  sid-3F2373EC-EE7C-4746-A947-3C8C85944718
+  sid-6DDAB27D-264D-4F5F-8AB9-B1EAE250CCA4
+  sid-B9443CC5-01F7-445C-8E1F-CD005683331C
+end
+
+lane sid-14BF3291-B82D-46B2-87DD-722AA159B91A(Company)
+end
+
+lane sid-73D1037B-68A5-4563-897B-F12E9F4EB9A8(EGovernment Website)
+end
+

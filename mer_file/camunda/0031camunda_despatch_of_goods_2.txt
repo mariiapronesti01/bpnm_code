@@ -1,0 +1,41 @@
+exclusiveGateway//ExclusiveGateway_1mpgzhg(Specialsandling)-->|sequenceFlow//SequenceFlow_0iu9po7(no)|inclusiveGateway//InclusiveGateway_0p2e5vq(Unnamed)
+inclusiveGateway//InclusiveGateway_0p2e5vq(Unnamed)-->|sequenceFlow//SequenceFlow_1j94oja(If insurancenecessary)|task//Task_12j0pib(Insure parcel)
+inclusiveGateway//InclusiveGateway_0p2e5vq(Unnamed)-->|sequenceFlow//SequenceFlow_1dlbln9(always)|task//Task_0jsoxba(Write packagelabel)
+task//Task_0jsoxba(Write packagelabel)-->|sequenceFlow//SequenceFlow_0mp5byl(Unnamed)|inclusiveGateway//InclusiveGateway_1dgb4sg(Unnamed)
+task//Task_12j0pib(Insure parcel)-->|sequenceFlow//SequenceFlow_0kz5g1t(Unnamed)|inclusiveGateway//InclusiveGateway_1dgb4sg(Unnamed)
+startEvent//StartEvent_1(Ship goods)-->|sequenceFlow//SequenceFlow_14a0oky(Unnamed)|parallelGateway//ParallelGateway_02fgrfq(Unnamed)
+parallelGateway//ParallelGateway_02fgrfq(Unnamed)-->|sequenceFlow//SequenceFlow_023hzxi(Unnamed)|task//Task_0vaxgaa(Clarify shipment method)
+task//Task_0vaxgaa(Clarify shipment method)-->|sequenceFlow//SequenceFlow_1rss71o(Unnamed)|exclusiveGateway//ExclusiveGateway_1mpgzhg(Specialsandling)
+exclusiveGateway//ExclusiveGateway_1mpgzhg(Specialsandling)-->|sequenceFlow//SequenceFlow_1xv6wk4(yes)|task//Task_0e6hvnj(Get 3 offersfrom logisticcompanies)
+task//Task_0e6hvnj(Get 3 offersfrom logisticcompanies)-->|sequenceFlow//SequenceFlow_1pq8ub3(Unnamed)|task//Task_0s79ile(Select logisticcompany andplace order)
+task//Task_0s79ile(Select logisticcompany andplace order)-->|sequenceFlow//SequenceFlow_0ajhekx(Unnamed)|exclusiveGateway//ExclusiveGateway_1ouv9kf(Unnamed)
+inclusiveGateway//InclusiveGateway_1dgb4sg(Unnamed)-->|sequenceFlow//SequenceFlow_0buzwss(Unnamed)|exclusiveGateway//ExclusiveGateway_1ouv9kf(Unnamed)
+exclusiveGateway//ExclusiveGateway_1ouv9kf(Unnamed)-->|sequenceFlow//SequenceFlow_035vf60(Unnamed)|exclusiveGateway//ExclusiveGateway_0z5sib0(Unnamed)
+task//Task_05ftug5(Package goods)-->|sequenceFlow//SequenceFlow_0b2nw5c(Unnamed)|exclusiveGateway//ExclusiveGateway_0z5sib0(Unnamed)
+exclusiveGateway//ExclusiveGateway_0z5sib0(Unnamed)-->|sequenceFlow//SequenceFlow_06kfaev(Unnamed)|task//Task_0sl26uo(Prepare forpicking upgoods)
+task//Task_0sl26uo(Prepare forpicking upgoods)-->|sequenceFlow//SequenceFlow_0v64x8b(Unnamed)|endEvent//EndEvent_1fx9yp3(Shipmentprepared)
+parallelGateway//ParallelGateway_02fgrfq(Unnamed)-->|sequenceFlow//SequenceFlow_1ujhfx4(Unnamed)|task//Task_05ftug5(Package goods)
+lane Lane_1viot5w(Logistics)
+  Task_12j0pib
+end
+
+lane Lane_1ocseyo(Secretary)
+  ParallelGateway_02fgrfq
+  Task_0s79ile
+  StartEvent_1
+  ExclusiveGateway_1mpgzhg
+  InclusiveGateway_1dgb4sg
+  Task_0vaxgaa
+  ExclusiveGateway_1ouv9kf
+  Task_0e6hvnj
+  InclusiveGateway_0p2e5vq
+  Task_0jsoxba
+end
+
+lane Lane_1vl2igx(Warehouse)
+  Task_05ftug5
+  EndEvent_1fx9yp3
+  Task_0sl26uo
+  ExclusiveGateway_0z5sib0
+end
+

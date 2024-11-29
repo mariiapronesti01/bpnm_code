@@ -1,0 +1,37 @@
+startEvent//sid-321AC9A1-54FB-425E-BFA7-504244D00EAC(Collect the money)-->|sequenceFlow//sid-C9A0BB46-D30B-4C17-8680-DDA841547A84(Unnamed)|task//sid-5E7DA06D-8786-467A-8F0D-522D7B153124(Receive the request for subrogate case)
+task//sid-5E7DA06D-8786-467A-8F0D-522D7B153124(Receive the request for subrogate case)-->|sequenceFlow//sid-CDAD6989-28FB-4657-AC09-7D1BFC2B106C(Unnamed)|exclusiveGateway//sid-C07848C2-CC3A-4B39-A703-733275B70CFA(Verify subrogate possible)
+exclusiveGateway//sid-C07848C2-CC3A-4B39-A703-733275B70CFA(Verify subrogate possible)-->|sequenceFlow//sid-075C46E9-8677-494F-B839-08DC8790EB8C(Unnamed)|task//sid-68C7EC36-041B-4371-897A-10CAEDBCA7D5(Close the case)
+task//sid-68C7EC36-041B-4371-897A-10CAEDBCA7D5(Close the case)-->|sequenceFlow//sid-FA0A780E-0665-4E4B-BD15-631C53A06577(Unnamed)|endEvent//sid-5136C85B-771A-4015-A7F9-C3DB58589E67(Recourse not possible)
+exclusiveGateway//sid-C07848C2-CC3A-4B39-A703-733275B70CFA(Verify subrogate possible)-->|sequenceFlow//sid-7F3AAC81-D455-4563-A4D5-31186638BAFF(Unnamed)|intermediateThrowEvent//sid-1200FF54-16D7-4596-985E-13B1002D9D6D(Send Request for Payment)
+intermediateThrowEvent//sid-1200FF54-16D7-4596-985E-13B1002D9D6D(Send Request for Payment)-->|sequenceFlow//sid-ABB53FFF-06FA-476C-9CAA-2BD76ADC27CB(Unnamed)|eventBasedGateway//sid-162D2F22-015C-4209-850B-47AE152D5526(Unnamed)
+intermediateCatchEvent//sid-64DB99F0-A9EE-42C8-87DB-0648627202E1(Receive Money from Insurant)-->|sequenceFlow//sid-33DBFFD9-F19E-4D3B-BC47-22BA9393DA72(Unnamed)|task//sid-8F807FC8-A66E-48BF-95C8-B70D44378B4A(Book the Payment)
+task//sid-8F807FC8-A66E-48BF-95C8-B70D44378B4A(Book the Payment)-->|sequenceFlow//sid-BB502D4B-77DB-48BB-A02B-44BE7903B0EF(Unnamed)|endEvent//sid-B5AA25DF-97C9-4C7C-A7A2-A3C3F68A84FC(Money collected)
+eventBasedGateway//sid-162D2F22-015C-4209-850B-47AE152D5526(Unnamed)-->|sequenceFlow//sid-A003C909-6B2B-498B-8DDE-C768D047B054(Unnamed)|intermediateCatchEvent//sid-64DB99F0-A9EE-42C8-87DB-0648627202E1(Receive Money from Insurant)
+eventBasedGateway//sid-162D2F22-015C-4209-850B-47AE152D5526(Unnamed)-->|sequenceFlow//sid-63DADA68-2280-4AC5-A7C2-6AFBAFDC4614(Unnamed)|intermediateCatchEvent//sid-A2BDF820-A758-4A9A-BF8F-209F2C547710(Deadline for responding the payment request)
+eventBasedGateway//sid-162D2F22-015C-4209-850B-47AE152D5526(Unnamed)-->|sequenceFlow//sid-70ECACFA-A8E6-48E6-850F-B08966375DFD(Unnamed)|intermediateCatchEvent//sid-7B544120-11DF-451E-BD7D-C4D60CD47C61(Disagreement reason received)
+intermediateCatchEvent//sid-7B544120-11DF-451E-BD7D-C4D60CD47C61(Disagreement reason received)-->|sequenceFlow//sid-936FABB7-B678-4319-B8BF-F23A82E68457(Unnamed)|exclusiveGateway//sid-AC0EE302-FFDF-44AD-B21E-176A76418AE4(Disagreement reasons are acceptable)
+intermediateCatchEvent//sid-A2BDF820-A758-4A9A-BF8F-209F2C547710(Deadline for responding the payment request)-->|sequenceFlow//sid-A1074C0E-30CA-4C81-8803-66265576AEC8(Unnamed)|task//sid-5B921FCA-5542-440A-9B15-5FC069E65EE9(Forward the case to the collection agency)
+exclusiveGateway//sid-AC0EE302-FFDF-44AD-B21E-176A76418AE4(Disagreement reasons are acceptable)-->|sequenceFlow//sid-48DFAAD0-F025-4C74-BB93-2EE716B88D3D(Yes)|task//sid-5B921FCA-5542-440A-9B15-5FC069E65EE9(Forward the case to the collection agency)
+exclusiveGateway//sid-AC0EE302-FFDF-44AD-B21E-176A76418AE4(Disagreement reasons are acceptable)-->|sequenceFlow//sid-C00D81BA-24CA-4C8D-8342-B2A7B1DEE240(No)|task//sid-68C7EC36-041B-4371-897A-10CAEDBCA7D5(Close the case)
+task//sid-5B921FCA-5542-440A-9B15-5FC069E65EE9(Forward the case to the collection agency)-->|sequenceFlow//sid-986AB9A1-0DF2-4E07-AC03-8545A9052469(Unnamed)|endEvent//sid-B6418D58-A019-4A83-8AB8-7E6A2A2F31D6(Case Forwarded)
+lane sid-7F3225B6-8DE4-4E1B-BBA0-D258E91D0D2A(Insurant)
+end
+
+lane sid-40093683-955E-4083-BEEC-BF6099AB80A4(Clerk)
+  sid-C07848C2-CC3A-4B39-A703-733275B70CFA
+  sid-5B921FCA-5542-440A-9B15-5FC069E65EE9
+  sid-64DB99F0-A9EE-42C8-87DB-0648627202E1
+  sid-7B544120-11DF-451E-BD7D-C4D60CD47C61
+  sid-1200FF54-16D7-4596-985E-13B1002D9D6D
+  sid-68C7EC36-041B-4371-897A-10CAEDBCA7D5
+  sid-B6418D58-A019-4A83-8AB8-7E6A2A2F31D6
+  sid-5E7DA06D-8786-467A-8F0D-522D7B153124
+  sid-A2BDF820-A758-4A9A-BF8F-209F2C547710
+  sid-321AC9A1-54FB-425E-BFA7-504244D00EAC
+  sid-B5AA25DF-97C9-4C7C-A7A2-A3C3F68A84FC
+  sid-AC0EE302-FFDF-44AD-B21E-176A76418AE4
+  sid-5136C85B-771A-4015-A7F9-C3DB58589E67
+  sid-8F807FC8-A66E-48BF-95C8-B70D44378B4A
+  sid-162D2F22-015C-4209-850B-47AE152D5526
+end
+

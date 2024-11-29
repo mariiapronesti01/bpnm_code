@@ -1,0 +1,9 @@
+Title: Contract
+
+For your contract project, you'll need components from various online shops. To determine which shop has the right parts, you must query all of them to find out their availability, pricing, and estimated delivery times.
+
+Compile a list of the parts you order from each shop. If a single shop doesn't have enough parts, place orders with multiple shops, always opting for the cheapest options.
+
+The parts will arrive in batches and in a random order, typically varying by plus or minus two days from the expected delivery date.
+
+Once the first batch of parts arrives, you can begin assembly. There may be times when you need to reorder parts. If your stock of a particular part drops below five, reorder the cheapest option; if it falls below three, reorder the fastest option. If you run out completely, you’ll email your friends to vent your frustrations about the webshops.

@@ -1,0 +1,3 @@
+Title: OEE
+
+Develop a process to gather relevant data from a machine and calculate its Overall Equipment Efficiency (OEE). If the OEE drops below a predetermined threshold or percentage, halt the machine and send an email notification to an engineer. When the machine is restarted, resume measuring the OEE. If the machine is disconnected, terminate the process.

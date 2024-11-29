@@ -1,0 +1,51 @@
+parallelGateway//sid-73C5A88B-DD8F-4BC2-BD54-5C295EBCB8B1(Unnamed)-->|sequenceFlow//sid-054C1ACD-3886-4C16-A7D6-7B310447FDEF(Unnamed)|userTask//sid-D4572426-72A8-4B94-A4F5-8B5DF5139696(Pack the product)
+userTask//sid-D4572426-72A8-4B94-A4F5-8B5DF5139696(Pack the product)-->|sequenceFlow//sid-AE8349CF-B54F-4CD1-AB9A-3F9180705F60(Unnamed)|parallelGateway//sid-2AF5782D-6971-4D87-B8E7-83BD74C6BA64(Unnamed)
+userTask//sid-425E443E-B873-43B0-B5D3-B8C6C26B1E3B(Request a courier)-->|sequenceFlow//sid-5575531A-5FCB-4290-85CF-6999E2756005(Unnamed)|parallelGateway//sid-2AF5782D-6971-4D87-B8E7-83BD74C6BA64(Unnamed)
+startEvent//sid-B9AAEEBC-B593-41CD-BFEC-2E01AD829705(Unnamed)-->|sequenceFlow//sid-A1941675-E2BB-4DD7-B690-EAAE46738496(Unnamed)|userTask//sid-FE459528-72C0-44E3-9DE1-62FEB8B12924(Connect to the managment system)
+userTask//sid-FE459528-72C0-44E3-9DE1-62FEB8B12924(Connect to the managment system)-->|sequenceFlow//sid-FAE4CE04-6FF8-4D9F-8005-97AB05162A3B(Unnamed)|serviceTask//sid-F533125F-D8F7-4098-97F9-80D8DC313F7F(Read order from system)
+serviceTask//sid-F533125F-D8F7-4098-97F9-80D8DC313F7F(Read order from system)-->|sequenceFlow//sid-CB04037C-5CC4-40B1-9703-45F14875120D(Unnamed)|exclusiveGateway//sid-EB8CFC1F-FE67-4521-97D9-1EA33080657A(Is first order in the stock)
+userTask//sid-B4F4C0DF-105D-4FD8-B05C-BC1DB2A03F4B(Reordered from the wholesaler)-->|sequenceFlow//sid-6402BE6E-DE17-49A1-B9C5-4D5D6E3FCEE9(Unnamed)|exclusiveGateway//sid-5FC5F9CE-0CC2-4486-9E0D-0EF6C4042841(Unnamed)
+userTask//sid-8F8797BD-0BE8-40E6-B9AA-CDF9F54C3757(Contact the wholesaler)-->|sequenceFlow//sid-C26863A8-2247-401C-ACCD-00A70428EA94(Unnamed)|userTask//sid-B4F4C0DF-105D-4FD8-B05C-BC1DB2A03F4B(Reordered from the wholesaler)
+exclusiveGateway//sid-EB8CFC1F-FE67-4521-97D9-1EA33080657A(Is first order in the stock)-->|sequenceFlow//sid-BF85D618-713C-484A-A2AE-8D49F1E4BA7C(No)|userTask//sid-8F8797BD-0BE8-40E6-B9AA-CDF9F54C3757(Contact the wholesaler)
+serviceTask//sid-B498DBA1-FAA9-4A45-A90D-888EA636FA6C(Browse the warehouse)-->|sequenceFlow//sid-D0C8B80D-D0DB-434D-8F3F-5E853FE9526F(Unnamed)|serviceTask//sid-F3B265E0-F432-4D29-9854-F1656FA35C73(Withdrawn  the product from the warehouse)
+exclusiveGateway//sid-EB8CFC1F-FE67-4521-97D9-1EA33080657A(Is first order in the stock)-->|sequenceFlow//sid-0893FB52-5D65-4DA7-B299-137E5D9E0456(Yes)|serviceTask//sid-B498DBA1-FAA9-4A45-A90D-888EA636FA6C(Browse the warehouse)
+exclusiveGateway//sid-5FC5F9CE-0CC2-4486-9E0D-0EF6C4042841(Unnamed)-->|sequenceFlow//sid-FFEA5153-759D-4FB8-B8EB-6F3319748969(Unnamed)|exclusiveGateway//sid-F6E66BDF-A28E-414D-967E-C1487197F42E(Arrival of the product)
+exclusiveGateway//sid-F6E66BDF-A28E-414D-967E-C1487197F42E(Arrival of the product)-->|sequenceFlow//sid-3C7D4A25-FAE8-4F2B-B5CD-AED33DBDA2D4(>10 days)|serviceTask//sid-58607C94-600A-495D-9E26-D4CBF78D2621(delivery delay penalty from the wholesaler)
+serviceTask//sid-58607C94-600A-495D-9E26-D4CBF78D2621(delivery delay penalty from the wholesaler)-->|sequenceFlow//sid-E23E584A-5E45-4133-8461-CEE3F11C0195(Unnamed)|exclusiveGateway//sid-9099C63B-CDEF-4573-BAB8-115817944AF2(Unnamed)
+exclusiveGateway//sid-F6E66BDF-A28E-414D-967E-C1487197F42E(Arrival of the product)-->|sequenceFlow//sid-2D6FD74B-5E30-49F4-BE30-1123866617A2(<10 days)|serviceTask//sid-2B47D193-6F42-43FA-8962-E1901A51008C(Give the Ok for the arrived product)
+serviceTask//sid-2B47D193-6F42-43FA-8962-E1901A51008C(Give the Ok for the arrived product)-->|sequenceFlow//sid-4F3D8D44-44F4-4381-9586-1AB6009E4D2A(Unnamed)|exclusiveGateway//sid-9099C63B-CDEF-4573-BAB8-115817944AF2(Unnamed)
+exclusiveGateway//sid-9099C63B-CDEF-4573-BAB8-115817944AF2(Unnamed)-->|sequenceFlow//sid-92B40B94-3C49-450E-A82C-17F03EA2F5B4(Unnamed)|serviceTask//sid-7B6D29ED-E8F4-428D-A53A-E7307C3F961A(Register the product in the management system)
+exclusiveGateway//sid-6F0B6237-77E0-426B-B9A4-0927A3B6D0C4(Ready for shipness)-->|sequenceFlow//sid-79153C40-D0AA-4BD6-B9BA-5779ABAC0A03(Yes)|parallelGateway//sid-73C5A88B-DD8F-4BC2-BD54-5C295EBCB8B1(Unnamed)
+serviceTask//sid-7B6D29ED-E8F4-428D-A53A-E7307C3F961A(Register the product in the management system)-->|sequenceFlow//sid-45D63C76-FB8F-4940-8575-56E631E14C03(Unnamed)|exclusiveGateway//sid-6F0B6237-77E0-426B-B9A4-0927A3B6D0C4(Ready for shipness)
+serviceTask//sid-F3B265E0-F432-4D29-9854-F1656FA35C73(Withdrawn  the product from the warehouse)-->|sequenceFlow//sid-3BF60774-21DC-4724-AECA-DF3DD41D73F9(Unnamed)|exclusiveGateway//sid-5FC5F9CE-0CC2-4486-9E0D-0EF6C4042841(Unnamed)
+userTask//sid-C5DBE713-5CAF-40AE-8EE5-567DCB262C8D(Ship the delivery)-->|sequenceFlow//sid-EFD95E45-0EC9-40E6-88D1-2E0CC17CE3B8(Unnamed)|endEvent//sid-A522D23D-BA06-4265-AE6E-04B257D05FB6(Successfully delivery)
+parallelGateway//sid-2AF5782D-6971-4D87-B8E7-83BD74C6BA64(Unnamed)-->|sequenceFlow//sid-A16A904A-87BB-4537-96DB-B9C2708801CB(Unnamed)|userTask//sid-C5DBE713-5CAF-40AE-8EE5-567DCB262C8D(Ship the delivery)
+parallelGateway//sid-73C5A88B-DD8F-4BC2-BD54-5C295EBCB8B1(Unnamed)-->|sequenceFlow//sid-874A28A3-B5DD-4C73-B148-B12EDC42F263(Unnamed)|userTask//sid-425E443E-B873-43B0-B5D3-B8C6C26B1E3B(Request a courier)
+exclusiveGateway//sid-6F0B6237-77E0-426B-B9A4-0927A3B6D0C4(Ready for shipness)-->|sequenceFlow//sid-D2203A34-3EDF-4EB7-A62A-3F951BB0BD2F(Unnamed)|serviceTask//sid-F533125F-D8F7-4098-97F9-80D8DC313F7F(Read order from system)
+lane sid-7F61D5E7-825D-43FF-A7FE-2434CE67BDE9(Stock management system)
+  sid-F3B265E0-F432-4D29-9854-F1656FA35C73
+  sid-F6E66BDF-A28E-414D-967E-C1487197F42E
+  sid-B498DBA1-FAA9-4A45-A90D-888EA636FA6C
+  sid-8F8797BD-0BE8-40E6-B9AA-CDF9F54C3757
+  sid-EB8CFC1F-FE67-4521-97D9-1EA33080657A
+  sid-58607C94-600A-495D-9E26-D4CBF78D2621
+  sid-7B6D29ED-E8F4-428D-A53A-E7307C3F961A
+  sid-2B47D193-6F42-43FA-8962-E1901A51008C
+  sid-9099C63B-CDEF-4573-BAB8-115817944AF2
+  sid-5FC5F9CE-0CC2-4486-9E0D-0EF6C4042841
+  sid-B4F4C0DF-105D-4FD8-B05C-BC1DB2A03F4B
+  sid-F533125F-D8F7-4098-97F9-80D8DC313F7F
+end
+
+lane sid-EDA32080-27D1-4C56-A800-7B9743BC29C5(User)
+  sid-425E443E-B873-43B0-B5D3-B8C6C26B1E3B
+  sid-73C5A88B-DD8F-4BC2-BD54-5C295EBCB8B1
+  sid-B9AAEEBC-B593-41CD-BFEC-2E01AD829705
+  sid-D4572426-72A8-4B94-A4F5-8B5DF5139696
+  sid-2AF5782D-6971-4D87-B8E7-83BD74C6BA64
+  sid-FE459528-72C0-44E3-9DE1-62FEB8B12924
+  sid-C5DBE713-5CAF-40AE-8EE5-567DCB262C8D
+  sid-A522D23D-BA06-4265-AE6E-04B257D05FB6
+  sid-6F0B6237-77E0-426B-B9A4-0927A3B6D0C4
+end
+

@@ -1,0 +1,57 @@
+startEvent//sid-0F5CD179-DAE3-4D4A-9A93-C14C2BF38E7A(Scoring request)-->|sequenceFlow//sid-E8EE8756-0EDC-461A-9757-CFC2CD910A14(Unnamed)|task//sid-E2DDFF2D-3312-487F-8AFF-0F5D38F4188F(Send request to credit agency)
+task//sid-E2DDFF2D-3312-487F-8AFF-0F5D38F4188F(Send request to credit agency)-->|sequenceFlow//sid-627389DA-11DF-44C5-8E7F-9B8E8A5ECCDA(Unnamed)|intermediateThrowEvent//sid-B3ADE152-01F4-477F-A656-A255E483D68D(Scoring request)
+intermediateThrowEvent//sid-B3ADE152-01F4-477F-A656-A255E483D68D(Scoring request)-->|sequenceFlow//sid-E26F70A8-2EC8-4216-ACFE-96A98257AA8C(Unnamed)|intermediateCatchEvent//sid-C6D7A458-BEEC-4A89-B761-CDF34B57F512(Level 1 scoring result)
+intermediateCatchEvent//sid-C6D7A458-BEEC-4A89-B761-CDF34B57F512(Level 1 scoring result)-->|sequenceFlow//sid-14C2B2DE-76F8-4342-8966-8DC20C6BFE6A(Unnamed)|exclusiveGateway//sid-736F9271-B6F1-4B4F-989A-0B94E5D4B45F(Is level 1 result available)
+exclusiveGateway//sid-736F9271-B6F1-4B4F-989A-0B94E5D4B45F(Is level 1 result available)-->|sequenceFlow//sid-E11639C8-4CAC-47CC-B205-131878A57803(yes)|intermediateThrowEvent//sid-B1CD4625-5660-46D4-9831-D04D95217DE1(Send level 1 report)
+intermediateThrowEvent//sid-B1CD4625-5660-46D4-9831-D04D95217DE1(Send level 1 report)-->|sequenceFlow//sid-DFF507EC-0A86-4D2C-A83A-3FCA8C4A098F(Unnamed)|endEvent//sid-10C3BE7A-1A02-41B8-9283-3B2B43CF2902(Level 1 report sent)
+exclusiveGateway//sid-736F9271-B6F1-4B4F-989A-0B94E5D4B45F(Is level 1 result available)-->|sequenceFlow//sid-2C3FD855-DD02-43B5-8B07-0B2B318C01CE(no)|intermediateCatchEvent//sid-E129B2BF-626D-45F9-859B-7D6056953F3D(Receive level 2 report)
+intermediateCatchEvent//sid-E129B2BF-626D-45F9-859B-7D6056953F3D(Receive level 2 report)-->|sequenceFlow//sid-8EF9EF35-7C09-4673-96B8-9E6D5FCD5949(Unnamed)|intermediateThrowEvent//sid-4CBA3D6D-AA69-4706-BB14-E6DF2332921A(Send level 2 report)
+intermediateThrowEvent//sid-4CBA3D6D-AA69-4706-BB14-E6DF2332921A(Send level 2 report)-->|sequenceFlow//sid-3811C0F8-6542-491B-9775-72C61EAD6737(Unnamed)|endEvent//sid-B27B17A7-8825-4A76-9498-59026244205C(Level 2 report sent)
+startEvent//sid-058A67B7-3774-4A6B-BF16-3047571A3972(Scoring request)-->|sequenceFlow//sid-71CDDC61-736A-49E9-8DAF-E1FAF74FE8FB(Unnamed)|task//sid-12134A12-42F3-4014-8836-7B86C65A8077(Perform level 1 scoring)
+task//sid-12134A12-42F3-4014-8836-7B86C65A8077(Perform level 1 scoring)-->|sequenceFlow//sid-3C48A0B8-366B-4FE8-8EA1-4660E87DCFA5(Unnamed)|exclusiveGateway//sid-1C1CCA11-0359-4936-983E-B081924C2FA2(Level 1 scoring available)
+exclusiveGateway//sid-1C1CCA11-0359-4936-983E-B081924C2FA2(Level 1 scoring available)-->|sequenceFlow//sid-C13C508D-B8E4-4EAE-8F31-A9E83E1D719F(Unnamed)|task//sid-CCD0EEFB-EDE6-4BA6-B928-FBF18389C9DF(Prepare Level 1 scoring report)
+task//sid-CCD0EEFB-EDE6-4BA6-B928-FBF18389C9DF(Prepare Level 1 scoring report)-->|sequenceFlow//sid-AAC0BD50-5CFA-43DC-90D4-C93767C94221(Unnamed)|intermediateThrowEvent//sid-05ED5F71-912E-40E0-8AB6-EA6B7F4BCB26(Send level 1 scoring)
+intermediateThrowEvent//sid-05ED5F71-912E-40E0-8AB6-EA6B7F4BCB26(Send level 1 scoring)-->|sequenceFlow//sid-BA835A80-6B32-4066-BBF0-88028C8EEAB9(Unnamed)|endEvent//sid-F9625A35-3D36-45DB-A241-97F4790F82AF(Level 1 scoringsent)
+task//sid-FB4407F6-96FD-416C-90C3-AD4E392BC1D1(Inform customer that level 1 scoring not available)-->|sequenceFlow//sid-194A303F-2569-4EC7-90F0-8A8081B1C4A4(Unnamed)|intermediateThrowEvent//sid-574006FB-06D6-47F9-960F-4310F3EA8884(Level 1 scoring not available notification)
+exclusiveGateway//sid-1C1CCA11-0359-4936-983E-B081924C2FA2(Level 1 scoring available)-->|sequenceFlow//sid-DEB29D0B-2D37-4CDD-9B20-B9AD01DDC283(yes)|task//sid-F7B60ADF-333E-4E6D-A52B-35C451220FC3(Prepare level 1scoring report)
+exclusiveGateway//sid-1C1CCA11-0359-4936-983E-B081924C2FA2(Level 1 scoring available)-->|sequenceFlow//sid-7E2F33F8-5BD3-4636-A25C-6CEDCF10E181(no)|task//sid-FB4407F6-96FD-416C-90C3-AD4E392BC1D1(Inform customer that level 1 scoring not available)
+intermediateThrowEvent//sid-574006FB-06D6-47F9-960F-4310F3EA8884(Level 1 scoring not available notification)-->|sequenceFlow//sid-13C4840D-B3E0-46EF-B6AC-4EF4F7EDE0B1(Unnamed)|task//sid-391AF803-4A78-4CD3-B31B-723F3B4E1EAB(Perform level 2 scoring)
+task//sid-391AF803-4A78-4CD3-B31B-723F3B4E1EAB(Perform level 2 scoring)-->|sequenceFlow//sid-F49FD6B5-C69B-4C24-B50F-9D252BA886D6(Unnamed)|task//sid-E952476D-5F48-4818-8E9C-4FC6320CF418(Prepare level 2 scoring report)
+task//sid-E952476D-5F48-4818-8E9C-4FC6320CF418(Prepare level 2 scoring report)-->|sequenceFlow//sid-9CA851A2-5EDA-400A-84B2-FAC5A201D2B4(Unnamed)|intermediateThrowEvent//sid-DF3FC115-2370-46FF-A701-FE83EC15DAF7(Send level 2 scoring)
+intermediateThrowEvent//sid-DF3FC115-2370-46FF-A701-FE83EC15DAF7(Send level 2 scoring)-->|sequenceFlow//sid-42F85E50-A732-496F-826F-C1697D880BE0(Unnamed)|endEvent//sid-367C4B5A-2146-4289-A147-181290A7FDC8(Level 2 scoring sent)
+nan//sid-94ADA360-7567-404D-809D-7B91E4ED5735(nan)-->|messageFlow//sid-7BC3A787-FD8D-4BA4-B55C-D0985BBAE64C(Unnamed)|startEvent//sid-0F5CD179-DAE3-4D4A-9A93-C14C2BF38E7A(Scoring request)
+intermediateThrowEvent//sid-B3ADE152-01F4-477F-A656-A255E483D68D(Scoring request)-->|messageFlow//sid-0389B09F-915B-4CB6-8CB2-8E54F383B239(Unnamed)|startEvent//sid-058A67B7-3774-4A6B-BF16-3047571A3972(Scoring request)
+intermediateThrowEvent//sid-574006FB-06D6-47F9-960F-4310F3EA8884(Level 1 scoring not available notification)-->|messageFlow//sid-BDC89960-89CD-47E9-A4D5-3F59B84BB7C2(Unnamed)|intermediateCatchEvent//sid-C6D7A458-BEEC-4A89-B761-CDF34B57F512(Level 1 scoring result)
+intermediateThrowEvent//sid-05ED5F71-912E-40E0-8AB6-EA6B7F4BCB26(Send level 1 scoring)-->|messageFlow//sid-AE43C4B0-ACB9-4DED-A568-F4C5A55DD533(Unnamed)|intermediateCatchEvent//sid-C6D7A458-BEEC-4A89-B761-CDF34B57F512(Level 1 scoring result)
+intermediateThrowEvent//sid-B1CD4625-5660-46D4-9831-D04D95217DE1(Send level 1 report)-->|messageFlow//sid-A237263E-E9A1-4237-92F6-BDD3C38D859A(Unnamed)|nan//sid-94ADA360-7567-404D-809D-7B91E4ED5735(nan)
+intermediateThrowEvent//sid-DF3FC115-2370-46FF-A701-FE83EC15DAF7(Send level 2 scoring)-->|messageFlow//sid-03E1A3AB-8E8F-49BA-9FD3-5F48CF1296D6(Unnamed)|intermediateCatchEvent//sid-E129B2BF-626D-45F9-859B-7D6056953F3D(Receive level 2 report)
+intermediateThrowEvent//sid-4CBA3D6D-AA69-4706-BB14-E6DF2332921A(Send level 2 report)-->|messageFlow//sid-3D111C1A-48DE-4894-95DB-A0A4129855D7(Unnamed)|nan//sid-94ADA360-7567-404D-809D-7B91E4ED5735(nan)
+lane sid-CFCBE18A-E893-40C9-B2EF-317907740122(Scoring Bank)
+  sid-B3ADE152-01F4-477F-A656-A255E483D68D
+  sid-B1CD4625-5660-46D4-9831-D04D95217DE1
+  sid-10C3BE7A-1A02-41B8-9283-3B2B43CF2902
+  sid-736F9271-B6F1-4B4F-989A-0B94E5D4B45F
+  sid-0F5CD179-DAE3-4D4A-9A93-C14C2BF38E7A
+  sid-E2DDFF2D-3312-487F-8AFF-0F5D38F4188F
+  sid-4CBA3D6D-AA69-4706-BB14-E6DF2332921A
+  sid-B27B17A7-8825-4A76-9498-59026244205C
+  sid-E129B2BF-626D-45F9-859B-7D6056953F3D
+  sid-C6D7A458-BEEC-4A89-B761-CDF34B57F512
+end
+
+lane sid-BFC3AD2E-F618-47BA-A7FB-604E98F95313(Scoring Credit Agency)
+  sid-F7B60ADF-333E-4E6D-A52B-35C451220FC3
+  sid-E952476D-5F48-4818-8E9C-4FC6320CF418
+  sid-FB4407F6-96FD-416C-90C3-AD4E392BC1D1
+  sid-F9625A35-3D36-45DB-A241-97F4790F82AF
+  sid-367C4B5A-2146-4289-A147-181290A7FDC8
+  sid-05ED5F71-912E-40E0-8AB6-EA6B7F4BCB26
+  sid-12134A12-42F3-4014-8836-7B86C65A8077
+  sid-391AF803-4A78-4CD3-B31B-723F3B4E1EAB
+  sid-DF3FC115-2370-46FF-A701-FE83EC15DAF7
+  sid-574006FB-06D6-47F9-960F-4310F3EA8884
+  sid-058A67B7-3774-4A6B-BF16-3047571A3972
+  sid-1C1CCA11-0359-4936-983E-B081924C2FA2
+  sid-CCD0EEFB-EDE6-4BA6-B928-FBF18389C9DF
+end
+

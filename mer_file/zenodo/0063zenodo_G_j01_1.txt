@@ -1,0 +1,81 @@
+startEvent//sid-1DD823E9-DA4B-44A7-8369-9DD91F5692EA(start farming process)-->|sequenceFlow//sid-975E55D1-F6C1-4CF8-AB20-8CD4F649EF93(Unnamed)|task//sid-DA10E39D-866A-4FFA-B60A-4FA5B9B84276(Find out which resources are wantedneeded)
+task//sid-DA10E39D-866A-4FFA-B60A-4FA5B9B84276(Find out which resources are wantedneeded)-->|sequenceFlow//sid-73C4F241-937D-40BA-9EE1-7E0533E8F877(Unnamed)|task//sid-E86A7469-8CB9-422B-9148-BA43104A012A(Decide collectable resources)
+task//sid-6B924C65-6026-43D8-AE53-3123B14B7822(Program Bots which resources should be collected  in which order)-->|sequenceFlow//sid-F14F5304-26BF-4448-BD3D-0D436A0D701D(Unnamed)|task//sid-B3856F6F-91B1-4EC6-868B-4F583EB9EB0A(Bots start collecting resources )
+parallelGateway//sid-46B2C7FC-47D6-496B-95E4-9C34E1802FE9(collecting resources)-->|sequenceFlow//sid-E6010B18-89E8-4185-92E0-FC623400E3F2(Unnamed)|task//sid-C75C5720-44BA-4127-B00E-A2613B624608(collectresource 1)
+parallelGateway//sid-46B2C7FC-47D6-496B-95E4-9C34E1802FE9(collecting resources)-->|sequenceFlow//sid-DD2AE3AC-3196-43BF-88FE-64AF0B1B3437(Unnamed)|task//sid-7F201290-A168-429C-B74A-BB1853F00908(collect resource 3)
+task//sid-08D0B331-942A-41D9-A6FF-4C7150B6390C(collect resource 2)-->|sequenceFlow//sid-A7520E57-AF6F-4AD1-9490-D421A27EF8D3(Unnamed)|parallelGateway//sid-1A1F5F6D-6AC8-4E8C-A84B-07FF0608496D(Unnamed)
+parallelGateway//sid-46B2C7FC-47D6-496B-95E4-9C34E1802FE9(collecting resources)-->|sequenceFlow//sid-09F6343A-E374-46F9-8BD4-007080589873(Unnamed)|task//sid-08D0B331-942A-41D9-A6FF-4C7150B6390C(collect resource 2)
+parallelGateway//sid-1A1F5F6D-6AC8-4E8C-A84B-07FF0608496D(Unnamed)-->|sequenceFlow//sid-6074FFE9-143F-49B1-8D94-484D8183F366(Unnamed)|task//sid-7A6E3ACA-1B87-4DEE-B04D-CF27CAB6FD1B(Bot finished collecting 1st set of resources)
+task//sid-C75C5720-44BA-4127-B00E-A2613B624608(collectresource 1)-->|sequenceFlow//sid-0DD11526-7AAA-4F1A-81BE-7C281749681E(Unnamed)|parallelGateway//sid-1A1F5F6D-6AC8-4E8C-A84B-07FF0608496D(Unnamed)
+task//sid-7F201290-A168-429C-B74A-BB1853F00908(collect resource 3)-->|sequenceFlow//sid-3C900815-0B3F-45DA-A4C1-C9A8F351F7C8(Unnamed)|parallelGateway//sid-1A1F5F6D-6AC8-4E8C-A84B-07FF0608496D(Unnamed)
+task//sid-E86A7469-8CB9-422B-9148-BA43104A012A(Decide collectable resources)-->|sequenceFlow//sid-0AD27FBA-6649-4C40-BDE2-5585816D0A64(Unnamed)|task//sid-2F1EA0B6-D8C5-49B1-AA91-3EB7F8804E28(Define order in which resources should be collected)
+task//sid-2F1EA0B6-D8C5-49B1-AA91-3EB7F8804E28(Define order in which resources should be collected)-->|sequenceFlow//sid-4B51CD44-76BE-4F74-B4AB-F118E29E7944(Unnamed)|task//sid-6B924C65-6026-43D8-AE53-3123B14B7822(Program Bots which resources should be collected  in which order)
+task//sid-997F7117-24A5-4736-8CBC-EB9D726CE0FA(Check collected resources)-->|sequenceFlow//sid-1C96A532-487D-4A14-99DD-15000340F421(Unnamed)|exclusiveGateway//sid-7221F1F0-9D6D-4340-A551-D6C2063D0753(have resources collected correct quantity and quality)
+task//sid-B3856F6F-91B1-4EC6-868B-4F583EB9EB0A(Bots start collecting resources )-->|sequenceFlow//sid-CACE5A7C-EF85-4BC6-91A3-D8E67D248512(Unnamed)|intermediateCatchEvent//sid-02982054-13B9-43FE-8A24-32FF81D917C2(Unnamed)
+task//sid-7A6E3ACA-1B87-4DEE-B04D-CF27CAB6FD1B(Bot finished collecting 1st set of resources)-->|sequenceFlow//sid-1DEBF456-24F8-4651-BA6E-DBA2A816D247(Unnamed)|intermediateCatchEvent//sid-FD1515F3-B77B-425E-8DCC-C46CA2071D1E(notification)
+task//sid-2571996A-BBDA-4A2B-A079-D902F3E5B61A(send bot collecting missing resources)-->|sequenceFlow//sid-90EFA415-79C7-4402-8BD2-F52A92B1096D(Unnamed)|task//sid-B3856F6F-91B1-4EC6-868B-4F583EB9EB0A(Bots start collecting resources )
+task//sid-6E91B0D0-AF86-4866-AEF9-DD6B10BDD3B8(Assemble Tool 1)-->|sequenceFlow//sid-F216EA92-6047-4CEB-AEA5-A6E411601CF7(Unnamed)|task//sid-00710BA1-4A0B-4479-BD3A-00D8ABD39E22(bot starts collecting further resources)
+task//sid-00710BA1-4A0B-4479-BD3A-00D8ABD39E22(bot starts collecting further resources)-->|sequenceFlow//sid-46CB6E5D-54A7-44FD-A82B-F879F029BB82(Unnamed)|intermediateCatchEvent//sid-5F1C31B0-0545-4A86-8910-BCAF16C8961E(notification)
+task//sid-C519023E-D6C0-43AA-AC68-84DCB6E48236(check collected resources)-->|sequenceFlow//sid-DDB73EEC-5A64-402A-9A27-286DA4140444(Unnamed)|exclusiveGateway//sid-B8387474-99F6-4437-AB43-220991999F24(have resources collected correct quantity and quality)
+parallelGateway//sid-CF5B6212-05D1-454C-96BA-83C1951DD33E(collecting resources)-->|sequenceFlow//sid-4E0FE551-091D-40C8-8FBD-C4A6BEB5E231(Unnamed)|task//sid-DB6A5734-BFE4-495B-80C1-06417ED7224F(collect resource 5)
+task//sid-DB6A5734-BFE4-495B-80C1-06417ED7224F(collect resource 5)-->|sequenceFlow//sid-707156D3-4803-45C6-B7FB-E83620A9651F(Unnamed)|parallelGateway//sid-D8F68133-BFCF-40F2-9B71-C38BAED5425F(Unnamed)
+parallelGateway//sid-CF5B6212-05D1-454C-96BA-83C1951DD33E(collecting resources)-->|sequenceFlow//sid-3C2859A4-AC09-4FE1-BD7A-6722F5355D2A(Unnamed)|task//sid-5435000E-5203-40E6-9733-84A189F60004(collect resource 6)
+parallelGateway//sid-CF5B6212-05D1-454C-96BA-83C1951DD33E(collecting resources)-->|sequenceFlow//sid-23A693E5-842C-414B-ADA0-F526B8F46158(Unnamed)|task//sid-F746D53C-82FA-42A8-AE7F-C8229881E027(collect resource 4)
+task//sid-5435000E-5203-40E6-9733-84A189F60004(collect resource 6)-->|sequenceFlow//sid-385FD878-48B2-4A5A-87C3-BA6D458FB9D9(Unnamed)|parallelGateway//sid-D8F68133-BFCF-40F2-9B71-C38BAED5425F(Unnamed)
+task//sid-F746D53C-82FA-42A8-AE7F-C8229881E027(collect resource 4)-->|sequenceFlow//sid-925AA18C-4F3E-456B-9A1E-87F44BBB563D(Unnamed)|parallelGateway//sid-D8F68133-BFCF-40F2-9B71-C38BAED5425F(Unnamed)
+task//sid-7C82DBC4-4C5D-4390-AF5E-E9992469F6F8(send bot collecting missing resources)-->|sequenceFlow//sid-C4A96B33-86FD-4C59-9234-0C57B57FB372(Unnamed)|task//sid-00710BA1-4A0B-4479-BD3A-00D8ABD39E22(bot starts collecting further resources)
+task//sid-2DAF0FFC-4C1A-45AD-A0E9-217D54793375(check friends results)-->|sequenceFlow//sid-503FBC3E-B1E2-4987-B401-51721E1DADDB(Unnamed)|inclusiveGateway//sid-8773C2AD-8B36-40D6-B19C-3D27EC32B224(friends farmingoutcomes)
+task//sid-70A7BB7C-0B89-4B5C-BE0D-5A1DE1B54883(brag about my farming bots)-->|sequenceFlow//sid-4F049F84-4523-4583-A557-CAB01FBF318A(Unnamed)|inclusiveGateway//sid-AEC5A0EA-2290-41ED-AB69-F6463F9FC779(Unnamed)
+task//sid-7151B92C-C7BC-453A-AB1E-E2C398ED919B(send them materials)-->|sequenceFlow//sid-596D37C7-A665-4434-8FC3-E9438C0AC81D(Unnamed)|inclusiveGateway//sid-AEC5A0EA-2290-41ED-AB69-F6463F9FC779(Unnamed)
+inclusiveGateway//sid-AEC5A0EA-2290-41ED-AB69-F6463F9FC779(Unnamed)-->|sequenceFlow//sid-6B0C067C-6830-4898-8DFE-C32E6AFA8BE0(Unnamed)|endEvent//sid-82EB5D22-3D41-4227-92CD-3024DD805319(Farming completed)
+exclusiveGateway//sid-7221F1F0-9D6D-4340-A551-D6C2063D0753(have resources collected correct quantity and quality)-->|sequenceFlow//sid-E1EF2793-03F6-4398-91CA-9642763309DE(yes)|task//sid-6E91B0D0-AF86-4866-AEF9-DD6B10BDD3B8(Assemble Tool 1)
+exclusiveGateway//sid-7221F1F0-9D6D-4340-A551-D6C2063D0753(have resources collected correct quantity and quality)-->|sequenceFlow//sid-65ACDC8E-C11D-4AA9-B232-232CA6FCF026(no)|task//sid-2571996A-BBDA-4A2B-A079-D902F3E5B61A(send bot collecting missing resources)
+exclusiveGateway//sid-B8387474-99F6-4437-AB43-220991999F24(have resources collected correct quantity and quality)-->|sequenceFlow//sid-B06088CC-7F48-47E7-8983-B5C5EA08020D(yes)|task//sid-2DAF0FFC-4C1A-45AD-A0E9-217D54793375(check friends results)
+exclusiveGateway//sid-B8387474-99F6-4437-AB43-220991999F24(have resources collected correct quantity and quality)-->|sequenceFlow//sid-05DE9EB5-D9F1-48B6-A150-01C0924D27A6(no)|task//sid-7C82DBC4-4C5D-4390-AF5E-E9992469F6F8(send bot collecting missing resources)
+inclusiveGateway//sid-8773C2AD-8B36-40D6-B19C-3D27EC32B224(friends farmingoutcomes)-->|sequenceFlow//sid-D771EE96-8115-4E1D-9155-252ABB03E330(not completed farming yet)|task//sid-70A7BB7C-0B89-4B5C-BE0D-5A1DE1B54883(brag about my farming bots)
+inclusiveGateway//sid-8773C2AD-8B36-40D6-B19C-3D27EC32B224(friends farmingoutcomes)-->|sequenceFlow//sid-4F9068BE-B5AF-4683-80FF-1FC42F7A3F38(finished farming)|task//sid-7151B92C-C7BC-453A-AB1E-E2C398ED919B(send them materials)
+intermediateCatchEvent//sid-02982054-13B9-43FE-8A24-32FF81D917C2(Unnamed)-->|sequenceFlow//sid-A7B74F4B-AA92-4768-8F4D-B555D8E5C986(Unnamed)|parallelGateway//sid-46B2C7FC-47D6-496B-95E4-9C34E1802FE9(collecting resources)
+intermediateCatchEvent//sid-FD1515F3-B77B-425E-8DCC-C46CA2071D1E(notification)-->|sequenceFlow//sid-666C4E02-5CC6-4BDF-9AA3-52FA17AD7257(Unnamed)|task//sid-997F7117-24A5-4736-8CBC-EB9D726CE0FA(Check collected resources)
+intermediateCatchEvent//sid-5F1C31B0-0545-4A86-8910-BCAF16C8961E(notification)-->|sequenceFlow//sid-39B0F880-4CF1-4C0E-8214-CE9AC50341FE(Unnamed)|parallelGateway//sid-CF5B6212-05D1-454C-96BA-83C1951DD33E(collecting resources)
+parallelGateway//sid-D8F68133-BFCF-40F2-9B71-C38BAED5425F(Unnamed)-->|sequenceFlow//sid-436E75F8-1F68-4DD3-9759-2D977231D2B0(Unnamed)|task//sid-0B37B654-75FF-4992-9E82-78C3E98B0973(Bot finished collecting 2nd set of resources)
+task//sid-0B37B654-75FF-4992-9E82-78C3E98B0973(Bot finished collecting 2nd set of resources)-->|sequenceFlow//sid-CEF4A25B-73D0-47BD-AF1F-E8ABB4E8261A(Unnamed)|intermediateCatchEvent//sid-A539F44B-B6EE-46FD-8A9D-C700AEEB6E41(notification)
+intermediateCatchEvent//sid-A539F44B-B6EE-46FD-8A9D-C700AEEB6E41(notification)-->|sequenceFlow//sid-635C787C-97E4-4FA3-9A8C-AF83770F1643(Unnamed)|task//sid-C519023E-D6C0-43AA-AC68-84DCB6E48236(check collected resources)
+lane sid-A80F308B-F360-469F-B5F8-39FFA3981598(Farming Bot Game)
+  sid-1DD823E9-DA4B-44A7-8369-9DD91F5692EA
+  sid-02982054-13B9-43FE-8A24-32FF81D917C2
+  sid-DA10E39D-866A-4FFA-B60A-4FA5B9B84276
+  sid-E86A7469-8CB9-422B-9148-BA43104A012A
+  sid-7F201290-A168-429C-B74A-BB1853F00908
+  sid-6B924C65-6026-43D8-AE53-3123B14B7822
+  sid-7C82DBC4-4C5D-4390-AF5E-E9992469F6F8
+  sid-DB6A5734-BFE4-495B-80C1-06417ED7224F
+  sid-CF5B6212-05D1-454C-96BA-83C1951DD33E
+  sid-A539F44B-B6EE-46FD-8A9D-C700AEEB6E41
+  sid-08D0B331-942A-41D9-A6FF-4C7150B6390C
+  sid-70A7BB7C-0B89-4B5C-BE0D-5A1DE1B54883
+  sid-5F1C31B0-0545-4A86-8910-BCAF16C8961E
+  sid-5435000E-5203-40E6-9733-84A189F60004
+  sid-7151B92C-C7BC-453A-AB1E-E2C398ED919B
+  sid-D8F68133-BFCF-40F2-9B71-C38BAED5425F
+  sid-C75C5720-44BA-4127-B00E-A2613B624608
+  sid-F746D53C-82FA-42A8-AE7F-C8229881E027
+  sid-B8387474-99F6-4437-AB43-220991999F24
+  sid-82EB5D22-3D41-4227-92CD-3024DD805319
+  sid-8773C2AD-8B36-40D6-B19C-3D27EC32B224
+  sid-997F7117-24A5-4736-8CBC-EB9D726CE0FA
+  sid-00710BA1-4A0B-4479-BD3A-00D8ABD39E22
+  sid-2571996A-BBDA-4A2B-A079-D902F3E5B61A
+  sid-FD1515F3-B77B-425E-8DCC-C46CA2071D1E
+  sid-6E91B0D0-AF86-4866-AEF9-DD6B10BDD3B8
+  sid-AEC5A0EA-2290-41ED-AB69-F6463F9FC779
+  sid-B3856F6F-91B1-4EC6-868B-4F583EB9EB0A
+  sid-1A1F5F6D-6AC8-4E8C-A84B-07FF0608496D
+  sid-0B37B654-75FF-4992-9E82-78C3E98B0973
+  sid-46B2C7FC-47D6-496B-95E4-9C34E1802FE9
+  sid-2DAF0FFC-4C1A-45AD-A0E9-217D54793375
+  sid-7A6E3ACA-1B87-4DEE-B04D-CF27CAB6FD1B
+  sid-2F1EA0B6-D8C5-49B1-AA91-3EB7F8804E28
+  sid-C519023E-D6C0-43AA-AC68-84DCB6E48236
+  sid-7221F1F0-9D6D-4340-A551-D6C2063D0753
+end
+

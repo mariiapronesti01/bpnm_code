@@ -1,0 +1,81 @@
+startEvent//sid-B8730A83-2749-4EF1-9461-A3E0081B59F0(receives order)-->|sequenceFlow//sid-D4A6C27B-2C10-4D5F-8777-50CD06AA983F(Unnamed)|serviceTask//sid-2143C9B1-6ABB-4C11-BC2D-5DB16F288777(ask customer if he wants only a burger or a menu)
+serviceTask//sid-2143C9B1-6ABB-4C11-BC2D-5DB16F288777(ask customer if he wants only a burger or a menu)-->|sequenceFlow//sid-C62BDB83-30E4-4A59-B083-1ADA52AA3014(Unnamed)|exclusiveGateway//sid-E41A81AE-E7C5-4A08-81C2-04DF50CDE5A2(Unnamed)
+parallelGateway//sid-62AB7948-58D7-4962-B6E6-E67E12253F25(Unnamed)-->|sequenceFlow//sid-2031F108-5A1B-4F52-ABA2-1A03727F72A3(Unnamed)|serviceTask//sid-A961A540-DC4C-42F3-AFA9-98209B314C65(prepare drink)
+parallelGateway//sid-62AB7948-58D7-4962-B6E6-E67E12253F25(Unnamed)-->|sequenceFlow//sid-648B4006-682B-45C0-B696-5B3DEFDC70CE(Unnamed)|serviceTask//sid-D089C1BA-1D49-4BE6-9C4B-0BDC1F94849F(ask whether customer wants wedges or fries)
+exclusiveGateway//sid-E41A81AE-E7C5-4A08-81C2-04DF50CDE5A2(Unnamed)-->|sequenceFlow//sid-8DC26210-BA1A-4FBF-85DF-E7EF63377D22(menu)|parallelGateway//sid-62AB7948-58D7-4962-B6E6-E67E12253F25(Unnamed)
+serviceTask//sid-A961A540-DC4C-42F3-AFA9-98209B314C65(prepare drink)-->|sequenceFlow//sid-E28F91AD-F825-48CE-B7F4-1E0C33D9527F(Unnamed)|intermediateCatchEvent//sid-B9E4C816-D357-4D06-8FA6-E841624B8631(Unnamed)
+serviceTask//sid-D089C1BA-1D49-4BE6-9C4B-0BDC1F94849F(ask whether customer wants wedges or fries)-->|sequenceFlow//sid-54DE492D-0221-4089-B8E9-05E69CEDB641(Unnamed)|exclusiveGateway//sid-A416FF4A-C318-4B98-84BF-C131D20B8A97(Unnamed)
+exclusiveGateway//sid-A416FF4A-C318-4B98-84BF-C131D20B8A97(Unnamed)-->|sequenceFlow//sid-D45595DD-3EEB-4F11-A415-DDE14921FE46(fries)|serviceTask//sid-6F8EE36D-CFDF-4F37-96E4-35C44ACBD124(prepare fries)
+exclusiveGateway//sid-A416FF4A-C318-4B98-84BF-C131D20B8A97(Unnamed)-->|sequenceFlow//sid-E5B3D876-0C5C-40DD-ABC3-BC802EAC1391(wedges)|serviceTask//sid-4F384E7C-4322-4221-8C44-E9DCCAE178C1(prepare wedges)
+serviceTask//sid-6F8EE36D-CFDF-4F37-96E4-35C44ACBD124(prepare fries)-->|sequenceFlow//sid-ED2CED96-7E2A-48CF-A7ED-9BF038181528(Unnamed)|intermediateCatchEvent//sid-096B5126-C17D-4EED-8F71-0182E39874F5(Unnamed)
+serviceTask//sid-4F384E7C-4322-4221-8C44-E9DCCAE178C1(prepare wedges)-->|sequenceFlow//sid-081DB6C3-6A40-4E40-A06D-F27819D670B7(Unnamed)|intermediateCatchEvent//sid-BF74743F-926D-4DB3-A81C-2A2AE19F698B(Unnamed)
+intermediateCatchEvent//sid-BF74743F-926D-4DB3-A81C-2A2AE19F698B(Unnamed)-->|sequenceFlow//sid-A847885A-A6A2-4C59-9012-4F8DC96825A4(Unnamed)|exclusiveGateway//sid-61933769-1ADE-46F8-AA31-2B6A719A7159(Unnamed)
+intermediateCatchEvent//sid-096B5126-C17D-4EED-8F71-0182E39874F5(Unnamed)-->|sequenceFlow//sid-65B6484C-E297-4D27-A2A9-572BC3846B88(Unnamed)|exclusiveGateway//sid-61933769-1ADE-46F8-AA31-2B6A719A7159(Unnamed)
+exclusiveGateway//sid-61933769-1ADE-46F8-AA31-2B6A719A7159(Unnamed)-->|sequenceFlow//sid-5A5180EF-2B7E-4B5A-BE55-61F39EF22D38(Unnamed)|parallelGateway//sid-72C2EADD-0E9E-4904-AB53-4E6CB2B51512(Unnamed)
+intermediateCatchEvent//sid-B9E4C816-D357-4D06-8FA6-E841624B8631(Unnamed)-->|sequenceFlow//sid-489C6FFB-1A67-410F-81EC-14A51B3382AE(Unnamed)|parallelGateway//sid-72C2EADD-0E9E-4904-AB53-4E6CB2B51512(Unnamed)
+parallelGateway//sid-72C2EADD-0E9E-4904-AB53-4E6CB2B51512(Unnamed)-->|sequenceFlow//sid-D3056D22-1801-421C-B39A-156F1F4024F9(Unnamed)|parallelGateway//sid-6EE5F316-605F-4C37-AAAA-0F5E4832B6B4(Unnamed)
+parallelGateway//sid-6EE5F316-605F-4C37-AAAA-0F5E4832B6B4(Unnamed)-->|sequenceFlow//sid-0618E05B-AF8F-46A4-83E3-C7F924E3DAC0(Unnamed)|serviceTask//sid-48F06201-4534-48C0-8B24-CDF0EEC17F46(prepares burger)
+serviceTask//sid-3E8C8D5C-5E48-4BF3-9831-19904E0F075C(gives enthusiastic status updates)-->|sequenceFlow//sid-0D215582-A240-426F-AAB7-0566669EB106(Unnamed)|intermediateCatchEvent//sid-EDEFDDC4-979D-4423-8456-BFA758B699F7(Unnamed)
+intermediateCatchEvent//sid-EDEFDDC4-979D-4423-8456-BFA758B699F7(Unnamed)-->|sequenceFlow//sid-81323395-B528-436D-8D35-8FBF07632CE6(Unnamed)|exclusiveGateway//sid-47C2153E-1CBD-4890-9242-AD57903AF251(Unnamed)
+serviceTask//sid-48F06201-4534-48C0-8B24-CDF0EEC17F46(prepares burger)-->|sequenceFlow//sid-FD7D9424-2759-44D5-B2A1-8A398115B4D8(Unnamed)|intermediateCatchEvent//sid-60D1D2FA-BA6F-4CE1-A70C-3F58FC335548(Unnamed)
+exclusiveGateway//sid-47C2153E-1CBD-4890-9242-AD57903AF251(Unnamed)-->|sequenceFlow//sid-EE3612F6-0207-4D91-98B3-9ED93F353DEC(burger prepared)|parallelGateway//sid-F6589F39-79C2-4445-B8A0-76771E88616C(Unnamed)
+parallelGateway//sid-F6589F39-79C2-4445-B8A0-76771E88616C(Unnamed)-->|sequenceFlow//sid-DF9420DB-F2F6-4E7F-B285-750E36267176(Unnamed)|serviceTask//sid-0BC0770F-56BE-418D-A910-E6BABAAEE6B8(puts order on conveyer belt)
+serviceTask//sid-0BC0770F-56BE-418D-A910-E6BABAAEE6B8(puts order on conveyer belt)-->|sequenceFlow//sid-177C5FD9-FD42-442A-B14A-5ED87DAB2738(Unnamed)|endEvent//sid-1C1D0C24-9D2A-4EBD-99BB-29EB9C237E6C(Unnamed)
+exclusiveGateway//sid-E41A81AE-E7C5-4A08-81C2-04DF50CDE5A2(Unnamed)-->|sequenceFlow//sid-7CF7C798-73D5-4C37-B9EC-E1017D265327(burger)|parallelGateway//sid-6EE5F316-605F-4C37-AAAA-0F5E4832B6B4(Unnamed)
+parallelGateway//sid-6EE5F316-605F-4C37-AAAA-0F5E4832B6B4(Unnamed)-->|sequenceFlow//sid-8D715A94-6DC4-43DC-9E37-5745721A14A2(Unnamed)|serviceTask//sid-3E8C8D5C-5E48-4BF3-9831-19904E0F075C(gives enthusiastic status updates)
+intermediateCatchEvent//sid-60D1D2FA-BA6F-4CE1-A70C-3F58FC335548(Unnamed)-->|sequenceFlow//sid-4A7F0628-1A5D-49B2-BA40-E6B4ED257670(Unnamed)|parallelGateway//sid-F6589F39-79C2-4445-B8A0-76771E88616C(Unnamed)
+exclusiveGateway//sid-47C2153E-1CBD-4890-9242-AD57903AF251(Unnamed)-->|sequenceFlow//sid-5A6BADCD-F997-4FE4-B77D-A8F82BF89507(burger not yet prepared)|serviceTask//sid-3E8C8D5C-5E48-4BF3-9831-19904E0F075C(gives enthusiastic status updates)
+startEvent//sid-664C5A17-AB91-4335-B8C6-3267347C06FF(Unnamed)-->|sequenceFlow//sid-7641095B-D44C-451F-ADCF-0EE0E8EFCE2F(Unnamed)|userTask//sid-E1C52C96-E859-4DA2-80D3-AE0E7BFEDBE4(Gives an order)
+userTask//sid-E1C52C96-E859-4DA2-80D3-AE0E7BFEDBE4(Gives an order)-->|sequenceFlow//sid-6E49B235-0156-4FAE-9E23-08564F4C3781(Unnamed)|userTask//sid-53F27D8E-4950-4E7D-9348-D40A0E634980(tells if he wants a burger or a menu)
+userTask//sid-53F27D8E-4950-4E7D-9348-D40A0E634980(tells if he wants a burger or a menu)-->|sequenceFlow//sid-D7BB06B4-A2DE-4971-81B0-9451461B644A(Unnamed)|userTask//sid-541B14F8-8029-42B3-AEAB-67DF0A29A9F2(tells whether he wants wedges or fries)
+userTask//sid-541B14F8-8029-42B3-AEAB-67DF0A29A9F2(tells whether he wants wedges or fries)-->|sequenceFlow//sid-02488E98-A2A1-4727-9B05-FC1ED244465A(Unnamed)|parallelGateway//sid-02B6E904-B7C7-4E8F-A192-AB8FA60276BE(Unnamed)
+userTask//sid-A26799E5-B8E1-4735-B4E2-192701351761(takes order from convey belt)-->|sequenceFlow//sid-A1CC0A6F-4FAE-41CB-842A-9DE27E970D92(Unnamed)|endEvent//sid-C2CF5268-E4B5-46A0-A45A-41BD47E5A25E(Unnamed)
+parallelGateway//sid-02B6E904-B7C7-4E8F-A192-AB8FA60276BE(Unnamed)-->|sequenceFlow//sid-EDE4DA83-88A1-47FD-A99B-A5B7217D3FF9(Unnamed)|userTask//sid-DF911950-0157-4B95-9559-BCD9C839D465(listen to enthusiastic updates)
+userTask//sid-DF911950-0157-4B95-9559-BCD9C839D465(listen to enthusiastic updates)-->|sequenceFlow//sid-9B6EB2A3-96A8-4AFA-8F0D-6864F5865BAF(Unnamed)|parallelGateway//sid-E34B9893-10BF-4A30-917B-63433E68B8AA(Unnamed)
+parallelGateway//sid-02B6E904-B7C7-4E8F-A192-AB8FA60276BE(Unnamed)-->|sequenceFlow//sid-F8C3119E-A910-4F8F-9DCC-8781205D27E3(Unnamed)|userTask//sid-0DA67BA1-3E95-41CC-BD12-E1EF66F34DF7(waiting for order to be completed)
+parallelGateway//sid-E34B9893-10BF-4A30-917B-63433E68B8AA(Unnamed)-->|sequenceFlow//sid-CE1C0C82-8BF9-4F1C-991F-EFC6A491567D(Unnamed)|userTask//sid-A26799E5-B8E1-4735-B4E2-192701351761(takes order from convey belt)
+userTask//sid-0DA67BA1-3E95-41CC-BD12-E1EF66F34DF7(waiting for order to be completed)-->|sequenceFlow//sid-8AB89B3A-E33E-4304-97E5-9905AC47B554(Unnamed)|parallelGateway//sid-E34B9893-10BF-4A30-917B-63433E68B8AA(Unnamed)
+userTask//sid-E1C52C96-E859-4DA2-80D3-AE0E7BFEDBE4(Gives an order)-->|messageFlow//sid-268895D4-C42C-4417-9E00-7A14BCD30681(Unnamed)|nan//sid-259CA540-FE70-419B-97C6-D2D71BB1747A(nan)
+serviceTask//sid-2143C9B1-6ABB-4C11-BC2D-5DB16F288777(ask customer if he wants only a burger or a menu)-->|messageFlow//sid-41668039-2EE9-43ED-98B4-4060E8CE0CBE(Unnamed)|userTask//sid-53F27D8E-4950-4E7D-9348-D40A0E634980(tells if he wants a burger or a menu)
+serviceTask//sid-D089C1BA-1D49-4BE6-9C4B-0BDC1F94849F(ask whether customer wants wedges or fries)-->|messageFlow//sid-DAE15CE0-15A9-489B-89FD-514AF6224EC7(Unnamed)|userTask//sid-541B14F8-8029-42B3-AEAB-67DF0A29A9F2(tells whether he wants wedges or fries)
+serviceTask//sid-0BC0770F-56BE-418D-A910-E6BABAAEE6B8(puts order on conveyer belt)-->|messageFlow//sid-296E5DDA-0994-4620-8080-D0C17B62C6F1(Unnamed)|userTask//sid-A26799E5-B8E1-4735-B4E2-192701351761(takes order from convey belt)
+serviceTask//sid-3E8C8D5C-5E48-4BF3-9831-19904E0F075C(gives enthusiastic status updates)-->|messageFlow//sid-058B172A-7CD0-4FB0-B627-0674AD08D827(Unnamed)|userTask//sid-DF911950-0157-4B95-9559-BCD9C839D465(listen to enthusiastic updates)
+lane sid-7230DB60-05A8-46D7-A9DE-E4B2169118D6(Robot)
+  sid-60D1D2FA-BA6F-4CE1-A70C-3F58FC335548
+  sid-4F384E7C-4322-4221-8C44-E9DCCAE178C1
+  sid-F6589F39-79C2-4445-B8A0-76771E88616C
+  sid-1C1D0C24-9D2A-4EBD-99BB-29EB9C237E6C
+  sid-BF74743F-926D-4DB3-A81C-2A2AE19F698B
+  sid-B8730A83-2749-4EF1-9461-A3E0081B59F0
+  sid-48F06201-4534-48C0-8B24-CDF0EEC17F46
+  sid-6EE5F316-605F-4C37-AAAA-0F5E4832B6B4
+  sid-3E8C8D5C-5E48-4BF3-9831-19904E0F075C
+  sid-096B5126-C17D-4EED-8F71-0182E39874F5
+  sid-47C2153E-1CBD-4890-9242-AD57903AF251
+  sid-62AB7948-58D7-4962-B6E6-E67E12253F25
+  sid-EDEFDDC4-979D-4423-8456-BFA758B699F7
+  sid-72C2EADD-0E9E-4904-AB53-4E6CB2B51512
+  sid-2143C9B1-6ABB-4C11-BC2D-5DB16F288777
+  sid-B9E4C816-D357-4D06-8FA6-E841624B8631
+  sid-E41A81AE-E7C5-4A08-81C2-04DF50CDE5A2
+  sid-6F8EE36D-CFDF-4F37-96E4-35C44ACBD124
+  sid-61933769-1ADE-46F8-AA31-2B6A719A7159
+  sid-D089C1BA-1D49-4BE6-9C4B-0BDC1F94849F
+  sid-A961A540-DC4C-42F3-AFA9-98209B314C65
+  sid-A416FF4A-C318-4B98-84BF-C131D20B8A97
+  sid-0BC0770F-56BE-418D-A910-E6BABAAEE6B8
+end
+
+lane sid-8A4AC258-D077-464A-A5E8-B1D519C1036D(Customer)
+  sid-664C5A17-AB91-4335-B8C6-3267347C06FF
+  sid-0DA67BA1-3E95-41CC-BD12-E1EF66F34DF7
+  sid-E34B9893-10BF-4A30-917B-63433E68B8AA
+  sid-A26799E5-B8E1-4735-B4E2-192701351761
+  sid-DF911950-0157-4B95-9559-BCD9C839D465
+  sid-02B6E904-B7C7-4E8F-A192-AB8FA60276BE
+  sid-53F27D8E-4950-4E7D-9348-D40A0E634980
+  sid-C2CF5268-E4B5-46A0-A45A-41BD47E5A25E
+  sid-541B14F8-8029-42B3-AEAB-67DF0A29A9F2
+  sid-E1C52C96-E859-4DA2-80D3-AE0E7BFEDBE4
+end
+

@@ -1,0 +1,3 @@
+The process begins with a customer feeling hungry for pizza. The customer selects a pizza from the menu and places an order. Once the order is received by the pizza vendor, the process moves forward. If the customer does not receive the pizza within 60 minutes, they will ask about the status of the pizza. The pizza vendor, specifically the clerk, will handle the inquiry and calm the customer.
+
+Meanwhile, the pizza chef bakes the pizza. Once it is ready, the delivery boy delivers the pizza to the customer. Upon receiving the pizza, the customer proceeds to pay for it. After the payment, the vendor sends a receipt to the customer. The customer then eats the pizza, and the process concludes when the customer’s hunger is satisfied.

@@ -1,0 +1,41 @@
+startEvent//_6-450(Order received)-->|sequenceFlow//_6-630(Unnamed)|parallelGateway//_6-652(Unnamed)
+task//_6-463(Bake the pizza)-->|sequenceFlow//_6-632(Unnamed)|task//_6-514(Deliver the pizza)
+task//_6-514(Deliver the pizza)-->|sequenceFlow//_6-634(Unnamed)|task//_6-565(Receive payment)
+task//_6-565(Receive payment)-->|sequenceFlow//_6-636(Unnamed)|endEvent//_6-616(Unnamed)
+parallelGateway//_6-652(Unnamed)-->|sequenceFlow//_6-691(Unnamed)|intermediateCatchEvent//_6-674(where is my pizza)
+parallelGateway//_6-652(Unnamed)-->|sequenceFlow//_6-693(Unnamed)|task//_6-463(Bake the pizza)
+task//_6-695(Calm customer)-->|sequenceFlow//_6-746(Unnamed)|intermediateCatchEvent//_6-674(where is my pizza)
+intermediateCatchEvent//_6-674(where is my pizza)-->|sequenceFlow//_6-748(Unnamed)|task//_6-695(Calm customer)
+startEvent//_6-61(Hungry for pizza)-->|sequenceFlow//_6-125(Unnamed)|task//_6-74(Select a pizza)
+task//_6-74(Select a pizza)-->|sequenceFlow//_6-178(Unnamed)|task//_6-127(Order a pizza)
+task//_6-127(Order a pizza)-->|sequenceFlow//_6-420(Unnamed)|eventBasedGateway//_6-180(Unnamed)
+eventBasedGateway//_6-180(Unnamed)-->|sequenceFlow//_6-422(Unnamed)|intermediateCatchEvent//_6-202(pizza received)
+eventBasedGateway//_6-180(Unnamed)-->|sequenceFlow//_6-424(Unnamed)|intermediateCatchEvent//_6-219(60 minutes)
+intermediateCatchEvent//_6-219(60 minutes)-->|sequenceFlow//_6-426(Unnamed)|task//_6-236(Ask for the pizza)
+intermediateCatchEvent//_6-202(pizza received)-->|sequenceFlow//_6-428(Unnamed)|task//_6-304(Pay the pizza)
+task//_6-236(Ask for the pizza)-->|sequenceFlow//_6-430(Unnamed)|eventBasedGateway//_6-180(Unnamed)
+task//_6-304(Pay the pizza)-->|sequenceFlow//_6-434(Unnamed)|task//_6-355(Eat the pizza)
+task//_6-355(Eat the pizza)-->|sequenceFlow//_6-436(Unnamed)|endEvent//_6-406(Hunger satisfied)
+task//_6-127(Order a pizza)-->|messageFlow//_6-638(pizza order)|startEvent//_6-450(Order received)
+task//_6-236(Ask for the pizza)-->|messageFlow//_6-642(Unnamed)|intermediateCatchEvent//_6-674(where is my pizza)
+task//_6-565(Receive payment)-->|messageFlow//_6-646(receipt)|task//_6-304(Pay the pizza)
+task//_6-304(Pay the pizza)-->|messageFlow//_6-648(money)|task//_6-565(Receive payment)
+task//_6-514(Deliver the pizza)-->|messageFlow//_6-640(pizza)|intermediateCatchEvent//_6-202(pizza received)
+task//_6-695(Calm customer)-->|messageFlow//_6-750(Unnamed)|task//_6-236(Ask for the pizza)
+lane _6-650(clerk)
+  _6-450
+  _6-674
+  _6-652
+  _6-695
+end
+
+lane _6-446(pizza chef)
+  _6-463
+end
+
+lane _6-448(delivery boy)
+  _6-514
+  _6-565
+  _6-616
+end
+

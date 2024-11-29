@@ -1,0 +1,8 @@
+TITLE: Credit Scoring
+
+Background
+In Germany, a credit protection agency known as "Schufa" offers a technical interface that enables customers to query the credit ratings of individuals.
+
+Bank sales clerks can use their software frontend to access the credit score for a particular customer. This action initiates a process within the banking system that operates in the background, communicating with the agency. As soon as the process begins, a scoring request is sent to the agency. The agency conducts a quick preliminary assessment (level 1), which typically results in an immediate outcome that is relayed back to the banking system within seconds. The clerk can then view this result on their frontend.
+
+However, there are times when the scoring cannot be determined immediately, resulting in a longer wait. In these cases, the agency informs the banking process about the delay and proceeds with a more detailed level 2 scoring, which may take several minutes. Once the scoring result is finalized, it is sent back to the banking system. If the clerk receives a message about the delay, the banking process prompts them to check again later. When the final result arrives, it will be displayed on the frontend for the clerk to see.

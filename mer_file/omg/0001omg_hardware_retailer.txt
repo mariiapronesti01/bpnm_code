@@ -1,0 +1,43 @@
+startEvent//_6-67(Goods  to ship)-->|sequenceFlow//_6-633(Unnamed)|parallelGateway//_6-80(Unnamed)
+parallelGateway//_6-80(Unnamed)-->|sequenceFlow//_6-635(Unnamed)|task//_6-102(Decide if normal post or special shipment)
+task//_6-102(Decide if normal post or special shipment)-->|sequenceFlow//_6-637(Unnamed)|exclusiveGateway//_6-204(Mode of delivery)
+exclusiveGateway//_6-204(Mode of delivery)-->|sequenceFlow//_6-639(Special Carrier)|task//_6-226(Request quotes from carriers)
+exclusiveGateway//_6-204(Mode of delivery)-->|sequenceFlow//_6-641(Normal Post)|task//_6-379(Check if extra insurance is necessary)
+task//_6-379(Check if extra insurance is necessary)-->|sequenceFlow//_6-643(Unnamed)|inclusiveGateway//_6-430(Unnamed)
+inclusiveGateway//_6-430(Unnamed)-->|sequenceFlow//_6-645(extra insurance required)|task//_6-452(Take out extra insurance)
+inclusiveGateway//_6-430(Unnamed)-->|sequenceFlow//_6-647(Always)|task//_6-328(Fill in a Post label)
+task//_6-328(Fill in a Post label)-->|sequenceFlow//_6-649(Unnamed)|inclusiveGateway//_6-503(Unnamed)
+task//_6-452(Take out extra insurance)-->|sequenceFlow//_6-651(Unnamed)|inclusiveGateway//_6-503(Unnamed)
+inclusiveGateway//_6-503(Unnamed)-->|sequenceFlow//_6-653(Unnamed)|exclusiveGateway//_6-525(Unnamed)
+task//_6-226(Request quotes from carriers)-->|sequenceFlow//_6-655(Unnamed)|task//_6-277(Assign a carrier  prepare paperwork)
+task//_6-277(Assign a carrier  prepare paperwork)-->|sequenceFlow//_6-657(Unnamed)|exclusiveGateway//_6-525(Unnamed)
+exclusiveGateway//_6-525(Unnamed)-->|sequenceFlow//_6-659(Unnamed)|parallelGateway//_6-547(Unnamed)
+task//_6-153(Package goods)-->|sequenceFlow//_6-661(Unnamed)|parallelGateway//_6-547(Unnamed)
+parallelGateway//_6-547(Unnamed)-->|sequenceFlow//_6-663(Unnamed)|task//_6-569(Add paperwork and move package to pick area)
+task//_6-569(Add paperwork and move package to pick area)-->|sequenceFlow//_6-665(Unnamed)|endEvent//_6-620(Goods available  for pick)
+parallelGateway//_6-80(Unnamed)-->|sequenceFlow//_6-667(Unnamed)|task//_6-153(Package goods)
+lane _6-61(Logistics  Manager)
+  _6-452
+end
+
+lane _6-63(Clerk)
+  _6-503
+  _6-226
+  _6-277
+  _6-525
+  _6-102
+  _6-430
+  _6-80
+  _6-204
+  _6-379
+  _6-328
+  _6-67
+end
+
+lane _6-65(Warehouse Worker)
+  _6-547
+  _6-153
+  _6-620
+  _6-569
+end
+

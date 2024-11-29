@@ -1,0 +1,7 @@
+Title: App For Participating at the Vienna Night Run
+
+To participate in the Vienna Night Run, the first step is selecting a starting block. After that, you’ll need to complete a 5 km run and measure your time. If you can finish in under 25 minutes, you’re ready to go; if not, you’ll need to train and keep checking your progress until you reach this goal. Once you’ve achieved this time, you can obtain your starting number.
+
+Next, you must determine whether to go home before the run or leave directly from work, depending on when your workday ends. If there’s more than one hour between your finishing time and the start of the run, you can go home; otherwise, you’ll need to head straight to the event from work. During the Night Run, you’ll be running while also hydrating. Finally, you’ll receive your official running time at the end of the event.
+
+Some of this information needs to be entered into the app, while other details are automatically collected by fitness gadgets.

@@ -1,0 +1,45 @@
+startEvent//sid-836E2A1B-4155-4171-A1EA-07922FCC52E9(Unnamed)-->|sequenceFlow//sid-3258C711-FF39-470A-ABA0-3381BAA1458C(Unnamed)|intermediateThrowEvent//sid-8CA5B58F-846F-4813-A91A-C7EFB393F71A(Request solvency score)
+intermediateThrowEvent//sid-8CA5B58F-846F-4813-A91A-C7EFB393F71A(Request solvency score)-->|sequenceFlow//sid-558AF82C-73CA-4BBF-A6BD-264F781A531A(Unnamed)|intermediateCatchEvent//sid-64F9272F-67A2-471C-8752-285366629FEC(Unnamed)
+intermediateCatchEvent//sid-64F9272F-67A2-471C-8752-285366629FEC(Unnamed)-->|sequenceFlow//sid-EB75DB8D-4B3F-4DE4-AB4F-72FB7A13C228(Unnamed)|intermediateCatchEvent//sid-323354B5-2A66-440B-82D6-E598A8BEE3C8(Wait for delay notification)
+intermediateCatchEvent//sid-323354B5-2A66-440B-82D6-E598A8BEE3C8(Wait for delay notification)-->|sequenceFlow//sid-C87F3C03-16B7-4B4C-9E9E-93E915A29041(Unnamed)|intermediateThrowEvent//sid-1A97CD68-4758-422A-9120-7CF96909F5EB(Forward Delay notification)
+intermediateCatchEvent//sid-64F9272F-67A2-471C-8752-285366629FEC(Unnamed)-->|sequenceFlow//sid-A9C43EA4-C4B5-4C09-B242-809E1AF57028(Unnamed)|intermediateCatchEvent//sid-FEE2CCA0-BC5F-493F-80F8-5311D75D21F1(Wait for persons solvency score)
+intermediateThrowEvent//sid-1A97CD68-4758-422A-9120-7CF96909F5EB(Forward Delay notification)-->|sequenceFlow//sid-12BBA9E1-16A9-4237-AFA7-B49EF2EE3DE3(Unnamed)|intermediateCatchEvent//sid-FEE2CCA0-BC5F-493F-80F8-5311D75D21F1(Wait for persons solvency score)
+intermediateCatchEvent//sid-FEE2CCA0-BC5F-493F-80F8-5311D75D21F1(Wait for persons solvency score)-->|sequenceFlow//sid-63549F89-736B-4039-8BB3-352A3CF0C8D4(Unnamed)|endEvent//sid-F3B07655-FC14-4B2A-A63A-409B77972401(Forward solvency score to the frontend)
+startEvent//sid-051C9890-29BA-4698-9ED4-078C8BAD4617(Unnamed)-->|sequenceFlow//sid-5DDBCF12-37EB-4023-9918-DA4227E47F5E(Unnamed)|task//sid-C9822BC3-78CC-4593-A55D-9507F667AA86(Detect score level)
+task//sid-C9822BC3-78CC-4593-A55D-9507F667AA86(Detect score level)-->|sequenceFlow//sid-C8C7AE84-0B0E-47CD-B053-EA2A730D38A6(Unnamed)|exclusiveGateway//sid-3F288A83-E33B-4485-B874-248A2E965FAB(Unnamed)
+task//sid-CED8A954-D2D8-48A7-9482-53E8B59DF13E(Check solvency score for the person Level 1)-->|sequenceFlow//sid-5B252D12-8017-439F-9F2F-E1E8DE8D5664(Unnamed)|exclusiveGateway//sid-9C7DAAB5-60FB-4E82-82DA-633233AB362C(Unnamed)
+exclusiveGateway//sid-9C7DAAB5-60FB-4E82-82DA-633233AB362C(Unnamed)-->|sequenceFlow//sid-5D7E0C54-32EF-428B-A894-8F410E4F9C36(Unnamed)|endEvent//sid-FE6F51D4-0CF4-40D1-A0AD-993BF3C81C13(Unnamed)
+exclusiveGateway//sid-3F288A83-E33B-4485-B874-248A2E965FAB(Unnamed)-->|sequenceFlow//sid-0580A6EC-FD49-48C5-979E-E06457E601C9(Level 1)|task//sid-CED8A954-D2D8-48A7-9482-53E8B59DF13E(Check solvency score for the person Level 1)
+task//sid-41DE5C3F-F2E4-4877-B516-DECE65E084A7(Check solvency score for the person Level 2)-->|sequenceFlow//sid-475B27D0-B17C-4B4E-BF4E-5A60B59A5922(Unnamed)|exclusiveGateway//sid-9C7DAAB5-60FB-4E82-82DA-633233AB362C(Unnamed)
+exclusiveGateway//sid-3F288A83-E33B-4485-B874-248A2E965FAB(Unnamed)-->|sequenceFlow//sid-6B83128E-63C4-46F3-9147-45D4C250BFBB(Unnamed)|intermediateThrowEvent//sid-9B15855C-D977-4A21-9608-832487E49242(Send delay notification)
+intermediateThrowEvent//sid-9B15855C-D977-4A21-9608-832487E49242(Send delay notification)-->|sequenceFlow//sid-457F6B43-96CE-4968-A194-FDEFC9509F2C(Unnamed)|task//sid-41DE5C3F-F2E4-4877-B516-DECE65E084A7(Check solvency score for the person Level 2)
+nan//sid-A61B9A4F-8688-43A1-9FD2-145B7FFC20BB(nan)-->|messageFlow//sid-3A3BDA90-86B3-4837-A2A3-A58FC516BCB8(Unnamed)|startEvent//sid-836E2A1B-4155-4171-A1EA-07922FCC52E9(Unnamed)
+intermediateThrowEvent//sid-8CA5B58F-846F-4813-A91A-C7EFB393F71A(Request solvency score)-->|messageFlow//sid-404078A7-52AB-469E-80BB-EFA581BA7327(Unnamed)|startEvent//sid-051C9890-29BA-4698-9ED4-078C8BAD4617(Unnamed)
+endEvent//sid-F3B07655-FC14-4B2A-A63A-409B77972401(Forward solvency score to the frontend)-->|messageFlow//sid-EFDE68E3-BB7F-42A7-A527-EDF84C55B344(Unnamed)|nan//sid-A61B9A4F-8688-43A1-9FD2-145B7FFC20BB(nan)
+intermediateThrowEvent//sid-9B15855C-D977-4A21-9608-832487E49242(Send delay notification)-->|messageFlow//sid-F5D40BB2-93C7-4051-B882-5835E8ECA44F(Unnamed)|intermediateCatchEvent//sid-323354B5-2A66-440B-82D6-E598A8BEE3C8(Wait for delay notification)
+intermediateThrowEvent//sid-1A97CD68-4758-422A-9120-7CF96909F5EB(Forward Delay notification)-->|messageFlow//sid-D750D39F-B8B5-462D-9ACA-405D2B57A6CC(Unnamed)|nan//sid-A61B9A4F-8688-43A1-9FD2-145B7FFC20BB(nan)
+endEvent//sid-FE6F51D4-0CF4-40D1-A0AD-993BF3C81C13(Unnamed)-->|messageFlow//sid-B391E200-8E33-436F-BF5C-FA7376D7C29C(Unnamed)|intermediateCatchEvent//sid-FEE2CCA0-BC5F-493F-80F8-5311D75D21F1(Wait for persons solvency score)
+lane sid-DB1974EC-B2E9-4C60-BAF1-72DED1703042(Frontend Bank)
+end
+
+lane sid-8EF7410C-74CB-48A7-B6ED-D7865452A2E9(Backend Bank)
+  sid-FEE2CCA0-BC5F-493F-80F8-5311D75D21F1
+  sid-323354B5-2A66-440B-82D6-E598A8BEE3C8
+  sid-64F9272F-67A2-471C-8752-285366629FEC
+  sid-836E2A1B-4155-4171-A1EA-07922FCC52E9
+  sid-8CA5B58F-846F-4813-A91A-C7EFB393F71A
+  sid-1A97CD68-4758-422A-9120-7CF96909F5EB
+  sid-F3B07655-FC14-4B2A-A63A-409B77972401
+end
+
+lane sid-2DD998CD-3713-4716-961D-10E122E8AC27(Solvency Service Schufa)
+  sid-9C7DAAB5-60FB-4E82-82DA-633233AB362C
+  sid-CED8A954-D2D8-48A7-9482-53E8B59DF13E
+  sid-3F288A83-E33B-4485-B874-248A2E965FAB
+  sid-FE6F51D4-0CF4-40D1-A0AD-993BF3C81C13
+  sid-9B15855C-D977-4A21-9608-832487E49242
+  sid-C9822BC3-78CC-4593-A55D-9507F667AA86
+  sid-051C9890-29BA-4698-9ED4-078C8BAD4617
+  sid-41DE5C3F-F2E4-4877-B516-DECE65E084A7
+end
+

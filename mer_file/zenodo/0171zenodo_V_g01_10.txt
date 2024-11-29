@@ -1,0 +1,110 @@
+startEvent//sid-54F314DE-4A60-4245-8FEF-EBD07380F42F(Unnamed)-->|sequenceFlow//sid-CD9C00BD-1AD8-4340-AB43-0ADD8E43F9B2(Unnamed)|task//sid-0E2B2613-EB01-453E-91CD-6615BEE622BA(Customer request Burger robot)
+task//sid-8E6A170D-5B4C-4837-B9F7-3E32F2253CB3(Customer gets his order)-->|sequenceFlow//sid-04605583-3A60-4570-AB08-E0F8625A0792(Unnamed)|endEvent//sid-C006BAB9-76B5-4D47-8947-A36457A58569(Unnamed)
+task//sid-16498533-C172-4C5F-A264-F7320D308EED(Customer places complete order)-->|sequenceFlow//sid-C39B05CD-F3BC-46E9-B724-1F9691A2C933(Unnamed)|task//sid-14B5EBEB-2903-4050-95C4-E220AAA73890(Customer checks order status)
+task//sid-14B5EBEB-2903-4050-95C4-E220AAA73890(Customer checks order status)-->|sequenceFlow//sid-9EADECD8-8A8C-442B-891F-424C90B54D2B(Unnamed)|task//sid-8E6A170D-5B4C-4837-B9F7-3E32F2253CB3(Customer gets his order)
+exclusiveGateway//sid-BB35A883-BC73-4FF9-AD1E-098B43F63771(Unnamed)-->|sequenceFlow//sid-0B5A9C94-D89E-4297-A8A6-4D6FD975D8BB(Unnamed)|parallelGateway//sid-D7A6483C-CF7B-42D8-A6FF-ABF8ED85C052(Unnamed)
+parallelGateway//sid-D7A6483C-CF7B-42D8-A6FF-ABF8ED85C052(Unnamed)-->|sequenceFlow//sid-C96B7055-BE08-475D-A0C6-D56534C56C53(Unnamed)|task//sid-4AC6C4D6-5F06-43E1-B0AA-EE24DA1DDC00(Preparing PommesWedges Production)
+task//sid-4AC6C4D6-5F06-43E1-B0AA-EE24DA1DDC00(Preparing PommesWedges Production)-->|sequenceFlow//sid-F282B22B-F5DF-49BD-86B4-621A9E46F1BE(Unnamed)|exclusiveGateway//sid-7F079A35-9610-4D3A-960D-6C0159BECDFA(Unnamed)
+exclusiveGateway//sid-7F079A35-9610-4D3A-960D-6C0159BECDFA(Unnamed)-->|sequenceFlow//sid-745EA047-F10B-4BA0-8D9B-1E0AB7E9F0DF(Unnamed)|task//sid-A23A0FA3-129E-43DF-9B75-5C7CAFDD4FC7(Pommes get prepared)
+exclusiveGateway//sid-7F079A35-9610-4D3A-960D-6C0159BECDFA(Unnamed)-->|sequenceFlow//sid-F1D054F4-D580-4709-8F15-E4B23CA7F77B(Unnamed)|task//sid-6D316929-E825-42FD-8FCC-C1DA3B688421(Wedges get prepared)
+task//sid-A23A0FA3-129E-43DF-9B75-5C7CAFDD4FC7(Pommes get prepared)-->|sequenceFlow//sid-E922F25A-337A-43E4-A87C-B97C0F1C7788(Unnamed)|exclusiveGateway//sid-13E657A4-5211-4ECB-AD98-5E60447E6B80(Unnamed)
+task//sid-6D316929-E825-42FD-8FCC-C1DA3B688421(Wedges get prepared)-->|sequenceFlow//sid-26973BEE-E9FC-4DE3-BC1F-1C71A55B3B6C(Unnamed)|exclusiveGateway//sid-34709A32-C258-4FA4-BE92-DAD5B75A1B63(Unnamed)
+task//sid-81752CA4-6060-443F-AB81-486B2A05FC2D(Pommes are get packed in the order)-->|sequenceFlow//sid-7CD469DB-2AF7-4B16-B897-2B3BF5BC6359(Unnamed)|task//sid-EA383069-3DA3-4650-BE72-55DA518EDB67(Burger preparing starts)
+task//sid-FE5F00AE-CC86-40BF-9571-2E49733B0B03(Pommes are get packed in the order)-->|sequenceFlow//sid-C39AF130-3209-4F16-A111-0DEA528D1999(Unnamed)|task//sid-EA383069-3DA3-4650-BE72-55DA518EDB67(Burger preparing starts)
+parallelGateway//sid-D7A6483C-CF7B-42D8-A6FF-ABF8ED85C052(Unnamed)-->|sequenceFlow//sid-DEC0B61E-D8DA-4AAE-B6E8-5CB2F4826AE9(Unnamed)|task//sid-2B5C6779-5373-43F8-948A-732AE6AF3C6E(Preparing the drinksoda)
+task//sid-2B5C6779-5373-43F8-948A-732AE6AF3C6E(Preparing the drinksoda)-->|sequenceFlow//sid-F46E86D2-7AE8-4A1E-8AA2-FDF4FF5470FE(Unnamed)|exclusiveGateway//sid-CD6650BE-5DE1-48D8-8B52-F93D658F0B08(Unnamed)
+task//sid-0A4FFA43-EAD5-4496-9BC7-A8FA97C076A8(Drink will packed in the order)-->|sequenceFlow//sid-70DBC6DE-4A7B-48B4-8921-E24F09563892(Unnamed)|task//sid-EA383069-3DA3-4650-BE72-55DA518EDB67(Burger preparing starts)
+task//sid-EA383069-3DA3-4650-BE72-55DA518EDB67(Burger preparing starts)-->|sequenceFlow//sid-7206CACB-F09B-4A3F-A18E-B458007A3D35(Unnamed)|parallelGateway//sid-7C5D7E24-7273-40A0-8E56-443B1FB04B05(Unnamed)
+parallelGateway//sid-7C5D7E24-7273-40A0-8E56-443B1FB04B05(Unnamed)-->|sequenceFlow//sid-3790AE39-D7D6-4666-8FC5-848F6A6159DD(Unnamed)|task//sid-426D4A1A-7A7D-44AD-AC43-BA89E866A432(check order status)
+parallelGateway//sid-7C5D7E24-7273-40A0-8E56-443B1FB04B05(Unnamed)-->|sequenceFlow//sid-16AE5903-04CF-4B77-89DD-4FF0F362BA7E(Unnamed)|task//sid-02B5995B-42E0-4E7B-B11F-BE663B3EC9CC(Ingredients are packed on the burger on the basis of the order)
+task//sid-02B5995B-42E0-4E7B-B11F-BE663B3EC9CC(Ingredients are packed on the burger on the basis of the order)-->|sequenceFlow//sid-52E53D87-4224-4471-8A72-A15F4065D1AC(Unnamed)|exclusiveGateway//sid-DB04302E-7E3C-4421-A283-7F722CC1A8D5(Unnamed)
+exclusiveGateway//sid-DB04302E-7E3C-4421-A283-7F722CC1A8D5(Unnamed)-->|sequenceFlow//sid-53859795-FC52-4E64-820F-074A9AE23F1E(Unnamed)|task//sid-7DC18223-4AF1-41CB-A5A8-3F6031C0F392(robot picks sesam bread)
+exclusiveGateway//sid-DB04302E-7E3C-4421-A283-7F722CC1A8D5(Unnamed)-->|sequenceFlow//sid-B87E39A9-5ED6-41D9-A65C-24BA3F41FA56(Unnamed)|task//sid-9ED22F4D-4190-46C8-B53E-72C74A7D5CD4(robot picks oregano bread)
+task//sid-9ED22F4D-4190-46C8-B53E-72C74A7D5CD4(robot picks oregano bread)-->|sequenceFlow//sid-A082E7E0-DCC1-4348-B2C7-285FF877B040(Unnamed)|exclusiveGateway//sid-35981F71-FBBB-4EF1-BF05-95622266BA36(Unnamed)
+task//sid-7DC18223-4AF1-41CB-A5A8-3F6031C0F392(robot picks sesam bread)-->|sequenceFlow//sid-CE86A9BA-01A1-4CBD-AA0F-82AA8D676B3F(Unnamed)|exclusiveGateway//sid-35981F71-FBBB-4EF1-BF05-95622266BA36(Unnamed)
+exclusiveGateway//sid-35981F71-FBBB-4EF1-BF05-95622266BA36(Unnamed)-->|sequenceFlow//sid-28F3C7BA-CA4F-4F1A-A272-EFFE41D4685D(Unnamed)|task//sid-905F035D-BB23-4E46-A898-0BFE968F3568(robot picks beef patty)
+exclusiveGateway//sid-35981F71-FBBB-4EF1-BF05-95622266BA36(Unnamed)-->|sequenceFlow//sid-B07B485B-6C46-44AB-8100-6C1AB4F2C5DB(Unnamed)|task//sid-6D4E14AB-E6A9-4E2C-AA9B-FF5528FDA1BE(robot picks chicken patty)
+task//sid-A0E13A65-B07D-46C4-B602-B7E7CA710F84(Robot accepts order)-->|sequenceFlow//sid-31E79573-330D-4DA1-8385-2679424D97C5(Unnamed)|exclusiveGateway//sid-BB35A883-BC73-4FF9-AD1E-098B43F63771(Unnamed)
+exclusiveGateway//sid-CD6650BE-5DE1-48D8-8B52-F93D658F0B08(Unnamed)-->|sequenceFlow//sid-9B2F6A0C-F4D1-4ED9-B393-11D19B81F2CA(Unnamed)|task//sid-108A690A-0F8A-4E37-942E-B96A67416EF2(preparing small drink 5 sec processing)
+task//sid-108A690A-0F8A-4E37-942E-B96A67416EF2(preparing small drink 5 sec processing)-->|sequenceFlow//sid-2335EC5A-DFAE-42E1-9385-471B2DC53BCB(Unnamed)|task//sid-0A4FFA43-EAD5-4496-9BC7-A8FA97C076A8(Drink will packed in the order)
+exclusiveGateway//sid-CD6650BE-5DE1-48D8-8B52-F93D658F0B08(Unnamed)-->|sequenceFlow//sid-0CEB5E9C-B08D-41BC-91B7-83B249653E8A(Unnamed)|task//sid-F13DE220-DA6C-4DAC-B02E-E425242A2B6F(preparing medium drink 9 sec processing)
+exclusiveGateway//sid-CD6650BE-5DE1-48D8-8B52-F93D658F0B08(Unnamed)-->|sequenceFlow//sid-14471882-8F04-4CF3-AEA6-FE4CADDA2E73(Unnamed)|task//sid-F50D5833-E021-4819-AB1C-6188BC6A3652(preparing large drink 13 sec processing)
+task//sid-F13DE220-DA6C-4DAC-B02E-E425242A2B6F(preparing medium drink 9 sec processing)-->|sequenceFlow//sid-9AAA875D-DF12-49EE-8F7B-66612362753F(Unnamed)|task//sid-0A4FFA43-EAD5-4496-9BC7-A8FA97C076A8(Drink will packed in the order)
+task//sid-F50D5833-E021-4819-AB1C-6188BC6A3652(preparing large drink 13 sec processing)-->|sequenceFlow//sid-947DB9E6-958E-4B07-8229-05A30EFD8011(Unnamed)|task//sid-0A4FFA43-EAD5-4496-9BC7-A8FA97C076A8(Drink will packed in the order)
+exclusiveGateway//sid-BB35A883-BC73-4FF9-AD1E-098B43F63771(Unnamed)-->|sequenceFlow//sid-D85CFAC1-48AC-4B6D-8D97-E4B9325B96A9(Unnamed)|task//sid-EA383069-3DA3-4650-BE72-55DA518EDB67(Burger preparing starts)
+exclusiveGateway//sid-34709A32-C258-4FA4-BE92-DAD5B75A1B63(Unnamed)-->|sequenceFlow//sid-5F3B963D-1C84-47F2-8E50-8BF21AE5C110(Unnamed)|task//sid-12A4F5A8-50C1-42B2-BCBF-5913224FF669(large Wedges will be prepared 50 sec processing time)
+exclusiveGateway//sid-34709A32-C258-4FA4-BE92-DAD5B75A1B63(Unnamed)-->|sequenceFlow//sid-11D83549-7E73-49B6-B914-760219ED53BA(Unnamed)|task//sid-B9B9670D-61CC-495F-832D-4F6766929E14(medium Wedges will be prepared 35 sec processing time)
+exclusiveGateway//sid-34709A32-C258-4FA4-BE92-DAD5B75A1B63(Unnamed)-->|sequenceFlow//sid-977FC876-8620-4D55-89C7-952560CAABD7(Unnamed)|task//sid-FADADC07-84A2-47C0-921F-209BB74381FD(small Wedges will be prepared 20 sec processing time)
+task//sid-12A4F5A8-50C1-42B2-BCBF-5913224FF669(large Wedges will be prepared 50 sec processing time)-->|sequenceFlow//sid-E011A6DD-9973-4379-B309-F57C0D69002E(Unnamed)|task//sid-81752CA4-6060-443F-AB81-486B2A05FC2D(Pommes are get packed in the order)
+task//sid-FADADC07-84A2-47C0-921F-209BB74381FD(small Wedges will be prepared 20 sec processing time)-->|sequenceFlow//sid-19E75EE3-F238-4B5E-A872-54350DD8FAD6(Unnamed)|task//sid-81752CA4-6060-443F-AB81-486B2A05FC2D(Pommes are get packed in the order)
+task//sid-B9B9670D-61CC-495F-832D-4F6766929E14(medium Wedges will be prepared 35 sec processing time)-->|sequenceFlow//sid-0A4DE83B-C09F-47DD-8923-80FE03134FE1(Unnamed)|task//sid-81752CA4-6060-443F-AB81-486B2A05FC2D(Pommes are get packed in the order)
+exclusiveGateway//sid-13E657A4-5211-4ECB-AD98-5E60447E6B80(Unnamed)-->|sequenceFlow//sid-B3AC573C-F59E-4687-847A-030112432FC6(Unnamed)|task//sid-9D7415C0-EBEB-4732-BA9A-E86AC4222C8F(medium Pommes will be prepared 23 sec processing time)
+exclusiveGateway//sid-13E657A4-5211-4ECB-AD98-5E60447E6B80(Unnamed)-->|sequenceFlow//sid-BA9C30DC-2466-4317-9CF4-708F38C3F2F3(Unnamed)|task//sid-9DC926C5-F3F2-48BB-8FE7-79F5E6E714AB(small Pommes will be prepared 15 sec processing time)
+exclusiveGateway//sid-13E657A4-5211-4ECB-AD98-5E60447E6B80(Unnamed)-->|sequenceFlow//sid-5F78EE2E-DB05-423A-9785-CCE28DD1EB2D(Unnamed)|task//sid-4C0488D8-4CFD-4462-8605-A811786D573D(large Pommes will be prepared 31 sec processing time)
+task//sid-4C0488D8-4CFD-4462-8605-A811786D573D(large Pommes will be prepared 31 sec processing time)-->|sequenceFlow//sid-95BF7C41-55CB-49C3-8CBC-CAE2BF57F5CB(Unnamed)|task//sid-FE5F00AE-CC86-40BF-9571-2E49733B0B03(Pommes are get packed in the order)
+task//sid-9D7415C0-EBEB-4732-BA9A-E86AC4222C8F(medium Pommes will be prepared 23 sec processing time)-->|sequenceFlow//sid-30596EDE-A0A0-41D3-8FDC-7137AE8E70D0(Unnamed)|task//sid-FE5F00AE-CC86-40BF-9571-2E49733B0B03(Pommes are get packed in the order)
+task//sid-9DC926C5-F3F2-48BB-8FE7-79F5E6E714AB(small Pommes will be prepared 15 sec processing time)-->|sequenceFlow//sid-0769C949-6BB8-450D-BA36-C8D9C05A2782(Unnamed)|task//sid-FE5F00AE-CC86-40BF-9571-2E49733B0B03(Pommes are get packed in the order)
+task//sid-426D4A1A-7A7D-44AD-AC43-BA89E866A432(check order status)-->|sequenceFlow//sid-A99F677A-2D6B-40BF-9C39-6E26BCE0585C(Unnamed)|exclusiveGateway//sid-0588BCDF-7B44-4DBF-9376-7EEBF69CA9BE(Unnamed)
+exclusiveGateway//sid-0588BCDF-7B44-4DBF-9376-7EEBF69CA9BE(Unnamed)-->|sequenceFlow//sid-501779E0-3D58-495C-A53F-C46181CEB17D(Unnamed)|task//sid-426D4A1A-7A7D-44AD-AC43-BA89E866A432(check order status)
+exclusiveGateway//sid-0588BCDF-7B44-4DBF-9376-7EEBF69CA9BE(Unnamed)-->|sequenceFlow//sid-3DD99024-2DA5-49E2-93A6-F83E9AC4A85E(Unnamed)|task//sid-DD1FDCE8-4B93-4080-BBCD-D1355D317636(communicate to customer)
+task//sid-6D4E14AB-E6A9-4E2C-AA9B-FF5528FDA1BE(robot picks chicken patty)-->|sequenceFlow//sid-F8D5957D-7BBC-44BF-9EED-7E9C3271A222(Unnamed)|parallelGateway//sid-6506B8FD-6FDF-46B5-907E-D43B8576CF40(Unnamed)
+task//sid-905F035D-BB23-4E46-A898-0BFE968F3568(robot picks beef patty)-->|sequenceFlow//sid-D7D3CAC1-CEBC-4BC0-835D-4FCF7F4BEAEF(Unnamed)|parallelGateway//sid-6506B8FD-6FDF-46B5-907E-D43B8576CF40(Unnamed)
+parallelGateway//sid-6506B8FD-6FDF-46B5-907E-D43B8576CF40(Unnamed)-->|sequenceFlow//sid-371CFE10-5ABA-4480-9294-7446C8A12F82(Unnamed)|task//sid-F215BD79-85EB-4E73-8322-64C15884984C(Order is placed on a conveyor belt)
+parallelGateway//sid-6506B8FD-6FDF-46B5-907E-D43B8576CF40(Unnamed)-->|sequenceFlow//sid-78667C71-3011-4811-B3E6-F7408AD80EFF(Unnamed)|task//sid-82285F32-4186-40A5-8542-B5215000FF79(set order status to finished)
+task//sid-82285F32-4186-40A5-8542-B5215000FF79(set order status to finished)-->|sequenceFlow//sid-327F9EDA-D7D4-419F-AA62-36D41F39B5CB(Unnamed)|task//sid-426D4A1A-7A7D-44AD-AC43-BA89E866A432(check order status)
+task//sid-0E2B2613-EB01-453E-91CD-6615BEE622BA(Customer request Burger robot)-->|messageFlow//sid-D4FFA56E-D2F4-4612-8C97-055DEAD41AF6(Unnamed)|task//sid-B2BA5E05-837E-43AB-B6B9-B7928FAAAC0E(Burger Robot ask for an burger menu or single burger)
+task//sid-F215BD79-85EB-4E73-8322-64C15884984C(Order is placed on a conveyor belt)-->|messageFlow//sid-62A59383-6B2B-4615-9B0E-79DCA54BC622(Unnamed)|task//sid-8E6A170D-5B4C-4837-B9F7-3E32F2253CB3(Customer gets his order)
+task//sid-B2BA5E05-837E-43AB-B6B9-B7928FAAAC0E(Burger Robot ask for an burger menu or single burger)-->|messageFlow//sid-5F25E44F-01B5-49C0-A7C3-5DCF4381CF20(Unnamed)|task//sid-16498533-C172-4C5F-A264-F7320D308EED(Customer places complete order)
+task//sid-16498533-C172-4C5F-A264-F7320D308EED(Customer places complete order)-->|messageFlow//sid-12FE8F37-2DD5-40E7-909B-43FB4F6F4839(Unnamed)|task//sid-A0E13A65-B07D-46C4-B602-B7E7CA710F84(Robot accepts order)
+task//sid-DD1FDCE8-4B93-4080-BBCD-D1355D317636(communicate to customer)-->|messageFlow//sid-26199B8B-2E63-4A02-9BF0-1BFF18F731E5(Unnamed)|task//sid-14B5EBEB-2903-4050-95C4-E220AAA73890(Customer checks order status)
+lane sid-A7F7847D-5836-443D-8266-9CB89D263E42(Customer)
+  sid-14B5EBEB-2903-4050-95C4-E220AAA73890
+  sid-16498533-C172-4C5F-A264-F7320D308EED
+  sid-0E2B2613-EB01-453E-91CD-6615BEE622BA
+  sid-54F314DE-4A60-4245-8FEF-EBD07380F42F
+  sid-8E6A170D-5B4C-4837-B9F7-3E32F2253CB3
+  sid-C006BAB9-76B5-4D47-8947-A36457A58569
+end
+
+lane sid-74D23044-35C7-4350-8B4D-FCBE9BF3A977(Burger robot)
+  sid-D7A6483C-CF7B-42D8-A6FF-ABF8ED85C052
+  sid-4AC6C4D6-5F06-43E1-B0AA-EE24DA1DDC00
+  sid-905F035D-BB23-4E46-A898-0BFE968F3568
+  sid-CD6650BE-5DE1-48D8-8B52-F93D658F0B08
+  sid-426D4A1A-7A7D-44AD-AC43-BA89E866A432
+  sid-9D7415C0-EBEB-4732-BA9A-E86AC4222C8F
+  sid-82285F32-4186-40A5-8542-B5215000FF79
+  sid-FE5F00AE-CC86-40BF-9571-2E49733B0B03
+  sid-B2BA5E05-837E-43AB-B6B9-B7928FAAAC0E
+  sid-EA383069-3DA3-4650-BE72-55DA518EDB67
+  sid-A0E13A65-B07D-46C4-B602-B7E7CA710F84
+  sid-6D316929-E825-42FD-8FCC-C1DA3B688421
+  sid-FADADC07-84A2-47C0-921F-209BB74381FD
+  sid-B9B9670D-61CC-495F-832D-4F6766929E14
+  sid-9ED22F4D-4190-46C8-B53E-72C74A7D5CD4
+  sid-34709A32-C258-4FA4-BE92-DAD5B75A1B63
+  sid-12A4F5A8-50C1-42B2-BCBF-5913224FF669
+  sid-BB35A883-BC73-4FF9-AD1E-098B43F63771
+  sid-F13DE220-DA6C-4DAC-B02E-E425242A2B6F
+  sid-4C0488D8-4CFD-4462-8605-A811786D573D
+  sid-A23A0FA3-129E-43DF-9B75-5C7CAFDD4FC7
+  sid-9DC926C5-F3F2-48BB-8FE7-79F5E6E714AB
+  sid-F215BD79-85EB-4E73-8322-64C15884984C
+  sid-0A4FFA43-EAD5-4496-9BC7-A8FA97C076A8
+  sid-DD1FDCE8-4B93-4080-BBCD-D1355D317636
+  sid-7DC18223-4AF1-41CB-A5A8-3F6031C0F392
+  sid-108A690A-0F8A-4E37-942E-B96A67416EF2
+  sid-2B5C6779-5373-43F8-948A-732AE6AF3C6E
+  sid-DB04302E-7E3C-4421-A283-7F722CC1A8D5
+  sid-13E657A4-5211-4ECB-AD98-5E60447E6B80
+  sid-02B5995B-42E0-4E7B-B11F-BE663B3EC9CC
+  sid-7F079A35-9610-4D3A-960D-6C0159BECDFA
+  sid-0588BCDF-7B44-4DBF-9376-7EEBF69CA9BE
+  sid-6D4E14AB-E6A9-4E2C-AA9B-FF5528FDA1BE
+  sid-7C5D7E24-7273-40A0-8E56-443B1FB04B05
+  sid-81752CA4-6060-443F-AB81-486B2A05FC2D
+  sid-35981F71-FBBB-4EF1-BF05-95622266BA36
+  sid-6506B8FD-6FDF-46B5-907E-D43B8576CF40
+  sid-F50D5833-E021-4819-AB1C-6188BC6A3652
+end
+

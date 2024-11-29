@@ -1,0 +1,64 @@
+startEvent//sid-E27710AC-3284-4AD0-B33F-31E1769304E3(Unnamed)-->|sequenceFlow//sid-82CAD24B-AFC9-40A0-91ED-9FC976DB8B54(Unnamed)|receiveTask//sid-BF591F86-09A1-42FB-BBE9-242912E24F61(Customized airplane order received)
+parallelGateway//sid-7374577F-CBE7-4B75-AA74-B88F8B463C58(Unnamed)-->|sequenceFlow//sid-5CE91D13-1537-4833-BE66-DAFB4132366D(Unnamed)|manualTask//sid-A5EC1FDE-5643-4C29-A9DD-13D3E5A1852D(Build the airplane base model)
+parallelGateway//sid-7374577F-CBE7-4B75-AA74-B88F8B463C58(Unnamed)-->|sequenceFlow//sid-02D3CF21-4400-42AB-8AFF-157C024336B5(Unnamed)|serviceTask//sid-9E8A0F91-F6CF-4B7F-8C3E-61672F6ED40C(Transmit requirements for the customization to the responsible teams)
+serviceTask//sid-9E8A0F91-F6CF-4B7F-8C3E-61672F6ED40C(Transmit requirements for the customization to the responsible teams)-->|sequenceFlow//sid-E4988974-1329-45F1-9121-7C87BBBF45B2(Unnamed)|parallelGateway//sid-75B2FC51-01F1-4055-BC5E-FC8482E0852F(Unnamed)
+manualTask//sid-A5EC1FDE-5643-4C29-A9DD-13D3E5A1852D(Build the airplane base model)-->|sequenceFlow//sid-86650C2F-8D42-4607-8F4E-2E0C0893635C(Unnamed)|parallelGateway//sid-75B2FC51-01F1-4055-BC5E-FC8482E0852F(Unnamed)
+manualTask//sid-96C57587-4C88-4BA5-8C18-46BF7F965E8B(Prepare the plane to a test flight)-->|sequenceFlow//sid-01EF1A14-558E-495C-9579-BB851E507801(Unnamed)|receiveTask//sid-75549A4C-5842-458A-9D19-CC19BB01BFDE(Receive a test  flight protocol)
+receiveTask//sid-75549A4C-5842-458A-9D19-CC19BB01BFDE(Receive a test  flight protocol)-->|sequenceFlow//sid-EE3570E2-2591-46FD-8C46-31123C15BF38(Unnamed)|serviceTask//sid-8E5C8565-33C8-4785-B5A4-F917AAF506BB(Automatic forwarding to the customer)
+manualTask//sid-61EEA9B2-D7AD-43AC-9C3A-8729EB2CED01(Control the engines and risk factors)-->|sequenceFlow//sid-9DC05182-59B7-4AAB-9665-9465A976A893(Unnamed)|manualTask//sid-96C57587-4C88-4BA5-8C18-46BF7F965E8B(Prepare the plane to a test flight)
+receiveTask//sid-20DFCD67-0FAD-4087-9B21-7096CF229E33(Receive a confirmation via EMail)-->|sequenceFlow//sid-4EA282E6-539D-4EBE-88A9-6CBBCE3E172C(Unnamed)|endEvent//sid-DF942A97-6682-4D1D-92EA-5EE00183C912(Unnamed)
+serviceTask//sid-8E5C8565-33C8-4785-B5A4-F917AAF506BB(Automatic forwarding to the customer)-->|sequenceFlow//sid-B2711330-47BB-43EC-B88C-114BD61B6A68(Unnamed)|exclusiveGateway//sid-4CA34483-786D-4DF6-9A7C-6DA9CDF62F0B(Unnamed)
+exclusiveGateway//sid-4CA34483-786D-4DF6-9A7C-6DA9CDF62F0B(Unnamed)-->|sequenceFlow//sid-CD24D57E-728D-4497-BB3A-3B10F8BFDE08(Unnamed)|manualTask//sid-4273C0C0-087A-4B39-9793-ABC57672D2D2(standard shipping to the customer)
+exclusiveGateway//sid-4CA34483-786D-4DF6-9A7C-6DA9CDF62F0B(Unnamed)-->|sequenceFlow//sid-6D9D5611-1854-494D-8BAE-3471AA591D3A(PremiumCustomer)|manualTask//sid-D427575E-1A4E-4E1D-9CAC-9BD325A7A2E9(premium shipping to the customer)
+manualTask//sid-D427575E-1A4E-4E1D-9CAC-9BD325A7A2E9(premium shipping to the customer)-->|sequenceFlow//sid-F956B740-3965-4B90-A56E-775C0DAF46D6(Unnamed)|exclusiveGateway//sid-E38394C8-E5C8-451F-AE7D-859DAF90FC51(Unnamed)
+manualTask//sid-4273C0C0-087A-4B39-9793-ABC57672D2D2(standard shipping to the customer)-->|sequenceFlow//sid-AD6CE499-62AF-4090-B5A9-9F0476630578(Unnamed)|exclusiveGateway//sid-E38394C8-E5C8-451F-AE7D-859DAF90FC51(Unnamed)
+exclusiveGateway//sid-E38394C8-E5C8-451F-AE7D-859DAF90FC51(Unnamed)-->|sequenceFlow//sid-D4F284F6-E117-4066-98F6-2635B5AC4A95(Unnamed)|receiveTask//sid-20DFCD67-0FAD-4087-9B21-7096CF229E33(Receive a confirmation via EMail)
+parallelGateway//sid-75B2FC51-01F1-4055-BC5E-FC8482E0852F(Unnamed)-->|sequenceFlow//sid-0466291A-CA87-47C1-BE2C-F580460FD4B0(Unnamed)|intermediateCatchEvent//sid-51B951A4-FCA5-41E1-94EC-BBA7E087C43F(14 Days)
+manualTask//sid-4B514EA3-C9C1-4606-88E7-18B4146C50BA(Install the individual bits and pieces in the airplane)-->|sequenceFlow//sid-F940D069-7F16-44E3-87BA-82E07AC93026(Unnamed)|exclusiveGateway//sid-678958ED-8995-4078-9080-8D1501B859B2(Unnamed)
+exclusiveGateway//sid-678958ED-8995-4078-9080-8D1501B859B2(Unnamed)-->|sequenceFlow//sid-273558B6-0F99-42B0-B4F0-23F0A822CB12(Unnamed)|manualTask//sid-61EEA9B2-D7AD-43AC-9C3A-8729EB2CED01(Control the engines and risk factors)
+manualTask//sid-27F8BC6A-4750-481B-86EB-A40651C93B7D(Send a reminder to the responsible team)-->|sequenceFlow//sid-DCF46E7D-6131-49EE-B064-272E4252550F(Unnamed)|intermediateCatchEvent//sid-51B951A4-FCA5-41E1-94EC-BBA7E087C43F(14 Days)
+exclusiveGateway//sid-2CACB68A-910F-4AC4-8EAF-D2D132CEA46F(Requirements met)-->|sequenceFlow//sid-EA3B1399-8146-4634-BB00-C13F5C54A887(No)|manualTask//sid-27F8BC6A-4750-481B-86EB-A40651C93B7D(Send a reminder to the responsible team)
+intermediateCatchEvent//sid-51B951A4-FCA5-41E1-94EC-BBA7E087C43F(14 Days)-->|sequenceFlow//sid-392BCB99-C9C4-480E-A8D1-2D5A4C2FD600(Unnamed)|exclusiveGateway//sid-2CACB68A-910F-4AC4-8EAF-D2D132CEA46F(Requirements met)
+exclusiveGateway//sid-2CACB68A-910F-4AC4-8EAF-D2D132CEA46F(Requirements met)-->|sequenceFlow//sid-CEA50A2C-22A3-42E1-8FCB-47FEADAB451B(Yes)|manualTask//sid-4B514EA3-C9C1-4606-88E7-18B4146C50BA(Install the individual bits and pieces in the airplane)
+receiveTask//sid-BF591F86-09A1-42FB-BBE9-242912E24F61(Customized airplane order received)-->|sequenceFlow//sid-6BBA7356-9FBD-4E97-BDCD-BF06974620B4(Unnamed)|serviceTask//sid-B393BE0C-12EF-428B-8DF2-F070C6EA6246(The order is being processed)
+serviceTask//sid-B393BE0C-12EF-428B-8DF2-F070C6EA6246(The order is being processed)-->|sequenceFlow//sid-848B6208-25F6-4DC2-81D6-4350241EAE08(Unnamed)|parallelGateway//sid-7374577F-CBE7-4B75-AA74-B88F8B463C58(Unnamed)
+nan//sid-6872C4EC-4177-4B03-A098-A74DC8616312(nan)-->|messageFlow//sid-85A624B0-4B05-4626-BA71-E6BD1F7ADA7A(Unnamed)|receiveTask//sid-BF591F86-09A1-42FB-BBE9-242912E24F61(Customized airplane order received)
+nan//sid-6872C4EC-4177-4B03-A098-A74DC8616312(nan)-->|messageFlow//sid-BE88A0EC-2CD2-4B0A-8C70-27F163A9DD55(Unnamed)|receiveTask//sid-20DFCD67-0FAD-4087-9B21-7096CF229E33(Receive a confirmation via EMail)
+nan//sid-3C342AF5-5726-4D98-A738-36E572919D52(nan)-->|messageFlow//sid-B262E56E-E51C-4D02-85B6-919A677C1C10(Unnamed)|receiveTask//sid-75549A4C-5842-458A-9D19-CC19BB01BFDE(Receive a test  flight protocol)
+manualTask//sid-27F8BC6A-4750-481B-86EB-A40651C93B7D(Send a reminder to the responsible team)-->|messageFlow//sid-0619BD31-A8C8-4914-93E6-CB2519B8C6C0(Unnamed)|nan//sid-E765794C-E46F-460E-BDED-479489335469(nan)
+serviceTask//sid-9E8A0F91-F6CF-4B7F-8C3E-61672F6ED40C(Transmit requirements for the customization to the responsible teams)-->|messageFlow//sid-0526DCAA-96BC-4DC9-BBB1-04289CD9AC87(Unnamed)|nan//sid-E765794C-E46F-460E-BDED-479489335469(nan)
+serviceTask//sid-8E5C8565-33C8-4785-B5A4-F917AAF506BB(Automatic forwarding to the customer)-->|messageFlow//sid-B4AE22A1-F215-4213-8634-04424246C91D(Unnamed)|nan//sid-6872C4EC-4177-4B03-A098-A74DC8616312(nan)
+lane sid-0D8A63AC-A6F0-4C0F-AE66-5175D1038418(Customer)
+end
+
+lane sid-EED4B3C7-4B12-40ED-999A-2CF690081D2B(Team)
+end
+
+lane sid-482A9266-61C1-4840-83FA-FF4F778FC16D(Manufacturer)
+  sid-51B951A4-FCA5-41E1-94EC-BBA7E087C43F
+  sid-9E8A0F91-F6CF-4B7F-8C3E-61672F6ED40C
+  sid-DF942A97-6682-4D1D-92EA-5EE00183C912
+  sid-75B2FC51-01F1-4055-BC5E-FC8482E0852F
+  sid-8E5C8565-33C8-4785-B5A4-F917AAF506BB
+  sid-20DFCD67-0FAD-4087-9B21-7096CF229E33
+  sid-BF591F86-09A1-42FB-BBE9-242912E24F61
+  sid-E38394C8-E5C8-451F-AE7D-859DAF90FC51
+  sid-2CACB68A-910F-4AC4-8EAF-D2D132CEA46F
+  sid-27F8BC6A-4750-481B-86EB-A40651C93B7D
+  sid-A5EC1FDE-5643-4C29-A9DD-13D3E5A1852D
+  sid-4CA34483-786D-4DF6-9A7C-6DA9CDF62F0B
+  sid-4B514EA3-C9C1-4606-88E7-18B4146C50BA
+  sid-D427575E-1A4E-4E1D-9CAC-9BD325A7A2E9
+  sid-678958ED-8995-4078-9080-8D1501B859B2
+  sid-7374577F-CBE7-4B75-AA74-B88F8B463C58
+  sid-B393BE0C-12EF-428B-8DF2-F070C6EA6246
+  sid-75549A4C-5842-458A-9D19-CC19BB01BFDE
+  sid-61EEA9B2-D7AD-43AC-9C3A-8729EB2CED01
+  sid-96C57587-4C88-4BA5-8C18-46BF7F965E8B
+  sid-4273C0C0-087A-4B39-9793-ABC57672D2D2
+  sid-E27710AC-3284-4AD0-B33F-31E1769304E3
+end
+
+lane sid-386E5B2C-84EC-4C63-B4B7-CA0887629329(Test Pilot)
+end
+

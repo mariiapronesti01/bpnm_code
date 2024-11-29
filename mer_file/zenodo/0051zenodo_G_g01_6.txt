@@ -1,0 +1,65 @@
+startEvent//sid-53D9A349-72CF-42FD-A5C5-3D406B2D70B4(Unnamed)-->|sequenceFlow//sid-ED62F604-3BD9-4616-9DDD-4616D2CFD118(Unnamed)|task//sid-E71ADC2D-333B-475D-AEF9-F53731A14BE3(Send invite to your friends)
+task//sid-E71ADC2D-333B-475D-AEF9-F53731A14BE3(Send invite to your friends)-->|sequenceFlow//sid-214F1A6D-E97B-45C7-A4C3-8DD79E119440(Unnamed)|task//sid-B02E5F9C-489E-42E9-BBF9-1F1E3920FC3F(Send invite to your friends)
+task//sid-B02E5F9C-489E-42E9-BBF9-1F1E3920FC3F(Send invite to your friends)-->|sequenceFlow//sid-4E7DE174-6A50-4924-A53A-BFA90A1F9A85(Unnamed)|task//sid-3E333608-2F27-4849-A190-EB51DC5B859E(check if games have been sent)
+task//sid-3E333608-2F27-4849-A190-EB51DC5B859E(check if games have been sent)-->|sequenceFlow//sid-E81F5467-8D59-4092-8F6B-C94EC43F6CDE(Unnamed)|exclusiveGateway//sid-68D961A6-94C6-4EE1-B40D-16D8C8A312B2(Unnamed)
+exclusiveGateway//sid-68D961A6-94C6-4EE1-B40D-16D8C8A312B2(Unnamed)-->|sequenceFlow//sid-D1DBF338-D402-4BB3-94E8-C618850B1FFD(Unnamed)|task//sid-00DF54C2-35C2-4B15-B9DE-369A78E2CD43(confirm that you enough game suggestions)
+task//sid-00DF54C2-35C2-4B15-B9DE-369A78E2CD43(confirm that you enough game suggestions)-->|sequenceFlow//sid-A4D79C8A-F83A-4CAC-A4DC-FE2C045FC537(Unnamed)|parallelGateway//sid-3162D031-FD1E-4328-BE7A-B815C68332F6(Unnamed)
+parallelGateway//sid-3162D031-FD1E-4328-BE7A-B815C68332F6(Unnamed)-->|sequenceFlow//sid-BF775280-F6D0-47FA-8890-163FE30978ED(Unnamed)|task//sid-3EDA3A41-B622-4B9F-92CA-1FD3D9326252(check my game library with the wanted games )
+task//sid-3EDA3A41-B622-4B9F-92CA-1FD3D9326252(check my game library with the wanted games )-->|sequenceFlow//sid-357E5E9A-8BAC-42A9-9282-1B89726B65A3(Unnamed)|exclusiveGateway//sid-68CC9EB4-7471-49AE-8E0D-8CF7BE2D06CC(Unnamed)
+exclusiveGateway//sid-68CC9EB4-7471-49AE-8E0D-8CF7BE2D06CC(Unnamed)-->|sequenceFlow//sid-368F3FE1-CC69-48BC-A1A3-662B1C538FB1(Unnamed)|task//sid-B996F63C-2096-4C60-BA7C-96DDA0A825C3(Download the missing games)
+parallelGateway//sid-3162D031-FD1E-4328-BE7A-B815C68332F6(Unnamed)-->|sequenceFlow//sid-9F8E2851-8BFD-411C-973E-C591E52D724F(Unnamed)|task//sid-3800EF58-6741-420C-8B6A-9D4B5B667108(Suggest a day for the LAN Party)
+task//sid-3800EF58-6741-420C-8B6A-9D4B5B667108(Suggest a day for the LAN Party)-->|sequenceFlow//sid-2F64C619-982C-437A-95E1-2F49E25439D7(Unnamed)|task//sid-234BDCCB-0A3D-416C-AD4F-D5F23ABB7E1C(Check if 8 or more people have time on the same day)
+task//sid-F0295604-86AE-414D-B3A4-8C7B2A41FDD2(Define a new day)-->|sequenceFlow//sid-E0102849-F006-4ADD-AB72-C845457A1D23(Unnamed)|task//sid-3800EF58-6741-420C-8B6A-9D4B5B667108(Suggest a day for the LAN Party)
+task//sid-B2483B24-0E69-4454-BF1F-0398C0731898(Ask for the preferred amount of beer)-->|sequenceFlow//sid-17C401BB-7C28-4BA2-9D90-330130390576(Unnamed)|task//sid-1067F3F8-1C72-4C27-ACCB-DCF9C032937D(check the own beer status)
+task//sid-1067F3F8-1C72-4C27-ACCB-DCF9C032937D(check the own beer status)-->|sequenceFlow//sid-69F83C4A-66B3-4588-9812-3F1E26EA1BD6(Unnamed)|exclusiveGateway//sid-409CF107-A90E-415D-BF1E-A2BC6B657F4A(Unnamed)
+exclusiveGateway//sid-409CF107-A90E-415D-BF1E-A2BC6B657F4A(Unnamed)-->|sequenceFlow//sid-DDAF620A-1C1C-4438-B548-64352A78E6DC(Unnamed)|task//sid-6A089749-C36B-4D39-8878-73E454A5AC23(buy more beer)
+task//sid-6A089749-C36B-4D39-8878-73E454A5AC23(buy more beer)-->|sequenceFlow//sid-724249E0-FA10-4F2A-A4A4-8EB01B733502(Unnamed)|endEvent//sid-150A2547-319C-4E38-9B6E-593F6FF5D174(Unnamed)
+task//sid-234BDCCB-0A3D-416C-AD4F-D5F23ABB7E1C(Check if 8 or more people have time on the same day)-->|sequenceFlow//sid-861C90B4-4007-43BE-ABD8-241E07B2AE5F(Unnamed)|exclusiveGateway//sid-CCDCAA01-67E8-40D5-A6F6-0E41291333C4(Unnamed)
+task//sid-D08C3B41-83CC-4D28-BE71-BAC81C955FFF(write down the 8 or more people who can come)-->|sequenceFlow//sid-9E89AB91-2005-4525-B2FD-DF007DCF87DC(Unnamed)|task//sid-B2483B24-0E69-4454-BF1F-0398C0731898(Ask for the preferred amount of beer)
+exclusiveGateway//sid-CCDCAA01-67E8-40D5-A6F6-0E41291333C4(Unnamed)-->|sequenceFlow//sid-E3E16301-C15D-43F1-AB23-1A939B4201ED(Unnamed)|parallelGateway//sid-F3645160-3E7C-497B-8643-C63BD84B25B0(Unnamed)
+parallelGateway//sid-F3645160-3E7C-497B-8643-C63BD84B25B0(Unnamed)-->|sequenceFlow//sid-9A7570CF-603C-457B-B9DD-9E3203BAF83C(Unnamed)|task//sid-D08C3B41-83CC-4D28-BE71-BAC81C955FFF(write down the 8 or more people who can come)
+task//sid-B996F63C-2096-4C60-BA7C-96DDA0A825C3(Download the missing games)-->|sequenceFlow//sid-28831DA1-DCEA-4358-9056-348D17FD0B5B(Unnamed)|task//sid-5978B910-9D91-4996-89B2-4BFDE62E37D9(create final game list for the LAN)
+exclusiveGateway//sid-68CC9EB4-7471-49AE-8E0D-8CF7BE2D06CC(Unnamed)-->|sequenceFlow//sid-946968E0-90C0-45F1-B840-1DA4B561CED4(Unnamed)|task//sid-5978B910-9D91-4996-89B2-4BFDE62E37D9(create final game list for the LAN)
+exclusiveGateway//sid-68D961A6-94C6-4EE1-B40D-16D8C8A312B2(Unnamed)-->|sequenceFlow//sid-C4721A01-52E4-49BE-AA31-3056D6AAF373(Unnamed)|task//sid-B02E5F9C-489E-42E9-BBF9-1F1E3920FC3F(Send invite to your friends)
+exclusiveGateway//sid-CCDCAA01-67E8-40D5-A6F6-0E41291333C4(Unnamed)-->|sequenceFlow//sid-56DD975D-E4AA-48D3-B8DE-9EA3B0307BFF(Unnamed)|task//sid-F0295604-86AE-414D-B3A4-8C7B2A41FDD2(Define a new day)
+task//sid-5978B910-9D91-4996-89B2-4BFDE62E37D9(create final game list for the LAN)-->|sequenceFlow//sid-DE860507-0BE0-4582-8760-D84A5C7D6751(Unnamed)|parallelGateway//sid-F3645160-3E7C-497B-8643-C63BD84B25B0(Unnamed)
+exclusiveGateway//sid-409CF107-A90E-415D-BF1E-A2BC6B657F4A(Unnamed)-->|sequenceFlow//sid-74413C2A-B7C8-45E9-BF04-67D5F81D31DC(Unnamed)|endEvent//sid-150A2547-319C-4E38-9B6E-593F6FF5D174(Unnamed)
+task//sid-FDD8572A-22B2-4AC5-B8F7-4058D09896DA(Friends open the LAN party invitation)-->|sequenceFlow//sid-47EC8653-A93A-421A-9970-C5B5590ACCB3(Unnamed)|task//sid-BBC299F5-57C2-4552-989D-E05E0202A7D9(Friends wish video games)
+task//sid-BBC299F5-57C2-4552-989D-E05E0202A7D9(Friends wish video games)-->|sequenceFlow//sid-21234657-81BD-46C7-B731-32010A13744E(Unnamed)|task//sid-03A29000-E382-492D-8C3C-17A70A87D293(Decide for a day)
+task//sid-03A29000-E382-492D-8C3C-17A70A87D293(Decide for a day)-->|sequenceFlow//sid-F48E2ACC-59D5-42FA-A014-E5CE8FCA12A7(Unnamed)|task//sid-AC95D86A-9D21-4685-AD80-B69ABEFD5239(communicate the prefered amount of beer)
+task//sid-E71ADC2D-333B-475D-AEF9-F53731A14BE3(Send invite to your friends)-->|messageFlow//sid-8502AF8E-4C60-45CB-9921-141C20A33CE8(Unnamed)|task//sid-FDD8572A-22B2-4AC5-B8F7-4058D09896DA(Friends open the LAN party invitation)
+task//sid-B02E5F9C-489E-42E9-BBF9-1F1E3920FC3F(Send invite to your friends)-->|messageFlow//sid-3EEA0F02-9C37-4FBD-AA23-1A728DC3EFB3(Unnamed)|task//sid-BBC299F5-57C2-4552-989D-E05E0202A7D9(Friends wish video games)
+task//sid-3800EF58-6741-420C-8B6A-9D4B5B667108(Suggest a day for the LAN Party)-->|messageFlow//sid-DF88121F-9129-4EFA-B7E2-486426311226(Unnamed)|task//sid-03A29000-E382-492D-8C3C-17A70A87D293(Decide for a day)
+task//sid-B2483B24-0E69-4454-BF1F-0398C0731898(Ask for the preferred amount of beer)-->|messageFlow//sid-31930EDE-8EA4-4391-996B-968725B21B8B(Unnamed)|task//sid-AC95D86A-9D21-4685-AD80-B69ABEFD5239(communicate the prefered amount of beer)
+lane sid-76931948-3972-400D-9D07-1D7317AF5D95(LAN Organisator)
+  sid-B996F63C-2096-4C60-BA7C-96DDA0A825C3
+  sid-1067F3F8-1C72-4C27-ACCB-DCF9C032937D
+  sid-6A089749-C36B-4D39-8878-73E454A5AC23
+  sid-234BDCCB-0A3D-416C-AD4F-D5F23ABB7E1C
+  sid-B02E5F9C-489E-42E9-BBF9-1F1E3920FC3F
+  sid-D08C3B41-83CC-4D28-BE71-BAC81C955FFF
+  sid-F0295604-86AE-414D-B3A4-8C7B2A41FDD2
+  sid-3800EF58-6741-420C-8B6A-9D4B5B667108
+  sid-3EDA3A41-B622-4B9F-92CA-1FD3D9326252
+  sid-3E333608-2F27-4849-A190-EB51DC5B859E
+  sid-68D961A6-94C6-4EE1-B40D-16D8C8A312B2
+  sid-B2483B24-0E69-4454-BF1F-0398C0731898
+  sid-409CF107-A90E-415D-BF1E-A2BC6B657F4A
+  sid-CCDCAA01-67E8-40D5-A6F6-0E41291333C4
+  sid-3162D031-FD1E-4328-BE7A-B815C68332F6
+  sid-5978B910-9D91-4996-89B2-4BFDE62E37D9
+  sid-E71ADC2D-333B-475D-AEF9-F53731A14BE3
+  sid-150A2547-319C-4E38-9B6E-593F6FF5D174
+  sid-68CC9EB4-7471-49AE-8E0D-8CF7BE2D06CC
+  sid-00DF54C2-35C2-4B15-B9DE-369A78E2CD43
+  sid-F3645160-3E7C-497B-8643-C63BD84B25B0
+  sid-53D9A349-72CF-42FD-A5C5-3D406B2D70B4
+end
+
+lane sid-945A9B5A-2C7A-4365-803F-265614870077(Friends)
+  sid-03A29000-E382-492D-8C3C-17A70A87D293
+  sid-BBC299F5-57C2-4552-989D-E05E0202A7D9
+  sid-AC95D86A-9D21-4685-AD80-B69ABEFD5239
+  sid-FDD8572A-22B2-4AC5-B8F7-4058D09896DA
+end
+

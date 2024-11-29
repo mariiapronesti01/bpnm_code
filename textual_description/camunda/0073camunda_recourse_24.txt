@@ -1,0 +1,7 @@
+TITLE: Recourse
+
+Insured individuals may be required to repay funds received from their insurance company for various reasons, a process known as recourse. The clerk explains how this process operates.
+
+When a potential subrogation against an insured individual is identified, I gather information regarding the case. If subrogation is deemed possible, I send a payment request to the insured and set a reminder for myself. If recourse is not feasible, I close the case.
+
+Upon receiving the payment, I record the transaction and finalize the case. If the insured disputes the recourse, I review their reasoning. If their claim is valid, I close the case; if it is not, I refer the case to a collection agency. If the deadline for disputing the matter passes without any payment received, I also forward the case to the collection agency.

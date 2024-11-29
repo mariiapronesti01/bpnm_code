@@ -1,0 +1,75 @@
+startEvent//sid-537F7B1E-D7F8-4DB2-9307-C297C1DAD4A0(Feel hungry)-->|sequenceFlow//sid-3ED489D6-1F62-4503-AFF4-0F69C7ECD42D(Unnamed)|task//sid-14AF2E31-5166-4740-A3AD-BCFEEC5CB1BD(Choose dish)
+task//sid-14AF2E31-5166-4740-A3AD-BCFEEC5CB1BD(Choose dish)-->|sequenceFlow//sid-B6508651-5FE1-4C6C-8804-A27928F4B1FB(Unnamed)|task//sid-60277482-72D8-4001-B305-2F8D06DC6606(Place order)
+task//sid-60277482-72D8-4001-B305-2F8D06DC6606(Place order)-->|sequenceFlow//sid-E5F39766-F30E-406C-ACEA-A8FA52F1BA81(Unnamed)|task//sid-0AFF71DC-2884-4C0B-9828-7E04F0EFF2F6(Pay for meal)
+task//sid-0AFF71DC-2884-4C0B-9828-7E04F0EFF2F6(Pay for meal)-->|sequenceFlow//sid-ED4632E6-78A4-427B-8DEE-6D3E488A452E(Unnamed)|task//sid-5AFFC3E8-CAA9-4433-9DCF-D483F55E25AF(Customer receives timer)
+task//sid-5AFFC3E8-CAA9-4433-9DCF-D483F55E25AF(Customer receives timer)-->|sequenceFlow//sid-F6FA6599-E056-4768-8760-95321E0A5FDC(Unnamed)|intermediateCatchEvent//sid-6DEBA53C-18C2-46EC-88FF-9CC34E77BD98(Waiting for meal)
+intermediateCatchEvent//sid-6DEBA53C-18C2-46EC-88FF-9CC34E77BD98(Waiting for meal)-->|sequenceFlow//sid-2DC4D0DA-35E6-497F-8F17-B4ABA9B59DCF(Unnamed)|intermediateCatchEvent//sid-9BD98DF4-97E9-43DE-805D-98992242C549(Meal ready buzzer goes off)
+intermediateCatchEvent//sid-9BD98DF4-97E9-43DE-805D-98992242C549(Meal ready buzzer goes off)-->|sequenceFlow//sid-40475F73-6931-46D4-8799-4F77EE8414A8(Unnamed)|task//sid-8B7F54AE-68E7-4139-B67A-785A15CEA988(Collect meal from counter)
+task//sid-8B7F54AE-68E7-4139-B67A-785A15CEA988(Collect meal from counter)-->|sequenceFlow//sid-618CC977-FDBE-4C08-A4DF-474CAB02793D(Unnamed)|task//sid-A644E3E3-D5C3-40F7-B4A1-B3B8CD7CCC88(Eat meal)
+task//sid-A644E3E3-D5C3-40F7-B4A1-B3B8CD7CCC88(Eat meal)-->|sequenceFlow//sid-CE5CB600-3E17-4798-91FA-9F72D711A5B9(Unnamed)|endEvent//sid-E3520550-CE37-4DCD-85A1-2BE1591D66B2(Hunger satisfied)
+task//sid-564A5039-439E-40CF-BDDD-95E43E6A726E(Enter order in POS)-->|sequenceFlow//sid-E0C38A30-9392-4178-96DB-09B5077E62B1(Unnamed)|task//sid-FF0E1399-6396-4160-B6C9-177657943E70(Collects money from customer)
+startEvent//sid-79E4755B-E682-4825-82F2-5C98A336B559(Order received)-->|sequenceFlow//sid-785ED776-1BF6-40BF-8F8A-377AB77B5621(Unnamed)|task//sid-564A5039-439E-40CF-BDDD-95E43E6A726E(Enter order in POS)
+task//sid-FF0E1399-6396-4160-B6C9-177657943E70(Collects money from customer)-->|sequenceFlow//sid-246CD098-AE3C-42D3-843C-34F2DF3C05E0(Unnamed)|task//sid-C24A91C0-441B-44BF-B2C8-5117E822C892(Give customer buzzer when meal is ready)
+task//sid-C24A91C0-441B-44BF-B2C8-5117E822C892(Give customer buzzer when meal is ready)-->|sequenceFlow//sid-E0FE6604-E707-4BE8-B1F8-9828DBA28E04(Unnamed)|task//sid-1E177268-ACF8-4E2C-BDC7-11C05C88E5CF(Inform chef of order)
+task//sid-1E177268-ACF8-4E2C-BDC7-11C05C88E5CF(Inform chef of order)-->|sequenceFlow//sid-67A4189A-79AE-4810-BE11-3838145B87F8(Unnamed)|intermediateCatchEvent//sid-BE7F7638-2380-4F5D-BC96-FCB0474C9ED8(Message received food is ready for collection)
+intermediateCatchEvent//sid-BE7F7638-2380-4F5D-BC96-FCB0474C9ED8(Message received food is ready for collection)-->|sequenceFlow//sid-7D5C7C89-FE3B-435F-BAD1-18473159C66C(Unnamed)|task//sid-8E6DDE9C-0A88-4163-B6ED-C79FE319697C(Set off customers buzzer meal ready for collection)
+task//sid-8E6DDE9C-0A88-4163-B6ED-C79FE319697C(Set off customers buzzer meal ready for collection)-->|sequenceFlow//sid-F3EDF224-7C1A-48B7-B7B2-3E993A907E7E(Unnamed)|task//sid-2869D36F-5B1C-42BE-A10F-FFC61F0B1B55(Place meal on counter for collection)
+task//sid-2869D36F-5B1C-42BE-A10F-FFC61F0B1B55(Place meal on counter for collection)-->|sequenceFlow//sid-A8DD240E-F395-4AD4-B3D3-151DEFD24EA4(Unnamed)|eventBasedGateway//sid-E34760B1-B40B-4469-8656-4ED57F4272F0(Unnamed)
+eventBasedGateway//sid-E34760B1-B40B-4469-8656-4ED57F4272F0(Unnamed)-->|sequenceFlow//sid-16F1BB80-3F3A-4F49-9D4F-5A1653B7BEB1(Unnamed)|intermediateCatchEvent//sid-2E1FCF83-410C-44D5-8858-D1EAD7951F56(Remind customer after 5 minutes if meal not collected)
+intermediateCatchEvent//sid-2E1FCF83-410C-44D5-8858-D1EAD7951F56(Remind customer after 5 minutes if meal not collected)-->|sequenceFlow//sid-87B3EDAC-4390-486B-B2B4-3B8A0D073BD7(Unnamed)|task//sid-0AE07584-4AE0-4316-B858-B631748DB87A(Remind customer that food is ready)
+eventBasedGateway//sid-E34760B1-B40B-4469-8656-4ED57F4272F0(Unnamed)-->|sequenceFlow//sid-3CBC4D9D-4888-4BA1-834D-C37D2B29517F(Unnamed)|intermediateCatchEvent//sid-382E7DD1-74DE-4C89-8078-CE1D82ED6CBC(Customer arrives to collect)
+task//sid-0AE07584-4AE0-4316-B858-B631748DB87A(Remind customer that food is ready)-->|sequenceFlow//sid-85286CB2-4CB5-4207-9415-4D46A8324FB7(Unnamed)|eventBasedGateway//sid-E34760B1-B40B-4469-8656-4ED57F4272F0(Unnamed)
+intermediateCatchEvent//sid-382E7DD1-74DE-4C89-8078-CE1D82ED6CBC(Customer arrives to collect)-->|sequenceFlow//sid-1E927A8C-877B-45C3-B9AD-9FC83EDE45BF(Unnamed)|endEvent//sid-43F2C980-01B9-4701-97B8-2A0B98C894E8(Unnamed)
+task//sid-F4DB835C-F9F0-4180-9251-1E6C5F667035(Place in service hatch)-->|sequenceFlow//sid-EB850CFA-5A3D-4808-8A29-2597BFF6EEB3(Unnamed)|task//sid-0748E6F3-DA7E-44BF-8DCE-ED632A1812BB(Informs employee food is ready)
+startEvent//sid-7F5F7DF7-7E3B-4772-A0A0-B9DA2FD0FDD2(Order received)-->|sequenceFlow//sid-559CEAC1-A7B9-469B-8AC1-D52C7F570141(Unnamed)|task//sid-99EEEF04-0A83-45DF-95A0-E8183BC40E93(Prepare meal)
+task//sid-0748E6F3-DA7E-44BF-8DCE-ED632A1812BB(Informs employee food is ready)-->|sequenceFlow//sid-350A542B-9199-49BA-9654-40A7ECD4411B(Unnamed)|endEvent//sid-05F0E668-116E-4C1E-A073-2C070F6A4653(Task completed)
+task//sid-99EEEF04-0A83-45DF-95A0-E8183BC40E93(Prepare meal)-->|sequenceFlow//sid-B980ADA8-DBB5-45CB-A487-1CC38985B667(Unnamed)|task//sid-0044F87A-FE89-430D-8151-B5450C18F9D7(Meal ready)
+task//sid-0044F87A-FE89-430D-8151-B5450C18F9D7(Meal ready)-->|sequenceFlow//sid-486D0708-8627-4B8B-9E1C-303645554FDD(Unnamed)|task//sid-F4DB835C-F9F0-4180-9251-1E6C5F667035(Place in service hatch)
+task//sid-0AFF71DC-2884-4C0B-9828-7E04F0EFF2F6(Pay for meal)-->|messageFlow//sid-9061EE17-7A59-4670-9C87-EC5A31F56C24(Unnamed)|task//sid-FF0E1399-6396-4160-B6C9-177657943E70(Collects money from customer)
+task//sid-60277482-72D8-4001-B305-2F8D06DC6606(Place order)-->|messageFlow//sid-C8DD39D0-56D5-4ACC-A499-A764CDB1FA38(Unnamed)|startEvent//sid-79E4755B-E682-4825-82F2-5C98A336B559(Order received)
+task//sid-FF0E1399-6396-4160-B6C9-177657943E70(Collects money from customer)-->|messageFlow//sid-6A3C4FB0-4060-4CCF-BC74-21B0CFB380FE(Unnamed)|task//sid-0AFF71DC-2884-4C0B-9828-7E04F0EFF2F6(Pay for meal)
+task//sid-1E177268-ACF8-4E2C-BDC7-11C05C88E5CF(Inform chef of order)-->|messageFlow//sid-2B1AA411-16DF-4A05-AA1E-21E3AECD6DFB(Unnamed)|startEvent//sid-7F5F7DF7-7E3B-4772-A0A0-B9DA2FD0FDD2(Order received)
+task//sid-0748E6F3-DA7E-44BF-8DCE-ED632A1812BB(Informs employee food is ready)-->|messageFlow//sid-332C0FBD-6405-4444-8A83-BB8E8EEECC05(Unnamed)|intermediateCatchEvent//sid-BE7F7638-2380-4F5D-BC96-FCB0474C9ED8(Message received food is ready for collection)
+task//sid-C24A91C0-441B-44BF-B2C8-5117E822C892(Give customer buzzer when meal is ready)-->|messageFlow//sid-B1291A57-17C7-4523-8FD5-DF2E6816F5A7(Unnamed)|task//sid-5AFFC3E8-CAA9-4433-9DCF-D483F55E25AF(Customer receives timer)
+task//sid-5AFFC3E8-CAA9-4433-9DCF-D483F55E25AF(Customer receives timer)-->|messageFlow//sid-52130D88-F519-45D9-A65C-06DF7ACF50CA(Unnamed)|task//sid-C24A91C0-441B-44BF-B2C8-5117E822C892(Give customer buzzer when meal is ready)
+task//sid-8E6DDE9C-0A88-4163-B6ED-C79FE319697C(Set off customers buzzer meal ready for collection)-->|messageFlow//sid-9E089951-1F36-4AE1-8422-C5832364BA32(Unnamed)|intermediateCatchEvent//sid-9BD98DF4-97E9-43DE-805D-98992242C549(Meal ready buzzer goes off)
+task//sid-0AE07584-4AE0-4316-B858-B631748DB87A(Remind customer that food is ready)-->|messageFlow//sid-F69825CF-BD06-45FC-B200-DA5B01979BA5(Unnamed)|intermediateCatchEvent//sid-9BD98DF4-97E9-43DE-805D-98992242C549(Meal ready buzzer goes off)
+task//sid-8B7F54AE-68E7-4139-B67A-785A15CEA988(Collect meal from counter)-->|messageFlow//sid-CEC3ACCA-64AF-489D-B220-35B692E5A5E8(Unnamed)|intermediateCatchEvent//sid-382E7DD1-74DE-4C89-8078-CE1D82ED6CBC(Customer arrives to collect)
+lane sid-016DE341-19DA-43B1-B65C-80C4194FD9BF(Customer)
+  sid-9BD98DF4-97E9-43DE-805D-98992242C549
+  sid-14AF2E31-5166-4740-A3AD-BCFEEC5CB1BD
+  sid-A644E3E3-D5C3-40F7-B4A1-B3B8CD7CCC88
+  sid-5AFFC3E8-CAA9-4433-9DCF-D483F55E25AF
+  sid-8B7F54AE-68E7-4139-B67A-785A15CEA988
+  sid-6DEBA53C-18C2-46EC-88FF-9CC34E77BD98
+  sid-537F7B1E-D7F8-4DB2-9307-C297C1DAD4A0
+  sid-60277482-72D8-4001-B305-2F8D06DC6606
+  sid-0AFF71DC-2884-4C0B-9828-7E04F0EFF2F6
+  sid-E3520550-CE37-4DCD-85A1-2BE1591D66B2
+end
+
+lane sid-DE10A588-561C-47D7-B960-02543E11F1F8(Employee)
+  sid-FF0E1399-6396-4160-B6C9-177657943E70
+  sid-C24A91C0-441B-44BF-B2C8-5117E822C892
+  sid-79E4755B-E682-4825-82F2-5C98A336B559
+  sid-1E177268-ACF8-4E2C-BDC7-11C05C88E5CF
+  sid-8E6DDE9C-0A88-4163-B6ED-C79FE319697C
+  sid-382E7DD1-74DE-4C89-8078-CE1D82ED6CBC
+  sid-0AE07584-4AE0-4316-B858-B631748DB87A
+  sid-E34760B1-B40B-4469-8656-4ED57F4272F0
+  sid-2E1FCF83-410C-44D5-8858-D1EAD7951F56
+  sid-BE7F7638-2380-4F5D-BC96-FCB0474C9ED8
+  sid-43F2C980-01B9-4701-97B8-2A0B98C894E8
+  sid-564A5039-439E-40CF-BDDD-95E43E6A726E
+  sid-2869D36F-5B1C-42BE-A10F-FFC61F0B1B55
+end
+
+lane sid-E931A89B-ECBE-4B07-94A5-38389D5EA229(Chef)
+  sid-F4DB835C-F9F0-4180-9251-1E6C5F667035
+  sid-0748E6F3-DA7E-44BF-8DCE-ED632A1812BB
+  sid-05F0E668-116E-4C1E-A073-2C070F6A4653
+  sid-99EEEF04-0A83-45DF-95A0-E8183BC40E93
+  sid-0044F87A-FE89-430D-8151-B5450C18F9D7
+  sid-7F5F7DF7-7E3B-4772-A0A0-B9DA2FD0FDD2
+end
+

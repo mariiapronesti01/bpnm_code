@@ -1,0 +1,4 @@
+TITLE: Self-Service Restaurant
+
+Upon entering the restaurant, a hungry guest selects a dish from the daily menu and waits for their turn. When called, they place their order with the staff, who inputs it into the POS system and processes the payment. Once payment is complete, the employee activates a buzzer and hands it to the guest, saying, “Your meal will be ready when this buzzer rings.” The staff then communicates the new order to the chef. After preparing the dish, the chef places it in the service hatch and informs the employee that it is ready. The employee then triggers the guest’s buzzer to signal that their meal is ready for pickup. The guest can retrieve their meal and enjoy it. If the guest does not respond to the buzzer within five minutes, the employee will call out to them several times as needed.
+

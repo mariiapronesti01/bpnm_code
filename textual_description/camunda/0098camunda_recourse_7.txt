@@ -1,0 +1,5 @@
+Insured individuals may be required to repay money received from their insurance company for various reasons, a process known as recourse. Here’s how the clerk manages this process.
+
+When a potential subrogation against an insured individual is found, the clerk gathers the relevant information about the case. If subrogation seems feasible, the clerk sends a payment request to the insured and sets a reminder. If recourse isn’t an option, the clerk closes the case.
+
+Upon receiving the payment, the clerk records the transaction and finalizes the case. If the insured disputes the recourse, the clerk carefully reviews their reasoning. If the claim is valid, the clerk closes the case; if it’s not justified, the clerk escalates the matter to a collection agency. If the deadline for disputing the recourse passes without any payment, the clerk also forwards the case to the collection agency.
