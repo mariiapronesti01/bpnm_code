@@ -1,0 +1,4 @@
+Category: E-Government
+Title: Find a Job
+
+You are required to regularly update which companies you have submitted job applications to. Based on your applications, you will receive notifications of new potential job offers. Companies must acknowledge the receipt of your applications and provide feedback on them. You can negotiate a job interview if a company is interested in hiring you. Once a company decides to proceed, you will enter a probationary period. After this phase, both you and the company can provide ratings for each other. Job applicant reviews of a company will only be accessible after one year. If you secure a permanent position, the process concludes, unless you rate the company with a C or lower; in that case, you will continue to receive job offers without the need to report your applications.

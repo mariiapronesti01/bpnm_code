@@ -174,15 +174,12 @@ def get_2ProcessesSimilarity(info_process1: dict, info_process2: dict, return_ma
     start_shortest_path_distance = get_ShortestPathDistanceMatrix(info_process1['start_shortest_path'], info_process2['start_shortest_path'])
     end_shortest_path_distance = get_ShortestPathDistanceMatrix(info_process1['end_shortest_path'], info_process2['end_shortest_path'])
     
-    try: 
-        if info_process1['lane_info'] and info_process2['lane_info']:
-            lane_similarity_matrix = get_LaneSimilarityMatrix(info_process1['G'], info_process2['G'], info_process1['lane_info'], info_process2['lane_info'])
-        elif info_process1['lane_info'] or info_process2['lane_info']:  
-            lane_similarity_matrix = np.zeros((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
-        else:
-            lane_similarity_matrix = np.ones((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
-    except:
+    if info_process1['lane_info'] and info_process2['lane_info']:
+        lane_similarity_matrix = get_LaneSimilarityMatrix(info_process1['G'], info_process2['G'], info_process1['lane_info'], info_process2['lane_info'])
+    elif info_process1['lane_info'] or info_process2['lane_info']:  
         lane_similarity_matrix = np.zeros((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
+    else:
+        lane_similarity_matrix = np.ones((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
         
     # Combine the similarities with the given weights
     # similarity_matrix = (
@@ -204,6 +201,88 @@ def get_2ProcessesSimilarity(info_process1: dict, info_process2: dict, return_ma
         return similarity_matrix, similarity_score
     else:
         return similarity_score
+
+
+##### FOR DEBUGGING PURPOSES ####
+# def get_LaneSimilarityMatrix(G1, G2, lane1, lane2):
+#     """
+#     Function that computes the similarity between the lanes of two processes, 
+#     by comparing the name of the lane to which each node in each graph belongs.
+#     """
+#     node_emb_1 = get_NodeEmbeddingDict(lane1)
+#     node_emb_2 = get_NodeEmbeddingDict(lane2)
+    
+#     # Ensure the order of nodes from G1 and G2
+#     nodes_1 = list(G1.nodes())
+#     nodes_2 = list(G2.nodes())
+    
+#     lane_similarity_matrix = np.zeros((len(nodes_1), len(nodes_2)))
+
+#     # Iterate over the nodes and compute the similarity
+#     for i, node1 in enumerate(nodes_1):
+#         for j, node2 in enumerate(nodes_2):
+#             try:
+#                 # Try to access the embeddings and compute cosine similarity
+#                 lane_similarity_matrix[i][j] = util.pytorch_cos_sim(node_emb_1[node1], node_emb_2[node2]).item()
+#             except KeyError as e:
+#                 # If a KeyError occurs, print debug information
+#                 print(f"KeyError encountered! Node embeddings not found for node '{node1}' or '{node2}'")
+#                 print(f"Graph1 nodes: {nodes_1}")
+#                 print(f"Graph2 nodes: {nodes_2}")
+#                 print(f"Available embeddings in lane1: {list(node_emb_1.keys())}")
+#                 print(f"Available embeddings in lane2: {list(node_emb_2.keys())}")
+#                 raise e  # Re-raise the error after logging the information
+
+#     return lane_similarity_matrix
+
+
+#### FOR DEBUGGING PURPOSES ####
+# def get_2ProcessesSimilarity(info_process1: dict, info_process2: dict, return_matrix=False):
+#     """
+#     Compute the similarity score between two processes.
+    
+#     Input:
+#     - info_process1: a dictionary containing the information of the first process
+#     - info_process2: a dictionary containing the information of the second process
+    
+#     Output:
+#     - similarity_score: a float value representing the similarity score between the two processes
+#     """
+#     try:
+#         # Calculate the different similarity metrics
+#         type_similarity = get_TypeSimilarityMatrix(info_process1['G'], info_process2['G'], info_process1['degree'], info_process2['degree'])
+#         label_similarity = get_LabelSimilarityMatrix(info_process1['embeddings'], info_process2['embeddings'])
+#         neighbor_similarity = get_NeighbourSimilarityMatrix(info_process1['G'], info_process2['G'], label_similarity, type_similarity)
+#         start_shortest_path_distance = get_ShortestPathDistanceMatrix(info_process1['start_shortest_path'], info_process2['start_shortest_path'])
+#         end_shortest_path_distance = get_ShortestPathDistanceMatrix(info_process1['end_shortest_path'], info_process2['end_shortest_path'])
+
+#         if info_process1['lane_info'] and info_process2['lane_info']:
+#             lane_similarity_matrix = get_LaneSimilarityMatrix(info_process1['G'], info_process2['G'], info_process1['lane_info'], info_process2['lane_info'])
+#         elif info_process1['lane_info'] or info_process2['lane_info']:  
+#             lane_similarity_matrix = np.zeros((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
+#         else:
+#             lane_similarity_matrix = np.ones((info_process1['G'].number_of_nodes(), info_process2['G'].number_of_nodes()))
+
+#         # Combine the similarities with the given weights (mean)
+#         similarity_matrix = np.mean([label_similarity, type_similarity, start_shortest_path_distance, end_shortest_path_distance, neighbor_similarity, lane_similarity_matrix], axis=0)
+
+#         max_row_mean = np.max(similarity_matrix, axis=1).mean()
+#         max_col_mean = np.max(similarity_matrix, axis=0).mean()
+#         similarity_score = (max_row_mean + max_col_mean) / 2
+
+#         if return_matrix:
+#             return similarity_matrix, similarity_score
+#         else:
+#             return similarity_score
+
+#     except KeyError as e:
+#         # Log file IDs and relevant info when a KeyError occurs
+#         print(f"KeyError encountered while processing files.")
+#         print(f"File 1 info: {info_process1}")
+#         print(f"File 2 info: {info_process2}")
+#         raise e  # Re-raise the error to maintain the traceback
+
+
 
 
 def get_AllFilesSimilarityMatrix(files_info: dict):

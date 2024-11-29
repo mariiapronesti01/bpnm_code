@@ -1,7 +1,7 @@
 Category: E-Government
 Title: Work Accident
 
-Create a process that helps in gathering information about work accidents (and almost work accidents):
+Create a process that helps in gathering information about work accidents:
 
 For insured gainful employment, a work accident is considered to be an accident that occurs in the following circumstances, by way of example:
 

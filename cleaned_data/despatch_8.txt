@@ -1,0 +1,8 @@
+TITLE: Dispatch of Goods
+
+The secretary is responsible for coordinating the shipping of goods. For larger shipments, special shipping arrangements must be made. In these situations, the secretary invites three logistics companies to submit proposals and selects one for the delivery. For smaller shipments, standard postal services are used. The secretary generates the shipping label, and if necessary, the head of the logistics department secures parcel insurance.
+
+At the same time, warehouse staff can begin preparing the items for shipment. Once everything is ready, the packaged goods are organized for pickup by the chosen logistics provider.
+
+Background Information:
+This process takes place at a small hardware company that ships both small orders to customers and larger quantities to retail businesses.
